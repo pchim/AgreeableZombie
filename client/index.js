@@ -5,8 +5,8 @@ import App from './components/App.js';
 
 var render = function() {
   ReactDOM.render(
-    <App />,
-    document.getElementById('app')
+    <App/>,
+    document.getElementById('app');
   );
 };
 

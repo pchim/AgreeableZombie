@@ -10,23 +10,23 @@ app.use(express.static(__dirname + '/client'));
 var port = process.env.PORT || 8000;
 
 
-app.get('/', function (req, res) {
+app.get('/', (req, res) => {
   res.send('serving up static files!');
 });
 
-io.on('connection', function(socket){
+io.on('connection', (socket) => {
   console.log('a user connected');
   socket.emit('highlight', {hello: 'world'});
   socket.on('event2', function(data) {
     console.log(data);
   });
-  socket.on('disconnect', function(){
+  socket.on('disconnect', () => {
     console.log('user disconnected');
   });
 });
 
 
-server.listen(port, function(err) {
+server.listen(port, (err) => {
   if (err) {
     return console.log('Listen error: ', err);
   }
