@@ -3,12 +3,9 @@ var app = express();
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
 
-
 app.use(express.static(__dirname + '/client'));
 
-
 var port = process.env.PORT || 8000;
-
 
 app.get('/', (req, res) => {
   res.send('serving up static files!');
@@ -24,7 +21,6 @@ io.on('connection', (socket) => {
     console.log('user disconnected');
   });
 });
-
 
 server.listen(port, (err) => {
   if (err) {

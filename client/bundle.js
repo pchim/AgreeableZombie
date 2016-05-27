@@ -60,6 +60,9 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	//import Button from './components/button.js';
+	//import Label from './components/label.js';
+
 	var render = function render() {
 	  _reactDom2.default.render(_react2.default.createElement(_App2.default, null), document.getElementById('app'));
 	};
@@ -19724,8 +19727,6 @@
 
 	  return App;
 	}(_react.Component);
-
-	;
 
 	exports.default = App;
 
