@@ -1,12 +1,26 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
+  <script src="/socket.io/socket.io.js"></script>
   </head>
   <body>
+   <script>
+   console.log('entered');
+    var socket = io();
+    console.log('after a while');
+    socket.on('highlight', function (data) {
+      console.log(data);
+      socket.emit('event2', { my: 'data' });
+    });
+  </script>
 
     <!-- initial react app tag -->
     <div id="app"></div>
 
     <!-- this is where the webpack.config serves the files, see output publicPath -->
     <script type="text/javascript" src="bundle.js"></script>
+   
+   <!--<script src="/socket.io/socket.io.js"></script>-->
+  
   </body>
 </html>

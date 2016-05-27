@@ -1,21 +1,37 @@
 var express = require('express');
-
-
 var app = express();
+var server = require('http').Server(app);
+var io = require('socket.io')(server);
+
+
 app.use(express.static(__dirname + '/client'));
 
 
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 8000;
 
 
 app.get('/', function (req, res) {
   res.send('serving up static files!');
 });
 
+io.on('connection', function(socket){
+  console.log('a user connected');
+  socket.emit('highlight', {hello: 'world'});
+  socket.on('event2', function(data) {
+    console.log(data);
+  });
+  socket.on('disconnect', function(){
+    console.log('user disconnected');
+  });
+});
 
-app.listen(port, function(err) {
+
+server.listen(port, function(err) {
   if (err) {
     return console.log('Listen error: ', err);
   }
   console.log('Your App is running!! Better go catch it!' + port);
 });
+
+
+    
