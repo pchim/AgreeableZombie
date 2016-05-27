@@ -16,9 +16,9 @@ app.get('/', (req, res) => {
 
 io.on('connection', (socket) => {
   console.log('a user connected');
-  socket.emit('highlight', {hello: 'world'});
-  socket.on('event2', function(data) {
-    console.log(data);
+  socket.emit('server event', {hello: 'world'});
+  socket.on('client event', function(data) {
+    socket.broadcast.emit('update label', data);
   });
   socket.on('disconnect', () => {
     console.log('user disconnected');
