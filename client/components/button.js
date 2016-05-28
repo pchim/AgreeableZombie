@@ -1,3 +1,5 @@
+import React, { PropTypes, Component } from 'react';
+
 var Button = React.createClass({
       _notifyServer: function(event){
         socket.emit('client event', {msg: 'button clicked'});

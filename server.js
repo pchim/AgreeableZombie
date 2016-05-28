@@ -13,9 +13,13 @@ app.get('/', (req, res) => {
 
 io.on('connection', (socket) => {
   console.log('a user connected');
-  socket.emit('server event', {hello: 'world'});
-  socket.on('client event', function(data) {
-    socket.broadcast.emit('update label', data);
+  //socket.emit('server event', {hello: 'world'});
+  socket.on('NextButtonClick', function(data) {
+    console.log ('inside server');
+    socket.emit('next page', data);
+  });
+  socket.on('PrevButtonClick', function(data) {
+    socket.emit('prev page');
   });
   socket.on('disconnect', () => {
     console.log('user disconnected');

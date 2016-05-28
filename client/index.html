@@ -4,17 +4,13 @@
   <script src="/socket.io/socket.io.js"></script>
   </head>
   <body>
-
-  <div id="mount-point"></div>
-  <div id="label-mount-point"></div>
-
    <script>
     var socket = io();
     socket.on('highlight', (data) => {
       console.log(data);
       socket.emit('event2', { my: 'data' });
     });
-    
+
     </script>
   </script>
     <!-- initial react app tag -->

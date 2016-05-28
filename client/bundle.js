@@ -19701,16 +19701,35 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var App = function (_Component) {
-	  _inherits(App, _Component);
+	var App = function (_React$Component) {
+	  _inherits(App, _React$Component);
 
-	  function App() {
+	  function App(props) {
 	    _classCallCheck(this, App);
 
-	    return _possibleConstructorReturn(this, Object.getPrototypeOf(App).apply(this, arguments));
+	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(App).call(this, props));
+
+	    socket.on('prev page', function (data) {
+	      console.log('data from server', data);
+	    });
+
+	    socket.on('next page', function (data) {});
+	    return _this;
 	  }
 
 	  _createClass(App, [{
+	    key: 'onClickPrev',
+	    value: function onClickPrev() {
+	      console.log('Previous Clicked');
+	      socket.emit('PrevButtonClick', { msg: 'Previous button clicked' });
+	    }
+	  }, {
+	    key: 'onClickNext',
+	    value: function onClickNext() {
+	      console.log('Next clicked');
+	      socket.emit('NextButtonClick', { msg: 'Next button clicked' });
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
@@ -19720,13 +19739,67 @@
 	          'h1',
 	          null,
 	          ' Hello I am App '
-	        )
+	        ),
+	        _react2.default.createElement(TextArea, null),
+	        _react2.default.createElement(Button, { clickHandler: this.onClickPrev.bind(this) }),
+	        _react2.default.createElement(Button, { clickHandler: this.onClickNext.bind(this) })
 	      );
 	    }
 	  }]);
 
 	  return App;
-	}(_react.Component);
+	}(_react2.default.Component);
+
+	;
+
+	var Button = function Button(props) {
+	  return _react2.default.createElement(
+	    'div',
+	    { className: 'button' },
+	    _react2.default.createElement(
+	      'button',
+	      { onClick: props.clickHandler },
+	      ' Button '
+	    )
+	  );
+	};
+
+	var TextArea = function (_React$Component2) {
+	  _inherits(TextArea, _React$Component2);
+
+	  function TextArea(props) {
+	    _classCallCheck(this, TextArea);
+
+	    var _this2 = _possibleConstructorReturn(this, Object.getPrototypeOf(TextArea).call(this, props));
+
+	    _this2.state = {
+	      msg: ''
+	    };
+	    return _this2;
+	  }
+
+	  _createClass(TextArea, [{
+	    key: 'changeText',
+	    value: function changeText(event) {
+	      this.setState({ msg: event.msg });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'my-label' },
+	        _react2.default.createElement(
+	          'h2',
+	          { onChange: this.changeText },
+	          this.state.msg
+	        )
+	      );
+	    }
+	  }]);
+
+	  return TextArea;
+	}(_react2.default.Component);
 
 	exports.default = App;
 
