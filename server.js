@@ -19,7 +19,7 @@ io.on('connection', (socket) => {
     socket.emit('next page', data);
   });
   socket.on('PrevButtonClick', function(data) {
-    socket.emit('prev page');
+    socket.emit('prev page', data);
   });
   socket.on('disconnect', () => {
     console.log('user disconnected');
