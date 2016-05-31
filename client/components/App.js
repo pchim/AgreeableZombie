@@ -1,8 +1,10 @@
 import React, { PropTypes, Component } from 'react';
 import TextArea from './TextArea.js';
-import Button from './button.js';
 import PrevButton from './PrevButton.js';
 import NextButton from './NextButton.js';
+import Background from './Background.js';
+import LeftPage from './LeftPage.js';
+import RightPage from './RightPage.js';
 
 class App extends React.Component {
   constructor(props) {
@@ -40,9 +42,13 @@ class App extends React.Component {
     return (
       <div>
         <h1> Hello I am App </h1>
-        <TextArea msg={this.state.msg}/>
         <PrevButton clickHandler={this.onClickPrev.bind(this)}/>
         <NextButton clickHandler={this.onClickNext.bind(this)}/>
+        <Background />
+        <TextArea msg={this.state.msg}/>
+        <LeftPage />
+        <RightPage />
+        <TextArea msg={this.state.msg}/>
       </div>
     );
   }
