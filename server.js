@@ -13,7 +13,6 @@ app.get('/', (req, res) => {
 
 io.on('connection', (socket) => {
   console.log('a user connected');
-  //socket.emit('server event', {hello: 'world'});
   socket.on('NextButtonClick', function(data) {
     console.log ('inside server');
     socket.emit('next page', data);
