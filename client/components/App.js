@@ -11,7 +11,7 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      msg: 'hello'
+      msg: 'This is the TextArea.'
     };
 
     socket.on('prev page', (data) => {
@@ -44,11 +44,8 @@ class App extends React.Component {
         <h1> Hello I am App </h1>
         <PrevButton clickHandler={this.onClickPrev.bind(this)}/>
         <NextButton clickHandler={this.onClickNext.bind(this)}/>
-        <Background />
-        <TextArea msg={this.state.msg}/>
         <LeftPage />
         <RightPage />
-        <TextArea msg={this.state.msg}/>
       </div>
     );
   }
