@@ -2,8 +2,9 @@
 import React, { PropTypes, Component } from 'react';
 
 var RightPage = (props) => (
-  <div className="rightPage"> 
+  <div id="rightPage"> 
    <h2> Right Page </h2>
+   <img src='../assets/page4.png' />
   </div>  
   );
 
