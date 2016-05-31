@@ -64,10 +64,10 @@ io.on('connection', (socket) => {
   console.log('a user connected');
   socket.on('NextButtonClick', function(data) {
     console.log ('inside server');
-    socket.emit('next page', data);
+    io.emit('next page', data);
   });
   socket.on('PrevButtonClick', function(data) {
-    socket.emit('prev page', data);
+    io.emit('prev page', data);
   });
   socket.on('disconnect', () => {
     console.log('user disconnected');
