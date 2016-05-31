@@ -1,0 +1,10 @@
+body {
+  text-align: center;
+}
+.next-button {
+  float: right;
+}
+
+.prev-button {
+  float: left;
+}

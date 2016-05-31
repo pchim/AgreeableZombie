@@ -41,10 +41,8 @@ class App extends React.Component {
       <div>
         <h1> Hello I am App </h1>
         <TextArea msg={this.state.msg}/>
-        <PrevButton />
-        <NextButton />
-        <Button clickHandler={this.onClickPrev.bind(this)}/> 
-        <Button clickHandler={this.onClickNext.bind(this)}/> 
+        <PrevButton clickHandler={this.onClickPrev.bind(this)}/>
+        <NextButton clickHandler={this.onClickNext.bind(this)}/>
       </div>
     );
   }
