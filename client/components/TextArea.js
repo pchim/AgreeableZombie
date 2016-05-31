@@ -5,5 +5,6 @@ var TextArea = (props) => (
         <h2>{props.msg}</h2>
       </div>
     );
-  
+  }
+}
 export default TextArea;
