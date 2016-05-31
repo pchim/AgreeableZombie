@@ -7,7 +7,7 @@ class TextArea extends React.Component {
 
   render (){
     return (
-      <div className="my-label">
+      <div className="textArea">
         <h2>{this.props.msg}</h2>
       </div>
     )

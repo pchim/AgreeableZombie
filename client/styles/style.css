@@ -1,0 +1,68 @@
+body {
+  text-align: center;
+}
+.prev-button {
+  float: left;
+}
+
+.next-button {
+  float: right;
+}
+
+.background {
+  width: 700px;
+  height: 500px;
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+}
+
+.textArea {
+  width: 650px;
+  height: 350px;
+  left: 80px;
+  top: 50px;
+  border: 1px solid;
+  position: absolute;
+  z-index: 10;
+  text-align: center;
+}
+
+.leftPage {
+  left: 90px;
+  top: 60px;
+  width: 200px;
+  height: 200px;
+  border: 0.5px solid;
+  z-index: 13;
+
+}
+
+.rightPage {
+  left: 300px;
+  top: 60px;
+  width: 200px;
+  height: 200px;
+  border: 0.5px solid;
+  z-index: 13;
+}
+
+.prevButton {  
+  left: 200px;
+  top: 350px;
+  width: 80px;
+  height: 30px;
+  border: 1px solid;
+  position: absolute;
+  z-index: 15;
+}
+
+.nextButton {
+  left: 500px;
+  top: 350px;
+  width: 80px;
+  height: 30px;
+  border: 1px solid;
+  position: absolute;
+  z-index: 15;
+}
