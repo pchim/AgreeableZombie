@@ -11,6 +11,7 @@ npm install -g nodemon webpack
 ```
 
 ```
+webpack --watch
 node server.js
 Visit `localhost:3000` in the browser.
 
