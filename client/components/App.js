@@ -42,7 +42,8 @@ class App extends React.Component {
         <TextArea msg={this.state.msg}/>
         <Button clickHandler={this.onClickPrev.bind(this)}/> 
         <Button clickHandler={this.onClickNext.bind(this)}/> 
-        <WebCam />
+
+        <WebCam conversation={this.state.conversation} />
       </div>
       
     );
