@@ -1,14 +1,42 @@
+html {
+  background: url(../assets/background.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: f6c582;
+}
 body {
   text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+}
+
+.button {
+  background-color: black;
+  color: white;
+  border:none;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 18px;
 }
 .prev-button {
-  float: left;
-  z-index: 10;
+  left: 200px;
+  top: 350px;
+  width: 80px;
+  height: 30px;
+  position: absolute;
+  z-index: 15;
+  padding: 15px;
 }
 
 .next-button {
-  float: right;
-  z-index: 10;
+  left: 500px;
+  top: 350px;
+  width: 80px;
+  height: 30px;
+  position: absolute;
+  z-index: 15;
 }
 
 .background {
@@ -28,32 +56,16 @@ body {
   background-color: blue;
 }
 
+#header {
+  padding: 25px;
+}
+
 #leftPage {
   z-index: 1;
 }
 
 #rightPage {
   z-index: 1;
-}
-
-.prevButton {  
-  left: 200px;
-  top: 350px;
-  width: 80px;
-  height: 30px;
-  border: 1px solid;
-  position: absolute;
-  z-index: 15;
-}
-
-.nextButton {
-  left: 500px;
-  top: 350px;
-  width: 80px;
-  height: 30px;
-  border: 1px solid;
-  position: absolute;
-  z-index: 15;
 }
 
 .video1 {
@@ -80,6 +92,6 @@ body {
   text-align: center;
 }
 
-.bookPage {
-  height: 500px;
+.book-page {
+  width: 400px;
 }
