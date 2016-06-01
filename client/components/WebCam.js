@@ -9,6 +9,8 @@ class WebCam extends React.Component {
     return (
       <div>
         Hello Again
+        <button id="button-preview">Button Preview</button>\
+        <div id="local-media">Container for Local Media</div>
       </div>
     );
   }
