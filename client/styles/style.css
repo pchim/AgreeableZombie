@@ -79,3 +79,7 @@ body {
   background-color: white;
   text-align: center;
 }
+
+.bookPage {
+  height: 500px;
+}

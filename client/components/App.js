@@ -15,7 +15,8 @@ class App extends React.Component {
 
     this.state = {
       msg: 'This is the TextArea.',
-      fakeBookData: [
+      pageCounter: 0, 
+      bookData: [
         {
           name: 'Page1',
           image: 'http://www.jb.man.ac.uk/aboutus/lovell/bluebook/bluebook051.jpg'
@@ -53,16 +54,25 @@ class App extends React.Component {
       this.setState({msg: data.msg});
     });
   }
-
   onClickPrev() {
     console.log('Previous Clicked');
     socket.emit('PrevButtonClick', {msg: 'Previous button clicked'});
+    if(this.state.pageCounter-1>=0) {
+      this.setState({pageCounter: this.state.pageCounter-1});
+    } else {
+      socket.emit('PrevButtonClick', {msg: "BEGINNING OF BOOK!"});
+    }
   }
 
   onClickNext() {
     console.log('Next clicked');
+    if (this.state.pageCounter<this.state.bookData.length-1) {
+      // socket.emit('NextButtonClick', {bookData: bookData[pageCounter].image});
+      this.setState({pageCounter: this.state.pageCounter+1});
+    } else {
+      socket.emit('NextButtonClick', {msg: "END OF BOOK!"});
+    }
     // socket.emit('NextButtonClick', {msg: 'Next button clicked'});
-    socket.emit('NextButtonClick', {msg: 'Next button clicked'});
 
   }
 
@@ -71,14 +81,15 @@ class App extends React.Component {
   }
  
   render() {
+    {console.log("What's up brah")};
     return (
       <div>
         <h1> Hello I am App </h1>
         
         <PrevButton clickHandler={this.onClickPrev.bind(this)}/>
-        
+        {console.log("hello there")}
         <NextButton clickHandler={this.onClickNext.bind(this)}/>
-        <LeftPage />
+        <LeftPage bookData={this.state.bookData} pageCounter={this.state.pageCounter}/>
         <RightPage />
 
         <Background />
