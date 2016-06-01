@@ -20,6 +20,7 @@ process.env.TWILIO_CONFIGURATION_SID
 var twilio = require('twilio');
 var AccessToken = twilio.AccessToken;
 var ConversationsGrant = AccessToken.ConversationsGrant;
+var randomUsername = require('./randos.js');
 
 app.use(express.static(__dirname + '/client'));
 
@@ -31,7 +32,7 @@ app.get('/', (req, res) => {
 
 // Twilio token request
 app.get('/token', function(req, res) {
-    var identity = 'TEST'; //create way to add usernames/rooms
+    var identity = randomUsername();
     
     // Create an access token
     var token = new AccessToken(
