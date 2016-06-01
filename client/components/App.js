@@ -106,7 +106,7 @@ class App extends React.Component {
         {console.log("hello there")}
         <NextButton clickHandler={this.onClickNext.bind(this)}/>
         <LeftPage bookData={this.state.bookData} pageCounter={this.state.pageCounter}/>
-        <RightPage />
+        <RightPage bookData={this.state.bookData} pageCounter={this.state.pageCounter}/>
 
         <Background />
 
