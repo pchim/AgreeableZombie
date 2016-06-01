@@ -1,12 +1,19 @@
 import React, { PropTypes, Component } from 'react';
-import TextArea from './TextArea.js';
+import Book from './Book.js';
+import Title from './Title.js';
 import PrevButton from './PrevButton.js';
 import NextButton from './NextButton.js';
 import Background from './Background.js';
-import LeftPage from './LeftPage.js';
-import RightPage from './RightPage.js';
+// import LeftPage from './LeftPage.js';
+// import RightPage from './RightPage.js';
+
+import LeftPageText from './LeftPageText.js';
+import RightPageText from './RightPageText.js';
+import LeftPageImage from './LeftPageImage.js';
+import RightPageImage from './RightPageImage.js';
 import Video1 from './Video1.js';
 import Video2 from './Video2.js';
+import Webcam from './Webcam.js';
 
 class App extends React.Component {
   constructor(props) {
@@ -15,6 +22,7 @@ class App extends React.Component {
     this.state = {
       msg: 'This is the TextArea.',
       pageCounter: 0, 
+      bookTitle: 'The Very Hungry Caterpillar',
       bookData: [
         // {
         //   name: 'BookCover',
@@ -73,7 +81,7 @@ class App extends React.Component {
     console.log('Previous Clicked');
     socket.emit('PrevButtonClick', {msg: 'Previous button clicked'});
     if(this.state.pageCounter-1>=0) {
-      this.setState({pageCounter: this.state.pageCounter-1});
+      this.setState({pageCounter: this.state.pageCounter-2});
     } else {
       socket.emit('PrevButtonClick', {msg: "BEGINNING OF BOOK!"});
     }
@@ -83,7 +91,7 @@ class App extends React.Component {
     console.log('Next clicked');
     if (this.state.pageCounter<this.state.bookData.length-1) {
       // socket.emit('NextButtonClick', {bookData: bookData[pageCounter].image});
-      this.setState({pageCounter: this.state.pageCounter+1});
+      this.setState({pageCounter: this.state.pageCounter+2});
     } else {
       socket.emit('NextButtonClick', {msg: "END OF BOOK!"});
     }
@@ -96,20 +104,20 @@ class App extends React.Component {
   }
  
   render() {
-    {console.log("What's up brah")};
+    {console.log("Inside render function")}
     return (
       <div>
-        <div id='header'>
-          <h1>Amazing Reader App</h1>
-        </div>
-        <PrevButton clickHandler={this.onClickPrev.bind(this)}/>
-        {console.log("hello there")}
-        <NextButton clickHandler={this.onClickNext.bind(this)}/>
-        <LeftPage bookData={this.state.bookData} pageCounter={this.state.pageCounter}/>
-        <RightPage bookData={this.state.bookData} pageCounter={this.state.pageCounter}/>
-
         <Background />
-
+        <Title bookTitle={this.state.bookTitle}/>
+        <Book msg={this.state.msg} /> 
+        <LeftPageText bookData={this.state.bookData} pageCounter={this.state.pageCounter}/>
+        <RightPageText bookData={this.state.bookData} pageCounter={this.state.pageCounter}/>
+        <LeftPageImage bookData={this.state.bookData} pageCounter={this.state.pageCounter}/>
+        <RightPageImage bookData={this.state.bookData} pageCounter={this.state.pageCounter}/>
+        <PrevButton clickHandler={this.onClickPrev.bind(this)}/>
+        {console.log("Inside div")}
+        <NextButton clickHandler={this.onClickNext.bind(this)}/>
+        <Webcam />
         <Video1 />
         <Video2 />
       </div>
