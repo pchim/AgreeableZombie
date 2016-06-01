@@ -119,9 +119,10 @@ class App extends React.Component {
         <PrevButton clickHandler={this.onClickPrev.bind(this)}/>
         {console.log("Inside div")}
         <NextButton clickHandler={this.onClickNext.bind(this)}/>
-        <Webcam />
         <Video1 />
         <Video2 />
+
+        <WebCam conversation={this.state.conversation} />
       </div>
       
     );

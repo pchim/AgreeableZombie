@@ -8,8 +8,14 @@ var render = function() {
     document.getElementById('app')
   );
 };
+// var render = function() {
+//   ReactDOM.render(
+//     <App/>,
+//     document.getElementById('app')
+//   );
+// };
 
-render();
+// render();
 
 // Global variables for Twilio
 var conversationsClient;
@@ -33,18 +39,18 @@ $.getJSON('/token', function(data) {
     // Create a Conversations Client and connect to Twilio
     conversationsClient = new Twilio.Conversations.Client(accessManager);
     conversationsClient.listen().then(clientConnected, function (error) {
-        log('Could not connect to Twilio: ' + error.message);
+        // log('Could not connect to Twilio: ' + error.message);
     }); 
 });
 
 // Successfully connected!
 function clientConnected() {
   // document.getElementById('invite-controls').style.display = 'block';
-  log("Connected to Twilio. Listening for incoming Invites as '" + conversationsClient.identity + "'");
+  // log("Connected to Twilio. Listening for incoming Invites as '" + conversationsClient.identity + "'");
 
   // When conversationClient hears 'invite' event, accept the invite event and start conversation
   conversationsClient.on('invite', function (invite) {
-      log('Incoming invite from: ' + invite.from);
+      // log('Incoming invite from: ' + invite.from);
       invite.accept().then(conversationStarted);
   });
 
@@ -63,7 +69,7 @@ function clientConnected() {
       
       conversationsClient.inviteToConversation(inviteTo, options)
       .then(conversationStarted, function (error) {
-        log('Unable to create conversation');
+        // log('Unable to create conversation');
         console.error('Unable to create conversation', error);
       });
     }
@@ -72,29 +78,30 @@ function clientConnected() {
 
 // Conversation is live
 function conversationStarted(conversation) {
-    log('In an active Conversation');
+    // log('In an active Conversation');
     activeConversation = conversation;
     // Draw local video, if not already previewing
     if (!previewMedia) {
-        ReactDOM.render(<ConversationContainer conversation={conversation} />, document.getElementById('local-conversation'));
+        ReactDOM.render(<App conversation={conversation} />, document.getElementById('app'));
     }
 
     // When a participant joins, draw their video on screen
     conversation.on('participantConnected', function (participant) {
-        log("Participant '" + participant.identity + "' connected");
+        // log("Participant '" + participant.identity + "' connected");
     });
 
     // When a participant disconnects, note in log
     conversation.on('participantDisconnected', function (participant) {
-        log("Participant '" + participant.identity + "' disconnected");
+        // log("Participant '" + participant.identity + "' disconnected");
     });
 
-    // When the conversation ends, stop capturing local video
-    conversation.on('disconnected', function (conversation) {
-        log("Connected to Twilio. Listening for incoming Invites as '" + conversationsClient.identity + "'");
-        ReactDOM.unmountComponentAtNode(document.getElementById('local-conversation'));
-        activeConversation = null;
-    });
+    // // When the conversation ends, stop capturing local video
+    // conversation.on('disconnected', function (conversation) {
+    //     log("Connected to Twilio. Listening for incoming Invites as '" + conversationsClient.identity + "'");
+    //     log("Connected to Twilio. Listening for incoming Invites as '" + conversationsClient.identity + "'");
+    //     ReactDOM.unmountComponentAtNode(document.getElementById('local-conversation'));
+    //     activeConversation = null;
+    // });
 }
 
 //  Local video preview
@@ -108,7 +115,7 @@ document.getElementById('button-preview').onclick = function () {
         },
         function (error) {
             console.error('Unable to access local media', error);
-            log('Unable to access Camera and Microphone');
+            // log('Unable to access Camera and Microphone');
         });
     };
 };
