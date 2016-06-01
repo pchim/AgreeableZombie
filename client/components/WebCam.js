@@ -1,17 +1,64 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
+import ConversationContainer from './ConversationContainer.jsx';
 
 class WebCam extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      renderConvoContainer: false,
+      conversationsClient: undefined,
+      activeConversation: undefined,
+      previewMedia: undefined,
+      identity: undefined,
+      message: undefined
+    };
+
+    var conversationsClient = this.state.conversationsClient;
+    var activeConversation = this.state.activeConversation;
+    var previewMedia = this.state.previewMedia;
+    var identity = this.state.identity;
+
+    var webcam = this;
+
+    //Ajax request to server to get token
+    $.getJSON('/token', function(data) {
+      var identity = data.identity;
+      var accessManager = new Twilio.AccessManager(data.token);
+
+      // Check the browser console to see identity
+      console.log(identity);
+
+      // Create a Conversations Client and connect to Twilio
+      conversationsClient = new Twilio.Conversations.Client(accessManager);
+
+      webcam.setState({
+        identity: identity,
+        conversationsClient: conversationsClient
+      });
+      
+      conversationsClient.listen().then(webcam.clientConnected.bind(webcam), function (error) {
+          webcam.log('Could not connect to Twilio: ' + error.message);
+          console.log(error, '<<< client could not connect');
+      });
+    });
   }
 
-  componentDidMount() {
-    const conversation = this.props.conversation;
-    conversation.localMedia.attach(this.refs['localMedia']);
+  log(message) {
+    this.setState({message: message});
+    console.log("WEBCAM MESSAGE: ", message);
+  }
 
-    conversation.on('participantConnected', participant => {
-      participant.media.attach(this.refs.remoteMedia);
-    });
+  clientConnected() {
+    // document.getElementById('invite-controls').style.display = 'block';
+    console.log("Connected to Twilio. Listening for incoming Invites as '" + this.state.conversationsClient.identity + "'");
+    var webcam = this;
+    // When conversationClient hears 'invite' event, accept the invite event and start conversation
+    this.state.conversationsClient.on('invite', function (invite) {
+        webcam.log('Incoming invite from: ' + invite.from);
+        invite.accept().then(webcam.conversationStarted.bind(webcam));
+    });
   }
 
   componentWillUnmount() {
@@ -21,12 +68,11 @@ class WebCam extends React.Component {
   }
 
   conversationStarted(conversation) {
-    console.log('In an active Conversation');
     var webcam = this;
+
     this.setState({activeConversation:conversation});
     // Draw local video, if not already previewing
     if (!this.state.previewMedia) {
-      console.log('trying to setState conversation of webcam');
       this.setState({renderConvoContainer: true});
     }
 
@@ -39,15 +85,14 @@ class WebCam extends React.Component {
     // When a participant disconnects, note in log
     webcam.state.activeConversation.on('participantDisconnected', function (participant) {
         webcam.log("Participant '" + participant.identity + "' disconnected");
+        webcam.setState({renderConvoContainer: false});
     });
 
-    // // When the conversation ends, stop capturing local video
-    // conversation.on('disconnected', function (conversation) {
-    //     log("Connected to Twilio. Listening for incoming Invites as '" + conversationsClient.identity + "'");
-    //     log("Connected to Twilio. Listening for incoming Invites as '" + conversationsClient.identity + "'");
-    //     ReactDOM.unmountComponentAtNode(document.getElementById('local-conversation'));
-    //     activeConversation = null;
-    // });
+    // When the conversation ends, stop capturing local video
+    webcam.state.activeConversation.on('disconnected', function (conversation) {
+        webcam.log("Connected to Twilio. Listening for incoming Invites as '" + webcam.state.conversationsClient.identity + "'");
+        webcam.setState({renderConvoContainer: false, activeConversation: null, previewMedia: null});
+    });
   }
 
 
@@ -90,15 +135,12 @@ class WebCam extends React.Component {
     return (
       <div>
         <h1>WEBCAM</h1>
-        <input id="user-input" type="test" placeholder="Username" />
-        <button id="user-button">Enter Username</button>
-
-        <button id="button-preview" onClick={this.handlePreview.bind(this)}>Button Preview</button>
+        <button id="button-preview" onClick={this.handlePreview.bind(this)}>Webcam Preview</button>
 
         <input id="invite-to" type="text" placeholder="Identity to send an invite to" />
-        <button id="button-invite" onClick={this.handleInvite.bind(this)}>Button Invite</button>
+        <button id="button-invite" onClick={this.handleInvite.bind(this)}>Invite</button>
 
-        <div id="local-media">Container for Local Media</div>
+        <div id="local-media" className="local-webcam">Container for Local Media</div>
         {this.state.renderConvoContainer === true ? <ConversationContainer conversation={this.state.activeConversation} /> : null }
         <p id="log-content">{this.state.message}</p>
       </div>
