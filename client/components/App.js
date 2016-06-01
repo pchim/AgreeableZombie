@@ -1,11 +1,10 @@
 import React, { PropTypes, Component } from 'react';
+
 import Book from './Book.js';
 import Title from './Title.js';
 import PrevButton from './PrevButton.js';
 import NextButton from './NextButton.js';
 import Background from './Background.js';
-// import LeftPage from './LeftPage.js';
-// import RightPage from './RightPage.js';
 
 import LeftPageText from './LeftPageText.js';
 import RightPageText from './RightPageText.js';
@@ -14,6 +13,9 @@ import RightPageImage from './RightPageImage.js';
 import Video1 from './Video1.js';
 import Video2 from './Video2.js';
 import Webcam from './Webcam.js';
+
+import WebCam from './WebCam.js';
+
 
 class App extends React.Component {
   constructor(props) {
@@ -121,6 +123,7 @@ class App extends React.Component {
         <Video1 />
         <Video2 />
       </div>
+      
     );
   }
 };
