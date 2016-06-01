@@ -7,7 +7,6 @@ import LeftPage from './LeftPage.js';
 import RightPage from './RightPage.js';
 import Video1 from './Video1.js';
 import Video2 from './Video2.js';
-import fakeBookData from './fakeBookData.js';
 
 class App extends React.Component {
   constructor(props) {
@@ -17,30 +16,46 @@ class App extends React.Component {
       msg: 'This is the TextArea.',
       pageCounter: 0, 
       bookData: [
+        // {
+        //   name: 'BookCover',
+        //   content: null,
+        //   image: 'https://drive.google.com/open?id=0Bz-k8izjSKu9VjhNWjJWN056UkE'
+        // },
         {
           name: 'Page1',
-          image: 'http://www.jb.man.ac.uk/aboutus/lovell/bluebook/bluebook051.jpg'
+          content: 'In the light of the moon a little egg lay on a leaf.',
+          image: 'http://bit.ly/22yATDi'
         },
         {
           name: 'Page2',
-          image: 'http://www.jb.man.ac.uk/aboutus/lovell/bluebook/bluebook076.jpg'
+          content: 'On Tuesday he ate through two pears. But he was still hungry.',
+          image: 'http://bit.ly/1WZdoUc'
         },
         {
           name: 'Page3',
-          image: 'http://www.jb.man.ac.uk/aboutus/lovell/bluebook/bluebook076.jpg'
+          content: 'On Saturday, he ate through one piece of chocolate cake, one ice-cream cone, one pickle, one slice of Swiss cheese, one slice of salami, one lollipop, one piece of cherry pie, one sausage, one cupcake, and one slice of watermelon. That night he had a stomach ache.',
+          image: 'http://bit.ly/1Pl7nPa'
         },
         {
           name: 'Page4',
-          image: 'http://www.jb.man.ac.uk/aboutus/lovell/bluebook/bluebook096.jpg'
+          content: 'He built a small house, called a cocoon, around himself. He stayed inside for more than two weeks. Then he nibbled a hole in the cocoon, pushed is way out and …',
+          image: 'http://bit.ly/1TXMLeW'
         },
         {
           name: 'Page5',
-          image: 'https://s-media-cache-ak0.pinimg.com/736x/9e/7b/d3/9e7bd39f635900028cd26596cbda365a.jpg'
+          content: 'Now he wasn’t hungry anymore – and he wasn’t a little caterpillar anymore. He was a big, fat caterpillar.',
+          image: 'http://bit.ly/1WxlhjD'
         },
         {
           name: 'Page6',
-          image: 'https://s-media-cache-ak0.pinimg.com/736x/2a/da/5e/2ada5e86d4a991b18e30e7d945d359aa.jpg'
+          content: 'He was a beautiful butterfly!',
+          image: 'http://bit.ly/1XQvu9S'
         }
+        // {
+        //   name: 'BackCover'
+        //   content: null,
+        //   image: 'http://bit.ly/1Uvgqw0'
+        // }
 
       ]
     };
@@ -84,8 +99,9 @@ class App extends React.Component {
     {console.log("What's up brah")};
     return (
       <div>
-        <h1> Hello I am App </h1>
-        
+        <div id='header'>
+          <h1>Amazing Reader App</h1>
+        </div>
         <PrevButton clickHandler={this.onClickPrev.bind(this)}/>
         {console.log("hello there")}
         <NextButton clickHandler={this.onClickNext.bind(this)}/>
