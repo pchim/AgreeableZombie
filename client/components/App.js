@@ -1,6 +1,7 @@
 import React, { PropTypes, Component } from 'react';
 import TextArea from './TextArea.js';
 import Button from './button.js';
+import WebCam from './WebCam.js';
 
 class App extends React.Component {
   constructor(props) {
@@ -41,7 +42,9 @@ class App extends React.Component {
         <TextArea msg={this.state.msg}/>
         <Button clickHandler={this.onClickPrev.bind(this)}/> 
         <Button clickHandler={this.onClickNext.bind(this)}/> 
+        <WebCam />
       </div>
+      
     );
   }
 };
