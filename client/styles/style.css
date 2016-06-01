@@ -92,6 +92,6 @@ body {
   text-align: center;
 }
 
-.book-page {
+.page-image, .page-words {
   width: 400px;
 }
