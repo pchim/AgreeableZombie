@@ -56,6 +56,8 @@ app.get('/token', function(req, res) {
     });
 });
 
+// draw history for canvas
+var drawHistory = [];
 
 // Socket.IO Connection
 io.on('connection', (socket) => {
@@ -69,6 +71,17 @@ io.on('connection', (socket) => {
   });
   socket.on('disconnect', () => {
     console.log('user disconnected');
+  });
+
+  //Socket Events for Canvas interactions
+  for(var i in drawHistory){
+    socket.emit('drawLine', drawHistory[i]);
+  }
+
+  socket.on('drawLine', data => {
+    var newLine = {line: data.line};
+    drawHistory.push(newLine);
+    io.emit('drawLine', newLine);
   });
 });
 
