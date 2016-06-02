@@ -13,12 +13,12 @@ import RightPageImage from './RightPageImage.js';
 import WebCam from './WebCam.js';
 import Canvas from './Canvas.jsx';
 
-class App extends React.Component { 
+class App extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      pageCounter: 0, 
+      pageCounter: 0,
       bookTitle: '',
       bookData: [],
       author: 'Eric Carle'
@@ -71,18 +71,18 @@ class App extends React.Component {
 
   onClickNext() {
     console.log('Next clicked');
-    if (this.state.pageCounter<this.state.bookData.length-1) { 
+    if (this.state.pageCounter<this.state.bookData.length-1) {
       this.setState({pageCounter: this.state.pageCounter+2});
       socket.emit('NextButtonClick', {msg: 'Next button clicked', pageCounter: this.state.pageCounter+2});
     } else {
       socket.emit('NextButtonClick', {msg: "END OF BOOK!", pageCounter: this.state.pageCounter});
-    }  
+    }
   }
 
   changeText(event) {
     this.setState ({msg: event.msg});
   }
- 
+
   render() {
     if (this.state.bookData.length > 0) {
      return (
@@ -112,4 +112,3 @@ class App extends React.Component {
 };
 
 export default App;
-

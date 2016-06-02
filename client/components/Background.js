@@ -5,5 +5,5 @@ var Background = (props) => (
         <img id='book-background-image' src="../assets/open-book-template.png" />
       </div>
     );
-  
+
 export default Background;
