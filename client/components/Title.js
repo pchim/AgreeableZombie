@@ -3,7 +3,8 @@ import React, { PropTypes, Component } from 'react';
 
 var Title = (props) => (
   <div className="title"> 
-    <h4>{props.bookTitle}</h4>
+    <h2>{props.bookTitle}</h2>
+    <p className="author">By {props.author}</p>
   </div>  
   );
 

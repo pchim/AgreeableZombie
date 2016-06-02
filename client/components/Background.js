@@ -2,7 +2,7 @@ import React, { PropTypes, Component } from 'react';
 
 var Background = (props) => (
       <div className="background">
-      <img src="../assets/background.jpg"></img>
+        <img id='book-background-image' src="../assets/open-book-template.png" />
       </div>
     );
   
