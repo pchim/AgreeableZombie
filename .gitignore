@@ -1,3 +1,12 @@
+#logs
+npm-debug.log
+
+#.env
+.env
+
+#npm modules
 node_modules
 .DS_Store
+
+# webpack bundle
 client/bundle.js
