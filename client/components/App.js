@@ -1,4 +1,9 @@
 import React, { PropTypes, Component } from 'react';
+<<<<<<< 73c23ac6ed5fa64d59b818b76de48df81776f2db
+=======
+
+import Library from './Library.js';
+>>>>>>> database
 import Book from './Book.js';
 import Title from './Title.js';
 import PrevButton from './PrevButton.js';
@@ -85,9 +90,16 @@ class App extends React.Component {
   }
  
   render() {
+<<<<<<< 73c23ac6ed5fa64d59b818b76de48df81776f2db
     if (this.state.bookData.length > 0) {
       return (
         <div>
+=======
+    {console.log("Inside render function")}
+    return (
+      <div>
+        <Library />
+>>>>>>> database
         <Background />
         <Title bookTitle={this.state.bookTitle}/>
         <Book msg={this.state.msg} /> 
