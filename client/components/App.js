@@ -12,8 +12,6 @@ import LeftPageImage from './LeftPageImage.js';
 import RightPageImage from './RightPageImage.js';
 import Video1 from './Video1.js';
 import Video2 from './Video2.js';
-import Webcam from './Webcam.js';
-
 import WebCam from './WebCam.js';
 
 
