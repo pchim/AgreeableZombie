@@ -22,12 +22,11 @@ class Canvas extends React.Component {
 
     socket.on('drawLine', data => {
       var line = data.line;
-      console.log(line, '<<<<< line for drawing on canvas');
       var context = this.state.context;
       context.beginPath();
       context.lineWidth = 2;
-      context.moveTo(line[0].x * this.state.width, line[0].y * this.state.height);
-      context.lineTo(line[1].x * this.state.width, line[1].y * this.state.height);
+      context.moveTo(line[0].x - 70 , line[0].y - 80); // adjusts draw point to be in book component
+      context.lineTo(line[1].x - 70 , line[1].y - 80);
       context.stroke();
     });
   }
@@ -35,23 +34,22 @@ class Canvas extends React.Component {
   componentDidMount() {
     var canvas = this.refs.canvas;
     var context = canvas.getContext('2d');
-    canvas.width = this.state.width;
-    canvas.height = this.state.height;
+    canvas.width = document.getElementsByClassName('book')[0].clientWidth;
+    canvas.height = document.getElementsByClassName('book')[0].clientHeight;
 
     canvas.onmousedown = e => {
-      // this.setState
-      console.log(e);
       this.setState({click:true});
     };
 
     canvas.onmouseup = e => {
-      console.log('mouse up detected');
       this.setState({click:false});
     };
 
+    var boundingRect = document.getElementsByClassName('book')[0].getBoundingClientRect();
+    console.log(boundingRect, "<<< boundingRect");
     canvas.onmousemove = e => {
-      var mx = e.clientX / canvas.width;
-      var my = e.clientY / canvas.height;
+      var mx = e.clientX;
+      var my = e.clientY;
 
       this.setState({
         move: true,
@@ -79,7 +77,6 @@ class Canvas extends React.Component {
   render() {
     return (
       <div className="canvas-container">
-      THE CANVAS
         <canvas id="canvas" ref="canvas" className="canvas"></canvas>
       </div>
     );
