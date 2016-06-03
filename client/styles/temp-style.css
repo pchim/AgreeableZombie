@@ -37,15 +37,18 @@ body {
   color: white;
 }
 
-.prev-button {
-  display: inline-block;
-  margin: 0 auto;
+#left {
+  float: left;
+  padding-top: 230px;
+  padding-left: 250px;
 }
 
-.next-button {
-  display: inline-block;
+#right {
+  float: right;
+  padding-top: 230px;
+  padding-right: 250px;
 }
 
-#buttons {
+#center {
   margin: 0 auto;
 }

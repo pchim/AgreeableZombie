@@ -96,10 +96,10 @@ class App extends React.Component {
       <div>
         <Logo />
         <Title bookTitle={this.state.bookTitle} author={this.state.author}/>
-        <Background />
         <div id='buttons'>
-          <PrevButton />
-          <NextButton />
+          <div id='left'><PrevButton /></div>
+          <div id='right'><NextButton /></div>
+          <div id='center'><Background /></div>
         </div>
       </div>
       
