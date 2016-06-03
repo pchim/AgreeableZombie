@@ -1,11 +1,13 @@
-import Karma from '../../client/components/Karma.js';
-var TestUtils = require('react-addons-test-utils');
-var React = require('react');
-var expect = require('expect');
+//this is an enzyme test
+//https://github.com/airbnb/enzyme
 
-describe('root', function () {
-  it('renders without problems', function () {
-    var root = TestUtils.renderIntoDocument(<Karma/>);
-    expect(root).toExist();
+import App from '../../client/components/App.js';
+const expect = require('expect');
+import React from 'react';
+import { shallow, mount, render } from 'enzyme';
+
+describe("App Component", function() {
+  it("renders without issue", function() {
+    expect(mount(<App />).find('.app').length).toBe(1);
   });
 });

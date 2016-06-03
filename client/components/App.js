@@ -1,5 +1,10 @@
 import React, { PropTypes, Component } from 'react';
+<<<<<<< a53422de1fe072d50650c3217fd5c170980909c5
 import Library from './Library.js';
+=======
+
+import socket from '../../websocket.js';
+>>>>>>> Adds React tests
 import Book from './Book.js';
 import Logo from './Logo.js';
 import Title from './Title.js';
@@ -13,6 +18,11 @@ import RightPageImage from './RightPageImage.js';
 import WebCam from './WebCam.js';
 import Canvas from './Canvas.jsx';
 
+<<<<<<< a53422de1fe072d50650c3217fd5c170980909c5
+=======
+
+
+>>>>>>> Adds React tests
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -84,7 +94,9 @@ class App extends React.Component {
   }
 
   render() {
+
     if (this.state.bookData.length > 0) {
+<<<<<<< a53422de1fe072d50650c3217fd5c170980909c5
      return (
           <div>
             <div id="webcam-features">
@@ -105,6 +117,29 @@ class App extends React.Component {
             <Canvas />
           </div>
         );
+=======
+      return (
+        <div>
+    return (
+
+      <div className="app" >
+        <Background />
+        <Title bookTitle={this.state.bookTitle}/>
+        <Book msg={this.state.msg} />
+        <LeftPageText bookData={this.state.bookData} pageCounter={this.state.pageCounter}/>
+        <RightPageText bookData={this.state.bookData} pageCounter={this.state.pageCounter}/>
+        <LeftPageImage bookData={this.state.bookData} pageCounter={this.state.pageCounter}/>
+        <RightPageImage bookData={this.state.bookData} pageCounter={this.state.pageCounter}/>
+        <PrevButton clickHandler={this.onClickPrev.bind(this)}/>
+        <NextButton clickHandler={this.onClickNext.bind(this)}/>
+        <Video1 />
+        <Video2 />
+        <WebCam conversation={this.state.conversation} />
+
+        <Canvas />
+      </div>
+    );
+>>>>>>> Adds React tests
   } else {
     return(<p> Loading ... </p>);
   }
