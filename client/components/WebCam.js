@@ -142,7 +142,7 @@ class WebCam extends React.Component {
           <input type="button" id="button-invite" onClick={this.handleInvite.bind(this)} value="Invite" />
         </div>
 
-        <div id="local-media" className="local-webcam">Container for Local Media</div>
+        <div id="local-media" className="local-webcam"></div>
         {this.state.renderConvoContainer === true ? <ConversationContainer conversation={this.state.activeConversation} /> : null }
         <p id="log-content">{this.state.message}</p>
       </div>

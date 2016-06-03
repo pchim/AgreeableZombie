@@ -17,10 +17,10 @@ import WebCam from './WebCam.js';
 import Canvas from './Canvas.jsx';
 
 
-// import LeftPageText from './LeftPageText.js';
-// import RightPageText from './RightPageText.js';
-// import LeftPageImage from './LeftPageImage.js';
-// import RightPageImage from './RightPageImage.js';
+import LeftPageText from './LeftPageText.js';
+import RightPageText from './RightPageText.js';
+import LeftPageImage from './LeftPageImage.js';
+import RightPageImage from './RightPageImage.js';
 // import Video1 from './Video1.js';
 // import Video2 from './Video2.js';
 import WebCam from './WebCam.js';
@@ -105,9 +105,14 @@ class App extends React.Component {
         <Logo />
         <Title bookTitle={this.state.bookTitle} author={this.state.author}/>
         <div id='buttons-with-book'>
-          <div id='left'><PrevButton /></div>
-          <div id='right'><NextButton /></div>
-          <div id='center'><Background /></div>
+          <div id='left'><PrevButton clickHandler={this.onClickPrev.bind(this)}/></div>
+          <div id='right'><NextButton clickHandler={this.onClickNext.bind(this)}/></div>
+          <div id='center'><Background />
+            <LeftPageText bookData={this.state.bookData} pageCounter={this.state.pageCounter}/>
+            <LeftPageImage bookData={this.state.bookData} pageCounter={this.state.pageCounter}/>
+            <RightPageText bookData={this.state.bookData} pageCounter={this.state.pageCounter}/>
+            <RightPageImage bookData={this.state.bookData} pageCounter={this.state.pageCounter}/>
+          </div>
         </div>
         <div id="webcam-features">
           <WebCam conversation={this.state.conversation}/>
