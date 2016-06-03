@@ -1,5 +1,5 @@
 html {
-  background: url(../assets/background.jpg) no-repeat center center fixed; 
+  /*background: url(../assets/background.jpg) no-repeat center center fixed;*/ 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -152,4 +152,9 @@ body {
   background-color: white;
   text-align: center;
 }
-
+.canvas-container {
+  position: absolute;
+  top: 80px;
+  left: 70px;
+  z-index: 30;
+}

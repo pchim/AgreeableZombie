@@ -13,7 +13,7 @@ import RightPageImage from './RightPageImage.js';
 import Video1 from './Video1.js';
 import Video2 from './Video2.js';
 import WebCam from './WebCam.js';
-
+import Canvas from './Canvas.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -121,6 +121,8 @@ class App extends React.Component {
         <Video2 />
 
         <WebCam conversation={this.state.conversation} />
+        
+        <Canvas />
       </div>
       
     );
