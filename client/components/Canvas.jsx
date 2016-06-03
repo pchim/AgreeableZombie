@@ -1,11 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import update from 'react-addons-update';
 
 class Canvas extends React.Component {
   constructor(props){
     super(props);
-    
+
     this.state = {
       // mouse state
       click: false,
@@ -20,6 +19,17 @@ class Canvas extends React.Component {
       height: window.innerHeight,
       socket: socket
     };
+
+    socket.on('drawLine', data => {
+      var line = data.line;
+      console.log(line, '<<<<< line for drawing on canvas');
+      var context = this.state.context;
+      context.beginPath();
+      context.lineWidth = 2;
+      context.moveTo(line[0].x * this.state.width, line[0].y * this.state.height);
+      context.lineTo(line[1].x * this.state.width, line[1].y * this.state.height);
+      context.stroke();
+    });
   }
 
   componentDidMount() {
@@ -49,11 +59,21 @@ class Canvas extends React.Component {
       });
     };
 
-
     this.setState({
       canvas: canvas,
       context: context
     });
+
+    this.drawLoop();
+  }
+
+  drawLoop() {
+    if(this.state.click && this.state.move && this.state.pos_prev) {
+      socket.emit('drawLine', {line: [this.state.pos, this.state.pos_prev]});
+      this.setState({move: false});
+    }
+    this.setState({pos_prev: this.state.pos});
+    setTimeout(this.drawLoop.bind(this), 25);
   }
 
   render() {
