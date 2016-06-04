@@ -72,32 +72,32 @@ class App extends React.Component {
     socket.on('prev page', (data) => {
       console.log ('data from server', data);
       this.setState({msg: data.msg});
+      this.setState({pageCounter: data.pageCounter});
     });
 
     socket.on('next page', (data) => {
       this.setState({msg: data.msg});
+      this.setState({pageCounter: data.pageCounter});
     });
   }
   onClickPrev() {
     console.log('Previous Clicked');
-    socket.emit('PrevButtonClick', {msg: 'Previous button clicked'});
+    socket.emit('PrevButtonClick', {msg: 'Previous button clicked', pageCounter: this.state.pageCounter-2});
     if(this.state.pageCounter-1>=0) {
       this.setState({pageCounter: this.state.pageCounter-2});
     } else {
-      socket.emit('PrevButtonClick', {msg: "BEGINNING OF BOOK!"});
+      socket.emit('PrevButtonClick', {msg: "BEGINNING OF BOOK!", pageCounter: this.state.pageCounter});
     }
   }
 
   onClickNext() {
     console.log('Next clicked');
-    if (this.state.pageCounter<this.state.bookData.length-1) {
-      // socket.emit('NextButtonClick', {bookData: bookData[pageCounter].image});
+    if (this.state.pageCounter<this.state.bookData.length-1) { 
       this.setState({pageCounter: this.state.pageCounter+2});
+      socket.emit('NextButtonClick', {msg: 'Next button clicked', pageCounter: this.state.pageCounter+2});
     } else {
-      socket.emit('NextButtonClick', {msg: "END OF BOOK!"});
-    }
-    // socket.emit('NextButtonClick', {msg: 'Next button clicked'});
-
+      socket.emit('NextButtonClick', {msg: "END OF BOOK!", pageCounter: this.state.pageCounter});
+    }  
   }
 
   changeText(event) {
