@@ -1,11 +1,9 @@
 import React, { PropTypes, Component } from 'react';
-
 import Book from './Book.js';
 import Title from './Title.js';
 import PrevButton from './PrevButton.js';
 import NextButton from './NextButton.js';
 import Background from './Background.js';
-
 import LeftPageText from './LeftPageText.js';
 import RightPageText from './RightPageText.js';
 import LeftPageImage from './LeftPageImage.js';
