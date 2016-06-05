@@ -28,10 +28,14 @@ class App extends React.Component {
     var app = this;
 
     $.getJSON('/api/books', function(data) {
-      var title = data.bookTitle;
-      var bookData = data.bookData;
 
-      console.log(bookData);
+      console.log('data from server is - ', data);
+
+      var title = data[0].bookTitle;
+      var bookData = data[0].bookData;
+
+      console.log('bookTitle is - ', title);
+      console.log('bookdata is - ', bookData);
 
       app.setState({
         bookTitle: title,
@@ -75,7 +79,6 @@ class App extends React.Component {
   }
  
   render() {
-    {console.log("Inside render function")}
     return (
       <div>
         <Background />
@@ -86,7 +89,6 @@ class App extends React.Component {
         <LeftPageImage bookData={this.state.bookData} pageCounter={this.state.pageCounter}/>
         <RightPageImage bookData={this.state.bookData} pageCounter={this.state.pageCounter}/>
         <PrevButton clickHandler={this.onClickPrev.bind(this)}/>
-        {console.log("Inside div")}
         <NextButton clickHandler={this.onClickNext.bind(this)}/>
         <Video1 />
         <Video2 />
