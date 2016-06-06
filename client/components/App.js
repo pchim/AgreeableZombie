@@ -25,8 +25,20 @@ class App extends React.Component {
       bookData: []
     };
 
-    var app = this;
+    socket.on('prev page', (data) => {
+      console.log ('data from server', data);
+      this.setState({msg: data.msg});
+      this.setState({pageCounter: data.pageCounter});
+    });
 
+    socket.on('next page', (data) => {
+      this.setState({msg: data.msg});
+      this.setState({pageCounter: data.pageCounter});
+    });
+  }
+
+  componentWillMount() {
+    var app = this;
     $.getJSON('/api/books', function(data) {
 
       console.log('data from server is - ', data);
@@ -42,18 +54,12 @@ class App extends React.Component {
         bookData: bookData
       });
     });
-
-    socket.on('prev page', (data) => {
-      console.log ('data from server', data);
-      this.setState({msg: data.msg});
-      this.setState({pageCounter: data.pageCounter});
-    });
-
-    socket.on('next page', (data) => {
-      this.setState({msg: data.msg});
-      this.setState({pageCounter: data.pageCounter});
-    });
   }
+
+  componentDidMount() {
+    this.render();
+  }
+
   onClickPrev() {
     console.log('Previous Clicked');
     socket.emit('PrevButtonClick', {msg: 'Previous button clicked', pageCounter: this.state.pageCounter-2});
@@ -79,8 +85,9 @@ class App extends React.Component {
   }
  
   render() {
-    return (
-      <div>
+    if (this.state.bookData.length > 0) {
+      return (
+        <div>
         <Background />
         <Title bookTitle={this.state.bookTitle}/>
         <Book msg={this.state.msg} /> 
@@ -97,8 +104,11 @@ class App extends React.Component {
         
         <Canvas />
       </div>
-      
     );
+  } else {
+    return (<p>  Loading .. </p>);
+  }
+      
   }
 };
 
