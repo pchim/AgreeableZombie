@@ -1,7 +1,6 @@
 import React, { PropTypes, Component } from 'react';
 import Library from './Library.js';
 import Book from './Book.js';
-// import Library from './Library.js';
 import Logo from './Logo.js';
 import Title from './Title.js';
 import Background from './Background.js';
@@ -98,8 +97,8 @@ class App extends React.Component {
         <Logo />
         <Title bookTitle={this.state.bookTitle} author={this.state.author}/>
         <div id='buttons-with-book'>
-          <div id='left'><PrevButton clickHandler={this.onClickPrev.bind(this)}/></div>
-          <div id='right'><NextButton clickHandler={this.onClickNext.bind(this)}/></div>
+          <div id='left-button'><PrevButton clickHandler={this.onClickPrev.bind(this)}/></div>
+          <div id='right-button'><NextButton clickHandler={this.onClickNext.bind(this)}/></div>
           <div id='center'><Background />
             <LeftPageText bookData={this.state.bookData} pageCounter={this.state.pageCounter}/>
             <LeftPageImage bookData={this.state.bookData} pageCounter={this.state.pageCounter}/>
@@ -115,29 +114,4 @@ class App extends React.Component {
 };
 
 export default App;
-/* <Library />
-        <Title bookTitle={this.state.bookTitle}/>
-        <Background />
-        <Book msg={this.state.msg} /> 
-        <LeftPageText bookData={this.state.bookData} pageCounter={this.state.pageCounter}/>
-        <RightPageText bookData={this.state.bookData} pageCounter={this.state.pageCounter}/>
-        <LeftPageImage bookData={this.state.bookData} pageCounter={this.state.pageCounter}/>
-        <RightPageImage bookData={this.state.bookData} pageCounter={this.state.pageCounter}/>
-        <PrevButton clickHandler={this.onClickPrev.bind(this)}/>
-        <NextButton clickHandler={this.onClickNext.bind(this)}/>
-        <Video1 />
-        <Video2 />
-        <WebCam conversation={this.state.conversation} />
-        
-        <Canvas />
-      </div>
-    );
-  } else {
-    return (<p>  Loading .. </p>);
-  }
-      
-  }
-};
 
-export default App;
-        <WebCam conversation={this.state.conversation} />*/

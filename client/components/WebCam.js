@@ -97,7 +97,6 @@ class WebCam extends React.Component {
   }
 
 
-
   handleInvite(e) {
     var inviteTo = document.getElementById('invite-to').value;
 
@@ -135,14 +134,15 @@ class WebCam extends React.Component {
   render() {
     return (
       <div>
-        <input type="button" id="button-preview" value="WebCam Preview" onClick={this.handlePreview.bind(this)} /><br/>
+        <input type="button" id="button-preview" value="WebCam Preview"  className="hvr-back-pulse"onClick={this.handlePreview.bind(this)} /><br/>
 
         <div id="invite-section">
           <input id="invite-to" type="text" placeholder="Invite friend by username" />
-          <input type="button" id="button-invite" onClick={this.handleInvite.bind(this)} value="Invite" />
+          <input type="button" id="button-invite"  className="hvr-back-pulse" onClick={this.handleInvite.bind(this)} value="Invite" />
         </div>
 
         <div id="local-media" className="local-webcam"></div>
+        <p id="your-username">You: {this.state.identity}</p>
         {this.state.renderConvoContainer === true ? <ConversationContainer conversation={this.state.activeConversation} /> : null }
       </div>
     );
