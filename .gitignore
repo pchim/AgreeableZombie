@@ -10,6 +10,7 @@ node_modules
 
 # webpack bundle
 client/bundle.js
+client/bundle.js.map
 
 #git files
 ./git

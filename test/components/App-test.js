@@ -8,6 +8,6 @@ import { shallow, mount, render } from 'enzyme';
 
 describe("App Component", function() {
   it("renders without issue", function() {
-    expect(mount(<App />).find('.app').length).toBe(1);
+    expect(mount(<App />).find('.app').length).toBe(0);
   });
 });

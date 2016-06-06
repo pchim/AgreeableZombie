@@ -1,6 +1,5 @@
 import React, { PropTypes, Component } from 'react';
 import Library from './Library.js';
-import socket from '../../websocket.js';
 import Book from './Book.js';
 import Logo from './Logo.js';
 import Title from './Title.js';
@@ -13,6 +12,9 @@ import LeftPageImage from './LeftPageImage.js';
 import RightPageImage from './RightPageImage.js';
 import WebCam from './WebCam.js';
 import Canvas from './Canvas.jsx';
+import socket from '../../websocket.js';
+import $ from 'jquery';
+
 
 class App extends React.Component {
   constructor(props) {
