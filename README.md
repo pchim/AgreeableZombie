@@ -6,7 +6,7 @@
 * **David Doan** - Development Team Member
 * **Jen Wong** - Development Team Member
 
-### See Demo Here
+### Demo
 159.203.213.49:8000
 
 ### Requirements
@@ -14,7 +14,7 @@
 * mongodb
 
 ### Description
-Read With Me is a remote reading app, that allows parents who are away from their kids to interactively read and webcam with them online. Both parties can draw on the storybook, change the pages, and make each page images animate.
+Read With Me is a remote reading app, that allows parents who are away from their kids to interactively read and webcam with them online. Both parties can draw on the storybook, navigate pages, and make each page image animate.
 
 ### Installing Dependencies
 
