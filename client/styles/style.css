@@ -1,3 +1,8 @@
+@font-face {
+  font-family:'TravelingTypewriter';
+  src: url('../assets/TravelingTypewriter.otf');
+}
+
 body {
   background: url(../assets/cartoon-wallpaper.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -209,4 +214,13 @@ input {
   top: 390px;
   left: 20px;
   border-radius: 15px;
+}
+
+.canvas-container {
+  position: absolute;
+  top: 150px;
+  left: 500px;
+  z-index: 3000;
+  width: 800px;
+  height: 480px;
 }

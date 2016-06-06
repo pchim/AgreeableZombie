@@ -102,6 +102,7 @@ class App extends React.Component {
                 <RightPageImage bookData={this.state.bookData} pageCounter={this.state.pageCounter}/>
               </div>
             </div>
+            <Canvas />
           </div>
         );
   } else {
