@@ -26,5 +26,6 @@ npm install -g nodemon webpack
 webpack --watch
 mongod
 nodemon server.js
-Visit localhost:8000 in the browser.
+
+//Visit localhost:8000 in the browser.
 
