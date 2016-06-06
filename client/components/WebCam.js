@@ -20,8 +20,7 @@ class WebCam extends React.Component {
     var previewMedia = this.state.previewMedia;
     var identity = this.state.identity;
 
-    var webc
-    am = this;
+    var webcam = this;
 
     //Ajax request to server to get token
     $.getJSON('/token', function(data) {
@@ -135,13 +134,12 @@ class WebCam extends React.Component {
   render() {
     return (
       <div>
-        <h1>WEBCAM</h1>
-        <button id="button-preview" onClick={this.handlePreview.bind(this)}>Webcam Preview</button>
+        <input type="button" id="button-preview" value="WebCam Preview"  className="hvr-back-pulse"onClick={this.handlePreview.bind(this)} /><br/> 
 
         <input id="invite-to" type="text" placeholder="Identity to send an invite to" />
-        <button id="button-invite" onClick={this.handleInvite.bind(this)}>Invite</button>
+        <input type="button" id="button-invite"  className="hvr-back-pulse" onClick={this.handleInvite.bind(this)} value="Invite" />
 
-        <div id="local-media" className="local-webcam">Container for Local Media</div>
+        <div id="local-media" className="local-webcam"></div>
         {this.state.renderConvoContainer === true ? <ConversationContainer conversation={this.state.activeConversation} /> : null }
         <p id="log-content">{this.state.message}</p>
       </div>

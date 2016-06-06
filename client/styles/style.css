@@ -7,7 +7,6 @@ body {
   margin: 0;
   font-family: TravelingTypewriter, sans-serif;
 }
-
 .header {
   /*background-color: #d6c6a7;*/
   text-align: center;
@@ -211,4 +210,3 @@ input {
   left: 20px;
   border-radius: 15px;
 }
-
