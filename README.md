@@ -1,10 +1,11 @@
 # Read With Me
 
 ## Team
+* **Ashwini Jogwar** - Product Owner
+* **Cathy Lee** - Scrum Master
 * **David Doan** - Development Team Member
 * **Jen Wong** - Development Team Member
-* **Cathy Lee** - Scrum Master
-* **Ashwini Jogwar** - Product Owner
+
 
 ### Requirements
 * node.js - v6.2.0
