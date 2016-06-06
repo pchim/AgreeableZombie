@@ -1,3 +1,8 @@
+@font-face {
+  font-family:'TravelingTypewriter';
+  src: url('../assets/TravelingTypewriter.otf');
+}
+
 body {
   background: url(../assets/cartoon-wallpaper.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
