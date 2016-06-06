@@ -1,3 +1,5 @@
+![Alt text](/client/assets/readwithme-logo.png "Read With Me Logo")
+
 # Read With Me
 
 ## Team
