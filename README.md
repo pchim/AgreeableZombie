@@ -25,5 +25,3 @@ mongod
 nodemon server.js
 Visit `localhost:8000` in the browser.
 
-**The server file is in the root directory for easy access, but there is a server 
-folder where all logic will be stored.
