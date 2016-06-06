@@ -25,8 +25,8 @@ class Canvas extends React.Component {
       var context = this.state.context;
       context.beginPath();
       context.lineWidth = 2;
-      context.moveTo(line[0].x - 70 , line[0].y - 80); // adjusts draw point to be in book component
-      context.lineTo(line[1].x - 70 , line[1].y - 80);
+      context.moveTo(line[0].x - 500 , line[0].y - 150 ); // adjusts draw point to be in book component
+      context.lineTo(line[1].x - 500 , line[1].y - 150 );
       context.stroke();
     });
   }
@@ -34,8 +34,8 @@ class Canvas extends React.Component {
   componentDidMount() {
     var canvas = this.refs.canvas;
     var context = canvas.getContext('2d');
-    canvas.width = document.getElementsByClassName('book')[0].clientWidth;
-    canvas.height = document.getElementsByClassName('book')[0].clientHeight;
+    canvas.width = document.getElementsByClassName('background')[0].clientWidth;
+    canvas.height = document.getElementsByClassName('background')[0].clientHeight;
 
     canvas.onmousedown = e => {
       this.setState({click:true});
@@ -45,8 +45,8 @@ class Canvas extends React.Component {
       this.setState({click:false});
     };
 
-    var boundingRect = document.getElementsByClassName('book')[0].getBoundingClientRect();
-    console.log(boundingRect, "<<< boundingRect");
+    var boundingRect = document.getElementsByClassName('background')[0].getBoundingClientRect();
+  
     canvas.onmousemove = e => {
       var mx = e.clientX;
       var my = e.clientY;
