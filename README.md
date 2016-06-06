@@ -12,6 +12,7 @@
 ### Requirements
 * node.js - v6.2.0
 * mongodb
+* Go to Twilio's site and follow directions at (https://www.twilio.com/docs/api/ip-messaging/guides/quickstart-js) to create a Twilio account to get SID and API keys
 
 ### Description
 Read With Me is a remote reading app, that allows parents who are away from their kids to interactively read and webcam with them online. Both parties can draw on the storybook, navigate pages, and make each page image animate.
