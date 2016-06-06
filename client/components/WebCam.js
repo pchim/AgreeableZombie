@@ -139,9 +139,9 @@ class WebCam extends React.Component {
         <input id="invite-to" type="text" placeholder="Identity to send an invite to" />
         <input type="button" id="button-invite"  className="hvr-back-pulse" onClick={this.handleInvite.bind(this)} value="Invite" />
 
+        <p id="your-username">{this.state.identity}</p>
         <div id="local-media" className="local-webcam"></div>
         {this.state.renderConvoContainer === true ? <ConversationContainer conversation={this.state.activeConversation} /> : null }
-        <p id="log-content">{this.state.message}</p>
       </div>
     );
   }
