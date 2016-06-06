@@ -17,6 +17,14 @@ import WebCam from './WebCam.js';
 import Canvas from './Canvas.jsx';
 
 
+// import LeftPageText from './LeftPageText.js';
+// import RightPageText from './RightPageText.js';
+// import LeftPageImage from './LeftPageImage.js';
+// import RightPageImage from './RightPageImage.js';
+// import Video1 from './Video1.js';
+// import Video2 from './Video2.js';
+import WebCam from './WebCam.js';
+
 
 class App extends React.Component {
   constructor(props) {
@@ -96,10 +104,13 @@ class App extends React.Component {
       <div>
         <Logo />
         <Title bookTitle={this.state.bookTitle} author={this.state.author}/>
-        <div id='buttons'>
+        <div id='buttons-with-book'>
           <div id='left'><PrevButton /></div>
           <div id='right'><NextButton /></div>
           <div id='center'><Background /></div>
+        </div>
+        <div id="webcam-features">
+          <WebCam conversation={this.state.conversation}/>
         </div>
       </div>
       
