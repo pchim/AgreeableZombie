@@ -2,7 +2,7 @@ import React, { PropTypes, Component } from 'react';
 
 var NextButton = (props) => (
   <div className="next-button"> 
-    <input type='button' className='button' value='>' onClick={props.clickHandler}/>
+    <input type='button' className='button hvr-bounce-to-right' value='>' onClick={props.clickHandler}/>
 
 
   </div>  

@@ -1,28 +1,27 @@
 import React, { PropTypes, Component } from 'react';
+import Library from './Library.js';
 import Book from './Book.js';
+import Logo from './Logo.js';
 import Title from './Title.js';
+import Background from './Background.js';
 import PrevButton from './PrevButton.js';
 import NextButton from './NextButton.js';
-import Background from './Background.js';
 import LeftPageText from './LeftPageText.js';
 import RightPageText from './RightPageText.js';
 import LeftPageImage from './LeftPageImage.js';
 import RightPageImage from './RightPageImage.js';
-import Video1 from './Video1.js';
-import Video2 from './Video2.js';
 import WebCam from './WebCam.js';
 import Canvas from './Canvas.jsx';
 
-
-class App extends React.Component {
+class App extends React.Component { 
   constructor(props) {
     super(props);
 
     this.state = {
-      msg: 'This is the TextArea.',
       pageCounter: 0, 
       bookTitle: '',
-      bookData: []
+      bookData: [],
+      author: 'Eric Carle'
     };
 
     socket.on('prev page', (data) => {
@@ -86,30 +85,30 @@ class App extends React.Component {
  
   render() {
     if (this.state.bookData.length > 0) {
-      return (
-        <div>
-        <Background />
-        <Title bookTitle={this.state.bookTitle}/>
-        <Book msg={this.state.msg} /> 
-        <LeftPageText bookData={this.state.bookData} pageCounter={this.state.pageCounter}/>
-        <RightPageText bookData={this.state.bookData} pageCounter={this.state.pageCounter}/>
-        <LeftPageImage bookData={this.state.bookData} pageCounter={this.state.pageCounter}/>
-        <RightPageImage bookData={this.state.bookData} pageCounter={this.state.pageCounter}/>
-        <PrevButton clickHandler={this.onClickPrev.bind(this)}/>
-        <NextButton clickHandler={this.onClickNext.bind(this)}/>
-        <Video1 />
-        <Video2 />
-
-        <WebCam conversation={this.state.conversation} />
-        
-        <Canvas />
-      </div>
-    );
+     return (
+          <div>
+            <div id="webcam-features">
+              <WebCam conversation={this.state.conversation}/>
+            </div>
+            <Logo />
+            <Title bookTitle={this.state.bookTitle} author={this.state.author}/>
+            <div id='buttons-with-book'>
+              <div id='left-button'><PrevButton clickHandler={this.onClickPrev.bind(this)}/></div>
+              <div id='right-button'><NextButton clickHandler={this.onClickNext.bind(this)}/></div>
+              <div id='center'><Background />
+                <LeftPageText bookData={this.state.bookData} pageCounter={this.state.pageCounter}/>
+                <LeftPageImage bookData={this.state.bookData} pageCounter={this.state.pageCounter}/>
+                <RightPageText bookData={this.state.bookData} pageCounter={this.state.pageCounter}/>
+                <RightPageImage bookData={this.state.bookData} pageCounter={this.state.pageCounter}/>
+              </div>
+            </div>
+          </div>
+        );
   } else {
-    return (<p>  Loading .. </p>);
+    return(<p> Loading ... </p>);
   }
-      
-  }
+}
 };
 
 export default App;
+

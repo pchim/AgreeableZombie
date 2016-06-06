@@ -20,12 +20,11 @@ class ConversationContainer extends React.Component {
 
   render() {
     return (
-      <div>
-        <span>CONVERSATION CONTAINER</span>
+      <div id="webcam-displays">
         <div ref='remoteMedia' className='media-container remote-webcam'></div>
         <div ref='localMedia' className='media-container local-webcam'></div>
-      </div>
-    );
+      </div>  
+    );
   }
 }
 

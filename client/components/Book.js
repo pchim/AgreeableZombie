@@ -7,3 +7,5 @@ var Book = (props) => (
     );
   
 export default Book;
+
+/*this is the component where highlighting will take place.*/
