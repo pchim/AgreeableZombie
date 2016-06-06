@@ -144,7 +144,6 @@ class WebCam extends React.Component {
 
         <div id="local-media" className="local-webcam"></div>
         {this.state.renderConvoContainer === true ? <ConversationContainer conversation={this.state.activeConversation} /> : null }
-        <p id="log-content">{this.state.message}</p>
       </div>
     );
   }

@@ -3,9 +3,9 @@ var Schema = mongoose.Schema;
 
 var bookSchema = new Schema({
   bookTitle: String,
-  pageName: String,
+  pageName: Number,
   content: String,
   image: String
 });
 
-module.exports.bookSchema = bookSchema; //Exports bookSchema so models.js can access it
+module.exports = bookSchema; //Exports bookSchema so models.js can access it

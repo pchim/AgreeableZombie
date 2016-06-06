@@ -16,16 +16,6 @@ import Video2 from './Video2.js';
 import WebCam from './WebCam.js';
 import Canvas from './Canvas.jsx';
 
-
-import LeftPageText from './LeftPageText.js';
-import RightPageText from './RightPageText.js';
-import LeftPageImage from './LeftPageImage.js';
-import RightPageImage from './RightPageImage.js';
-// import Video1 from './Video1.js';
-// import Video2 from './Video2.js';
-import WebCam from './WebCam.js';
-
-
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -102,6 +92,9 @@ class App extends React.Component {
     {console.log("Inside render function")}
     return (
       <div>
+        <div id="webcam-features">
+          <WebCam conversation={this.state.conversation}/>
+        </div>
         <Logo />
         <Title bookTitle={this.state.bookTitle} author={this.state.author}/>
         <div id='buttons-with-book'>
@@ -114,9 +107,7 @@ class App extends React.Component {
             <RightPageImage bookData={this.state.bookData} pageCounter={this.state.pageCounter}/>
           </div>
         </div>
-        <div id="webcam-features">
-          <WebCam conversation={this.state.conversation}/>
-        </div>
+
       </div>
       
     );
