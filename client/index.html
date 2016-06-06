@@ -8,20 +8,27 @@
   <script src="script.js"></script>
   <script src="/socket.io/socket.io.js"></script>
   <link rel="stylesheet" href="animate.min.css">
-
   <link rel='stylesheet' type='text/css' href='styles/style.css'>
   <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
   <link href="styles/hover.css" rel="stylesheet" media="all">
   <title>Read With Me</title>
   </head>
   <body>
+   <script>
+    var socket = io();
+    socket.on('highlight', (data) => {
+      console.log(data);
+      socket.emit('event2', { my: 'data' });
+    });
+    </script>
+  </script>
     <!-- initial react app tag -->
 
     <div id="app"></div>
 
     <!-- this is where the webpack.config serves the files, see output publicPath -->
     <script type="text/javascript" src="bundle.js"></script>
-    <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script> -->
+
   </body>
 </html>
 
