@@ -41,7 +41,7 @@ app.get('/', (req, res) => {
 // Twilio token request
 app.get('/token', function(req, res) {
     var identity = randomUsername();
-    
+
     // Create an access token
     var token = new AccessToken(
         process.env.TWILIO_ACCOUNT_SID,
@@ -97,5 +97,7 @@ server.listen(port, (err) => {
   if (err) {
     return console.log('Listen error: ', err);
   }
-  console.log('Your App is running!! Better go catch it!' + port);
+  console.log('Your server is running!! Better go catch it!' + port);
 });
+
+module.exports = app;

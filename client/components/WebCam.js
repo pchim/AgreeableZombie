@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ConversationContainer from './ConversationContainer.jsx';
+import $ from 'jquery';
 
 class WebCam extends React.Component {
   constructor(props) {
@@ -37,7 +38,7 @@ class WebCam extends React.Component {
         identity: identity,
         conversationsClient: conversationsClient
       });
-      
+
       conversationsClient.listen().then(webcam.clientConnected.bind(webcam), function (error) {
           webcam.log('Could not connect to Twilio: ' + error.message);
           console.log(error, '<<< client could not connect');
@@ -62,10 +63,10 @@ class WebCam extends React.Component {
   }
 
   componentWillUnmount() {
-    const conversation = this.props.conversation;
-    conversation.localMedia.stop();
-    conversation.disconnect();
-  }
+    const conversation = this.props.conversation;
+    conversation.localMedia.stop();
+    conversation.disconnect();
+  }
 
   conversationStarted(conversation) {
     var webcam = this;
@@ -124,7 +125,7 @@ class WebCam extends React.Component {
             preview.attach('#local-media');
         },
         function (error) {
-            console.error('Unable to access local media', error); 
+            console.error('Unable to access local media', error);
         });
 
       this.setState({previewMedia: preview});
@@ -134,7 +135,7 @@ class WebCam extends React.Component {
   render() {
     return (
       <div>
-        <input type="button" id="button-preview" value="WebCam Preview"  className="hvr-back-pulse"onClick={this.handlePreview.bind(this)} /><br/> 
+        <input type="button" id="button-preview" value="WebCam Preview"  className="hvr-back-pulse"onClick={this.handlePreview.bind(this)} /><br/>
 
         <input id="invite-to" type="text" placeholder="Identity to send an invite to" />
         <input type="button" id="button-invite"  className="hvr-back-pulse" onClick={this.handleInvite.bind(this)} value="Invite" />
