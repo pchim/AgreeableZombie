@@ -3,6 +3,14 @@ var express = require('express');
 var app = express();
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
+var mongoose = require('mongoose');
+
+// configure our server with all the middleware and routing
+require('./server/middleware.js')(app, express);
+require('./server/routes.js')(app, express);
+
+// connect to mongo database named "books"
+mongoose.connect('mongodb://localhost/books');
 
 // Setup of environment variables
 require('dotenv').load();
@@ -64,10 +72,10 @@ io.on('connection', (socket) => {
   console.log('a user connected');
   socket.on('NextButtonClick', function(data) {
     console.log ('inside server');
-    socket.emit('next page', data);
+    io.emit('next page', data);
   });
   socket.on('PrevButtonClick', function(data) {
-    socket.emit('prev page', data);
+    io.emit('prev page', data);
   });
   socket.on('disconnect', () => {
     console.log('user disconnected');

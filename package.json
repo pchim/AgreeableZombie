@@ -21,6 +21,7 @@
     "eslint": "^2.7.0",
     "eslint-config-hackreactor": "github:hackreactor-labs/eslint-config-hackreactor",
     "express": "^4.13.4",
+    "mongoose": "^4.4.19",
     "nodemon": "^1.2.1",
     "react": "^0.14.8",
     "react-dom": "^0.14.8",
@@ -28,7 +29,9 @@
     "redux": "^3.3.1",
     "socket.io": "^1.4.6",
     "twilio": "^2.9.1",
-    "webpack": "^1.12.14"
+    "webpack": "^1.12.14",
+    "body-parser": "^1.4.3",
+    "morgan": "^1.1.1"
   },
   "devDependencies": {
     "babel-cli": "^6.7.5",
