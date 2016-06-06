@@ -12,4 +12,4 @@ node_modules
 client/bundle.js
 
 #git files
-.git
+./git
