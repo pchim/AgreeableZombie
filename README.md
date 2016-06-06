@@ -7,7 +7,7 @@
 * **Jen Wong** - Development Team Member
 
 ### Demo
-159.203.213.49:8000
+http://159.203.213.49:8000
 
 ### Requirements
 * node.js - v6.2.0
