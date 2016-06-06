@@ -1,10 +1,11 @@
 # Read With Me
 
 # Team
-David Doan - Development Team Member
-Jen Wong - Development Team Member
-Cathy Lee - Scrum Master
-Ashwini Jogwar - Product Owner
+Markup : 
+*David Doan - Development Team Member
+*Jen Wong - Development Team Member
+*Cathy Lee - Scrum Master
+*Ashwini Jogwar - Product Owner
 
 
 ### Installing Dependencies
