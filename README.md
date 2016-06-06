@@ -27,5 +27,5 @@ webpack --watch
 mongod
 nodemon server.js
 
-//Visit localhost:8000 in the browser.
+//visit localhost:8000 in the browser.
 
