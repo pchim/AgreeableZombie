@@ -10,7 +10,7 @@ require('./server/middleware.js')(app, express);
 require('./server/routes.js')(app, express);
 
 // connect to mongo database named "books"
-mongoose.connect('mongodb://localhost/books');
+mongoose.connect(process.env.MONGODB_URI);
 
 // Setup of environment variables
 require('dotenv').load();
