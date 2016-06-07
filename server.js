@@ -11,6 +11,7 @@ require('./server/routes.js')(app, express);
 
 // connect to mongo database named "books"
 mongoose.connect(process.env.MONGODB_URI);
+console.log(process.env);
 
 // Setup of environment variables
 require('dotenv').load();
