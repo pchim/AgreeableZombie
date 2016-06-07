@@ -28,7 +28,7 @@ mongod
 nodemon server.js
 
 //visit localhost:8000 in the browser.
-
+```
 ### Testing
 Client side testing is implemented with Karma and Airbnb's Enzyme framework. Enzyme's shallow rendering and Karma's sourcemap allow developers to pinpoint their errors. Server side testing is implement with Supertest and Chai.
 
