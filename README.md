@@ -30,12 +30,9 @@ nodemon server.js
 //visit localhost:8000 in the browser.
 ```
 ### Testing
-Client side testing is implemented with Karma and Airbnb's Enzyme framework. Enzyme's shallow rendering and Karma's sourcemap allow developers to pinpoint their errors. Server side testing is implement with Supertest and Chai.
+Client side testing is implemented with Karma and Airbnb's Enzyme framework. Developers can pinpoint the source of their errors's using Enzyme's shallow rendering and Karma's sourcemap. Server side testing is implement with Supertest and Chai.
 
 
 From the root directory run:
 ```
 npm test
-
-
-
