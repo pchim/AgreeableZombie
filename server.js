@@ -22,6 +22,10 @@ require('dotenv').config({ silent: true });
 require('./server/middleware.js')(app, express);
 require('./server/routes.js')(app, express);
 
+// Setup of environment variables
+require('dotenv').load();
+var path = require('path');
+
 // connect to mongo database named "books"
 mongoose.connect(process.env.MONGODB_URI);
 
