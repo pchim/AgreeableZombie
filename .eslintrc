@@ -1,0 +1,7 @@
+{
+  "extends": "airbnb-base/legacy",
+  "rules": {
+    "no-multi-spaces": [0],
+    "no-underscore-dangle": [0]
+  }
+}
