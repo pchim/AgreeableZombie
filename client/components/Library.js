@@ -1,10 +1,9 @@
-import React, { PropTypes, Component } from 'react';
+import React from 'react';
 
-var Library = (props) => (
-  <div className="library"> 
+const Library = () => (
+  <div className="library">
     <h2>Hello from the Library view</h2>
-  </div>  
-  );
+  </div>
+);
 
 export default Library;
-

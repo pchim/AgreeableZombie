@@ -1,9 +1,14 @@
+var path = require('path');
+var mongoose = require('mongoose');
+
 // Express-Node-Socket.io requirements
 var express = require('express');
 var app = express();
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
-var mongoose = require('mongoose');
+
+// Setup of environment variables
+require('dotenv').config({ silent: true });
 
 // configure our server with all the middleware and routing
 require('./server/middleware.js')(app, express);
@@ -11,11 +16,6 @@ require('./server/routes.js')(app, express);
 
 // connect to mongo database named "books"
 mongoose.connect(process.env.MONGODB_URI);
-console.log(process.env);
-
-// Setup of environment variables
-require('dotenv').load();
-var path = require('path');
 
 /* Twilio Webcam Setup
 Sign-up with Twilio and get keys
@@ -34,10 +34,6 @@ var randomUsername = require('./randos.js');
 app.use(express.static(__dirname + '/client'));
 
 var port = process.env.PORT || 8000;
-
-app.get('/', (req, res) => {
-  res.send('serving up static files!');
-});
 
 // Twilio token request
 app.get('/token', function(req, res) {
@@ -63,6 +59,10 @@ app.get('/token', function(req, res) {
         identity: identity,
         token: token.toJwt()
     });
+});
+
+app.get('*', function (req, res) {
+    res.sendFile(path.join(__dirname + '/client/index.html'));
 });
 
 // draw history for canvas
