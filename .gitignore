@@ -9,8 +9,7 @@ node_modules
 .DS_Store
 
 # webpack bundle
-client/bundle.js
-client/bundle.js.map
+bundle.*
 
 #git files
 ./git
