@@ -13,3 +13,4 @@ bundle.*
 
 #git files
 ./git
+.gitaliases
