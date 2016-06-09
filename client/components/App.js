@@ -1,3 +1,4 @@
+import materialize from 'materialize-css/sass/materialize.scss';
 import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
 import AuthBar from './AuthBar';
