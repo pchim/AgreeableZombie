@@ -6,8 +6,12 @@ class LibraryContainer extends Component {
     super(props);
 
     this.state = {
+      term: '',
       books: [],
+      filtered: [],
     };
+
+    this.filterBooks = this.filterBooks.bind(this);
   }
 
   componentWillMount() {
@@ -17,12 +21,18 @@ class LibraryContainer extends Component {
   }
 
   receiveBooks(books) {
-    this.setState({ ...this.state, books });
+    const filtered = books;
+    this.setState({ ...this.state, books, filtered });
+  }
+
+  filterBooks(term) {
+    const filtered = term ? this.state.books.filter(book => book.bookTitle.includes(term)) : this.state.books;
+    this.setState({ ...this.state, term, filtered });
   }
 
   render() {
     return (
-      <Library books={this.state.books} />
+      <Library books={this.state.filtered} term={this.state.term} filter={this.filterBooks} />
     );
   }
 }
