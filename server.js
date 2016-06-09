@@ -33,7 +33,7 @@ var randomUsername = require('./randos.js');
 
 app.use(express.static(__dirname + '/client'));
 
-var port = process.env.PORT || 8000;
+var port = process.env.PORT || 3000;
 
 // Twilio token request
 app.get('/token', function(req, res) {
