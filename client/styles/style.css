@@ -3,14 +3,54 @@
   src: url('../assets/TravelingTypewriter.otf');
 }
 
-body {
+
+body html {
+  margin: 0;
+  padding: 0;
   background-color: rgb(255,255,253);
+}
+
+
+#wrapper {
+  width: 100%;
+  background-color:pink;
+}
+
+section {
+  width:90%;
+  float:left;
+  position: absolute;
+}
+
+nav {
+  position:absolute;
+  width:50px;
+  height:100%;
+  top:0;
+  right:0;
+  border-color: black
+}
+
+.icons {
+  max-width: 27px;
+  height: 27px;
+}
+
+
+/*body {
+  background: url(../assets/cartoon-wallpaper.jpg) no-repeat center center fixed; 
+>>>>>>> Solidify Side Menu
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   margin: 0;
   font-family: TravelingTypewriter, sans-serif;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> Solidify Side Menu
 }
 
 
@@ -42,18 +82,14 @@ body {
   display: inline-block;
 }
 
-.header {
-  /*background-color: #d6c6a7;*/
-  text-align: center;
-}
 .logo {
   margin: 10px 0px 0px 0px;
   position: absolute;
   top: 15px;
   left: 509px;
-}
+}*/
 
-.title-and-author {
+/*.title-and-author {
   text-align: center;
   margin-top: 0px;
   position: absolute;
@@ -75,9 +111,9 @@ body {
   top: 150px;
   left: 500px;
   z-index: 1;
-}
+}*/
 
-#book-background-image {
+/*#book-background-image {
   float:left;
   width: 40%;
   height: auto;
@@ -110,9 +146,9 @@ body {
   position: absolute;
   top: 190px;
   left: 580px;
-}
+}*/
 
-.left-page-image {
+./*left-page-image {
   z-index: 1000;
   text-align: center;
   position: absolute;
@@ -196,27 +232,11 @@ input {
   font-family: TravelingTypewriter, sans-serif;
   font-size: 18px;
   text-align: center;
-}
+}*/
 
-:-moz-placeholder { /* Firefox 18- */
-  font-family: TravelingTypewriter, sans-serif;
-  font-size: 18px;
-  text-align: center;
-}
 
-::-moz-placeholder {  /* Firefox 19+ */
-  font-family: TravelingTypewriter, sans-serif;
-  font-size: 18px;
-  text-align: center;
-}
 
-:-ms-input-placeholder {
-  font-family: TravelingTypewriter, sans-serif;
-  font-size: 18px;
-  text-align: center;
-}
-
-#webcam-wrapper {
+/*#webcam-wrapper {
   vertical-align: top;
   width: 700px;
   margin: 0 auto;
@@ -254,6 +274,7 @@ input {
   z-index: 3000;
   width: 800px;
   height: 480px;
+
 }
 
 .fb-button {
@@ -263,3 +284,4 @@ input {
   padding-right: 7px;
   font-size: 20px;
 }
+

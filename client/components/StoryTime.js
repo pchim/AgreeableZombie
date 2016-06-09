@@ -10,6 +10,7 @@ import LeftPageImage from './storycomponents/LeftPageImage.js';
 import RightPageImage from './storycomponents/RightPageImage.js';
 import WebCam from './storycomponents/WebCam.js';
 import Canvas from './storycomponents/Canvas.jsx';
+import SideBar from './storycomponents/SideBar.js';
 import socket from '../../websocket.js';
 import $ from 'jquery';
 
@@ -99,7 +100,14 @@ class StoryTime extends React.Component {
   render() {
     if (this.state.bookData.length > 0) {
       return (
-        <div>
+        <div  >
+          <nav className="orange lighten-5">
+            <SideBar />
+          </nav>
+          <section>
+            <p>bookasdaskldaksldksaldaslkasdasdasdasdldklad adalsdkalsdkasld kalsdkasld askdalsdklasd askdlaksdla aksdalkdald akdalkdas aksdlaskd aksldalksd askdlaskdlaskdl  kasdalkdlas akdlaskdlsa askdlasdk asdklaskd asdlkalsd alsdkalsd dskdkdkdk</p>
+            <p>bookasdaskldaksldksaldaslkd</p>
+          </section>
         </div>
       );
     }
