@@ -1,9 +1,14 @@
-import React, { PropTypes, Component } from 'react';
+import React from 'react';
 
-var PrevButton = (props) => (
-  <div className="prev-button"> 
-    <input type='button' className='button hvr-bounce-to-left' value='<' onClick={props.clickHandler}/>
-  </div>  
-  );
+const PrevButton = (props) => (
+  <div className="prev-button">
+    <input
+      type="button"
+      className="button hvr-bounce-to-left"
+      value="<"
+      onClick={props.leftClickHandler}
+    />
+  </div>
+);
 
 export default PrevButton;

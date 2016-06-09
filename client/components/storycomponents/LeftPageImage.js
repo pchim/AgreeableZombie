@@ -1,10 +1,14 @@
 
-import React, { PropTypes, Component } from 'react';
+import React from 'react';
 
-var LeftPageImage = (props) => (
-  <div className="left-page-image"> 
-    <img className="page-image hvr-wobble-vertical" src={props.bookData[props.pageCounter].image} />
-  </div>  
+const LeftPageImage = (props) => (
+  <div className="left-page-image">
+    <img
+      className="page-image hvr-wobble-vertical"
+      src={props.bookData[props.pageCounter].image}
+      alt="childrenbookpic"
+    />
+  </div>
   );
 
 export default LeftPageImage;

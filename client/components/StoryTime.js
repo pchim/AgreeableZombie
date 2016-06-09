@@ -1,4 +1,4 @@
-import React, { PropTypes, Component } from 'react';
+import React from 'react';
 import Logo from './storycomponents/Logo.js';
 import Title from './storycomponents/Title.js';
 import BookBackground from './storycomponents/BookBackground.js';
@@ -6,14 +6,13 @@ import PrevButton from './storycomponents/PrevButton.js';
 import NextButton from './storycomponents/NextButton.js';
 import LeftPageText from './storycomponents/LeftPageText.js';
 import RightPageText from './storycomponents/RightPageText.js';
-import LeftPageImage from './storycomponents/LeftPageImage.js';
-import RightPageImage from './storycomponents/RightPageImage.js';
 import WebCam from './storycomponents/WebCam.js';
 import Canvas from './storycomponents/Canvas.jsx';
 import SideBar from './storycomponents/SideBar.js';
 import socket from '../../websocket.js';
 import $ from 'jquery';
-
+// import LeftPageImage from './storycomponents/LeftPageImage.js';
+// import RightPageImage from './storycomponents/RightPageImage.js';
 
 class StoryTime extends React.Component {
   constructor(props) {
@@ -25,6 +24,9 @@ class StoryTime extends React.Component {
       bookData: [],
       author: 'Eric Carle',
     };
+
+    this.onClickPrev = this.onClickPrev.bind(this);
+    this.onClickNext = this.onClickNext.bind(this);
 
     socket.on('prev page', (data) => {
       console.log('data from server', data);
@@ -105,8 +107,12 @@ class StoryTime extends React.Component {
             <SideBar />
           </nav>
           <section>
-            <p>bookasdaskldaksldksaldaslkasdasdasdasdldklad adalsdkalsdkasld kalsdkasld askdalsdklasd askdlaksdla aksdalkdald akdalkdas aksdlaskd aksldalksd askdlaskdlaskdl  kasdalkdlas akdlaskdlsa askdlasdk asdklaskd asdlkalsd alsdkalsd dskdkdkdk</p>
-            <p>bookasdaskldaksldksaldaslkd</p>
+            <Title bookTitle={this.state.bookTitle} author={this.state.author} />
+            <BookBackground />
+            <PrevButton leftClickHandler={this.onClickPrev} />
+            <NextButton rightClickHandler={this.onClickNext} />
+            <LeftPageText bookData={this.state.bookData} pageCounter={this.state.pageCounter} />
+            <RightPageText bookData={this.state.bookData} pageCounter={this.state.pageCounter} />
           </section>
         </div>
       );
@@ -121,16 +127,14 @@ export default StoryTime;
 // <div id="webcam-features">
 //   <WebCam conversation={this.state.conversation}/>
 // </div>
-// <Logo />
-// <Title bookTitle={this.state.bookTitle} author={this.state.author}/>
+
 // <div id='buttons-with-book'>
 //   <div id='left-button'><PrevButton clickHandler={this.onClickPrev.bind(this)}/></div>
 //   <div id='right-button'><NextButton clickHandler={this.onClickNext.bind(this)}/></div>
-//   <div id='center'><BookBackground />
 //     <LeftPageText bookData={this.state.bookData} pageCounter={this.state.pageCounter}/>
 //     <LeftPageImage bookData={this.state.bookData} pageCounter={this.state.pageCounter}/>
 //     <RightPageText bookData={this.state.bookData} pageCounter={this.state.pageCounter}/>
-//     <RightPageImage bookData={this.state.bookData} pageCounter={this.state.pageCounter}/>
-//   </div>
-// </div>
-// <Canvas />
+//     <RightPageImage bookData={this.state.bookData} pageCounter={this.state.pageCounter}/>   
+//     </div>
+//      </div>
+// // <Canvas />

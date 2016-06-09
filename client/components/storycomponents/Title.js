@@ -1,11 +1,10 @@
+import React from 'react';
 
-import React, { PropTypes, Component } from 'react';
-
-var Title = (props) => (
-  <div className="title-and-author"> 
+const Title = (props) => (
+  <div className="center">
     <h3 className="title">{props.bookTitle}</h3>
     <p className="author">By {props.author}</p>
-  </div>  
+  </div>
   );
 
 export default Title;

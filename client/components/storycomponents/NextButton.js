@@ -1,12 +1,15 @@
-import React, { PropTypes, Component } from 'react';
+import React from 'react';
 
-var NextButton = (props) => (
-  <div className="next-button"> 
-    <input type='button' className='button hvr-bounce-to-right' value='>' onClick={props.clickHandler}/>
-
-
-  </div>  
-  );
+const NextButton = (props) => (
+  <div className="next-button">
+    <input
+      type="button"
+      className="button hvr-bounce-to-right"
+      value=">"
+      onClick={props.rightClickHandler}
+    />
+  </div>
+);
 
 export default NextButton;
 
