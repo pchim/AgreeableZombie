@@ -16,6 +16,13 @@ class AuthBar extends React.Component {
     this.signOut = this.signOut.bind(this);
   }
 
+  componentWillMount() {
+    $.get('/facebook/user')
+      .then(user => {
+        this.setState({ user });
+      });
+  }
+
   signIn() {
     // $.get('/facebook/signin').then(user => {
     //   this.setState({ user });
