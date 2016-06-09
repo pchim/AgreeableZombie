@@ -4,7 +4,6 @@
 }
 
 body {
-  /*background: url(../assets/star-party.jpg) no-repeat center center fixed; */
   background-color: rgb(255,255,253);
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -14,9 +13,6 @@ body {
   font-family: TravelingTypewriter, sans-serif;
 }
 
-body.story-time {
-  background: url(../assets/cartoon-wallpaper.jpg) no-repeat center center fixed;
-}
 
 /*
  * todo: this would be better to use the scss variables;
@@ -45,7 +41,6 @@ body.story-time {
   min-height: 160px;
   display: inline-block;
 }
-
 
 .header {
   /*background-color: #d6c6a7;*/
@@ -83,8 +78,9 @@ body.story-time {
 }
 
 #book-background-image {
-  width: 800px;
-  height: 480px;
+  float:left;
+  width: 40%;
+  height: auto;
 }
 
 .button {

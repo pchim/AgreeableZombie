@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ConversationContainer from './ConversationContainer.jsx';
+import ConversationContainer from '../ConversationContainer.jsx';
 import $ from 'jquery';
 
 class WebCam extends React.Component {
