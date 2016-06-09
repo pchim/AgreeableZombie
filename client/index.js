@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { Router, Route, IndexRedirect, browserHistory } from 'react-router';
 
 import App from './components/App';
-import Library from './components/Library';
+import LibraryContainer from './components/LibraryContainer';
 import StoryTime from './components/StoryTime';
 import NoMatch from './components/NoMatch';
 
@@ -18,7 +18,7 @@ const render = () => {
     <Router history={browserHistory}>
       <Route path="/" component={App}>
         <IndexRedirect to="/library" />
-        <Route path="library" component={Library} />
+        <Route path="library" component={LibraryContainer} />
         <Route path="story-time" component={StoryTime} />
         <Route path="*" component={NoMatch} />
       </Route>
