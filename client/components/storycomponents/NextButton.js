@@ -4,7 +4,7 @@ const NextButton = (props) => (
   <div className="next-button">
     <input
       type="button"
-      className="button hvr-bounce-to-right"
+      className="page-turn-button"
       value=">"
       onClick={props.rightClickHandler}
     />

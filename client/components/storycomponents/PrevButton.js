@@ -4,7 +4,7 @@ const PrevButton = (props) => (
   <div className="prev-button">
     <input
       type="button"
-      className="button hvr-bounce-to-left"
+      className="page-turn-button"
       value="<"
       onClick={props.leftClickHandler}
     />
