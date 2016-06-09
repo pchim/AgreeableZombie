@@ -1,7 +1,5 @@
 /* global document */
-
 import React from 'react';
-// import { Link } from 'react-router';
 import $ from 'jquery';
 
 class AuthBar extends React.Component {
@@ -9,24 +7,21 @@ class AuthBar extends React.Component {
     super(props);
 
     this.state = {
-      user: {},
+      user: undefined,
     };
 
     this.signIn = this.signIn.bind(this);
     this.signOut = this.signOut.bind(this);
   }
 
-  componentWillMount() {
-    $.get('/facebook/user')
+  componentDidMount() {
+    $.get('/facebook/verify')
       .then(user => {
         this.setState({ user });
       });
   }
 
   signIn() {
-    // $.get('/facebook/signin').then(user => {
-    //   this.setState({ user });
-    // });
     document.location.assign('/facebook/signin');
   }
 
@@ -37,21 +32,13 @@ class AuthBar extends React.Component {
   }
 
   render() {
+    const user = this.state.user ? this.state.user.facebook : '';
+
     return (
       <div>
         <ul>
-          <li>
-            {
-              name ? this.state.user.name
-                   : <button onClick={this.signIn}>Sign In</button>
-            }
-          </li>
-          <li>
-            {
-              name ? <button onClick={this.signOut}>Sign Out</button>
-                   : null
-            }
-          </li>
+          {user ? <li>{user.name}</li> : <li><button onClick={this.signIn}>Sign In</button></li>}
+          {user ? <li><button onClick={this.signOut}>Sign Out</button></li> : null}
         </ul>
       </div>
     );
