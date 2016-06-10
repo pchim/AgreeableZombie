@@ -4,6 +4,7 @@ var auth = require('./controllers/auth');
 module.exports = function(app) {
   app.get('/api/books', books.getAllBooks);
   app.post('/api/books', books.addBook);
+  app.post('/api/addAllBooks', books.addAllSampleBooks);
 
   app.get('/facebook/signin', auth.facebook.signin);
   app.get('/facebook/verify', function(req, res) {
@@ -27,3 +28,4 @@ module.exports = function(app) {
     });
   });
 };
+
