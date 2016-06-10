@@ -1,4 +1,4 @@
-var Book = require('./bookModel.js');
+var Book = require('../models/Book');
 
 module.exports = {
   getAllBooks: function (req, res) {

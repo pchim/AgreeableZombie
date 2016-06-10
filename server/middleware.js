@@ -19,9 +19,9 @@ module.exports = function (app, express) {
   app.use(express.static(__dirname + '/../../client'));
   app.use(cookieParser());
   app.use(session({
-    secret: 'tank and spank',
+    secret: 'peter cotton-tail',
     resave: false,
-    saveUninitialized: false,
+    saveUninitialized: false
   }));
   app.use(passport.initialize());
   app.use(passport.session());
