@@ -10,7 +10,8 @@
     "test": "mocha ./test/server --compilers js:babel-register && karma start",
     "test:client": "karma start",
     "test:server": "mocha ./test/server --watch --compilers js:babel-register",
-    "watch": "webpack --watch"
+    "watch": "webpack --watch",
+    "import:sampleBooks": "curl --data '' localhost:8000/api/addAllBooks"
   },
   "repository": {
     "type": "git",

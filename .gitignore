@@ -20,4 +20,4 @@ client/assets/fonts
 
 #archived sites
 ./PublicBooksLoader/sites
-./PublicBooksLoader/archived-stories
+./PublicBooksLoader/archived-stories/*

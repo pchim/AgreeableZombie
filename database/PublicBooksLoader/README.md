@@ -33,3 +33,6 @@ If the images are being hosted on an image hosting site, modify the 'hosted' var
 Currently, only story 14837 is hosted for wonky-mongoose, so this story is in our addBooks method
 within our booksController.
 //////
+
+If one already has a book parsed in the json format of our model in sample-book-data, one can import
+that all of the books in that directory by running "npm run import:sampleBooks"
