@@ -51,10 +51,10 @@ const parseText = (bookPath, fileName) => {
   fs.readFile(bookPath, 'utf8').then(content => {
     // we're stripping the html and necessary contents to obtain the public domain
     // version of the children's stories
-    let text = content.replace(/\<pre\>([\s\S]*?)\<\/pre\>/g, '');
-    text = text.replace(/\<title\>([\s\S]*?)\<\/title\>/, '');
+    let text = content.replace(/\<html([\s\S]*?)\<\/pre\>/, '');
+    text = text.replace(/\<pre\>([\s\S]*?)\<\/html\>/, '');
     text = stripTags(text, ['img']).replace(/\/\*([\s\S]*?)\*\//g, '');
-    text = text.replace(/\s*\<img ([\s\S]*?)\/\>\s*/g, '\n[IMAGE]\n');
+    text = text.replace(/\s*\<img ([\s\S]*?)\/*\>\s*/g, '\n[IMAGE]\n');
     const trail = getTrail(bookPath)[0];
 
     // write a stripped down version of the .htm version
@@ -97,13 +97,19 @@ const getBookData = (bookPath, imageSources, text, fileName) => {
   let currPage = 0;
   // keep track of which image in the imageSources array we are on
   let currImage = 0;
+
+  let bookTitle = null;
+  let bookTitleImage = null;
   // go through the text, line by line
   for (let i = 0; i < textSplit.length-1; i++) {
     // if the current line is an image
     if (textSplit[i] === '[IMAGE]') {
       // if the current string is not empty spaces
-      if (!!(currStr.replace(/\s+/g, ''))) {
+      if (!!(currStr.replace(/[(&nbsp;)\s]+/g, ''))) {
         currPage++;
+        if (bookTitle === null) {
+          bookTitle = currStr;
+        }
         // we create a text page object
         bookData.push({
           name: currPage.toString(),
@@ -115,6 +121,9 @@ const getBookData = (bookPath, imageSources, text, fileName) => {
       }
       currPage++;
       // then we push that image object that we found on this line
+      if (bookTitleImage === null) {
+        bookTitleImage = imageSources[currImage];
+      }
       bookData.push({
         name: currPage.toString(),
         content: imageSources[currImage],
@@ -126,8 +135,10 @@ const getBookData = (bookPath, imageSources, text, fileName) => {
       currStr += textSplit[i] + '\n';
     }
   }
+  const book = { bookTitle, bookTitleImage, bookData };
+
   // write the transformed data to the sample book data directory
-  fs.writeFile(archiveHelper.paths.sampleData + '/' + fileName + '.json', JSON.stringify(bookData, null, ' '))
+  fs.writeFile(archiveHelper.paths.sampleData + '/' + fileName + '.json', JSON.stringify(book, null, ' '))
     .then(() => {
       console.log('write success');
       const trail = getTrail(bookPath)[0];
