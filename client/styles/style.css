@@ -7,19 +7,12 @@ body html {
   background-color: rgb(255,255,253);
 }
 
-
-#wrapper {
-  width: 100%;
-  background-color:pink;
-}
-
-section {
+.booksection {
   width:95%;
   float:left;
-  position: absolute;
 }
 
-nav {
+.sidenavigation {
   position:fixed;
   width:50px;
   height:100%;
@@ -35,7 +28,14 @@ footer {
 
 .icons {
   max-width: 27px;
+  margin: 10px 0px;
   height: 27px;
+  position:relative;
+}
+
+.icons:hover {
+  opacity: 0.3;
+  transition: opacity 0.2s ease-in-out;
 }
 
 
@@ -67,6 +67,7 @@ footer {
   display: inline-block;
 }
 
+
 .logo {
   margin: 10px 0px 0px 0px;
   max-width: 150px;
@@ -86,7 +87,6 @@ footer {
 .book-background-image {
   width: 1200px;
   height:480px;
-
 }
 
 .page-turn-button {
@@ -106,7 +106,7 @@ footer {
 
 .page-turn-button:hover {
   opacity: 0.3;
-  transition: opacity .5s ease-in-out;
+  transition: opacity .2s ease-in-out;
 }
 
 .next-button {
@@ -226,9 +226,7 @@ input {
   text-align: center;
 }
 
-
-
-/*#webcam-wrapper {
+#webcam-wrapper {
   vertical-align: top;
   width: 700px;
   margin: 0 auto;
@@ -239,10 +237,11 @@ input {
 
 .local-webcam > video {
   width: 230px;
+  height: auto;
   position: absolute;
-  top: 200px;
-  left: 20px;
-  border-radius: 15px;
+  top: 580px;
+  left: 300px;
+  border-radius: 5px;
 }
 
 #your-username {
@@ -253,10 +252,11 @@ input {
 
 .remote-webcam > video {
   width: 230px;
+  height: auto;
   position: absolute;
-  top: 390px;
-  left: 20px;
-  border-radius: 15px;
+  top: 580px;
+  left: 800px;
+  border-radius: 5px;
 }
 
 .canvas-container {
@@ -266,7 +266,6 @@ input {
   z-index: 3000;
   width: 800px;
   height: 480px;
-
 }
 
 .fb-button {
@@ -276,4 +275,3 @@ input {
   padding-right: 7px;
   font-size: 20px;
 }
-
