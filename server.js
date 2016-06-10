@@ -7,6 +7,15 @@ var app = express();
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
 
+var twilio = require('twilio');
+var randomUsername = require('./randos.js');
+
+var port;
+var drawHistory;
+var i;
+var AccessToken;
+var ConversationsGrant;
+
 // Setup of environment variables
 require('dotenv').config({ silent: true });
 
@@ -26,14 +35,11 @@ process.env.TWILIO_API_KEY
 process.env.TWILIO_API_SECRET
 process.env.TWILIO_CONFIGURATION_SID
 */
-var twilio = require('twilio');
-var AccessToken = twilio.AccessToken;
-var ConversationsGrant = AccessToken.ConversationsGrant;
-var randomUsername = require('./randos.js');
+AccessToken = twilio.AccessToken;
+ConversationsGrant = AccessToken.ConversationsGrant;
 
 app.use(express.static(__dirname + '/client'));
 
-var port = process.env.PORT || 3000;
 
 // Twilio token request
 app.get('/token', function(req, res) {
@@ -66,35 +72,25 @@ app.get('*', function (req, res) {
 });
 
 // draw history for canvas
-var drawHistory = [];
+drawHistory = [];
 
 // Socket.IO Connection
-io.on('connection', (socket) => {
-  console.log('a user connected');
+io.on('connection', function(socket) {
   socket.on('NextButtonClick', function(data) {
-    console.log ('inside server');
-    io.emit('next page', data);
+    io.emit('next', data);
   });
+
   socket.on('PrevButtonClick', function(data) {
-    io.emit('prev page', data);
+    io.emit('prev', data);
   });
-  socket.on('disconnect', () => {
+
+  socket.on('disconnect', function() {
     console.log('user disconnected');
-  });
-
-  //Socket Events for Canvas interactions
-  for(var i in drawHistory){
-    socket.emit('drawLine', drawHistory[i]);
-  }
-
-  socket.on('drawLine', data => {
-    var newLine = {line: data.line};
-    drawHistory.push(newLine);
-    io.emit('drawLine', newLine);
   });
 });
 
-server.listen(port, (err) => {
+port = process.env.PORT || 3000;
+server.listen(port, function(err) {
   if (err) {
     return console.log('Listen error: ', err);
   }
