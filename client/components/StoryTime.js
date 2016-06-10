@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from './storycomponents/Logo.js';
+// import Logo from './storycomponents/Logo.js';
 import Title from './storycomponents/Title.js';
 import BookBackground from './storycomponents/BookBackground.js';
 import PrevButton from './storycomponents/PrevButton.js';
@@ -7,6 +7,7 @@ import NextButton from './storycomponents/NextButton.js';
 import LeftPageText from './storycomponents/LeftPageText.js';
 import RightPageText from './storycomponents/RightPageText.js';
 // import WebCam from './storycomponents/WebCam.js';
+import InvitePopUp from './storycomponents/InvitePopUp.js';
 import Canvas from './storycomponents/Canvas.jsx';
 import SideBar from './storycomponents/SideBar.js';
 import socket from '../../websocket.js';
@@ -25,6 +26,8 @@ class StoryTime extends React.Component {
       bookData: [],
       author: 'Eric Carle',
 
+      invitePopUp: false,
+
       renderConvoContainer: false,
       conversationsClient: undefined,
       activeConversation: undefined,
@@ -37,6 +40,7 @@ class StoryTime extends React.Component {
     this.onClickNext = this.onClickNext.bind(this);
     this.handlePreview = this.handlePreview.bind(this);
     this.handleInvite = this.handleInvite.bind(this);
+    this.handleInviteToggle = this.handleInviteToggle.bind(this);
 
     var conversationsClient = this.state.conversationsClient;
     var activeConversation = this.state.activeConversation;
@@ -95,11 +99,7 @@ class StoryTime extends React.Component {
       invite.accept().then(webcam.conversationStarted.bind(webcam));
     });
   }
-  componentWillUnmount() {
-    const conversation = this.props.conversation;
-    conversation.localMedia.stop();
-    conversation.disconnect();
-  }
+
 
   conversationStarted(conversation) {
     var webcam = this;
@@ -129,7 +129,9 @@ class StoryTime extends React.Component {
     });
   }
 
-
+  handleInviteToggle() {
+    this.setState({ invitePopUp: !this.state.invitePopUp });
+  }
 
   handleInvite(e) {
     var inviteTo = document.getElementById('invite-to').value;
@@ -145,12 +147,12 @@ class StoryTime extends React.Component {
       this.state.conversationsClient.inviteToConversation(inviteTo, options)
       .then(webcam.conversationStarted.bind(webcam), function(error) {
         console.error('Unable to create conversation', error);
-      });
+      }).then(this.handleInviteToggle());
     }
   }
 
   handlePreview(e) {
-    if(!this.state.previewMedia){
+    if (!this.state.previewMedia) {
       var preview = new Twilio.Conversations.LocalMedia();
       Twilio.Conversations.getUserMedia().then(
         function (mediaStream) {
@@ -164,6 +166,7 @@ class StoryTime extends React.Component {
       this.setState({ previewMedia: preview });
     }
   }
+
   componentWillMount() {
     const app = this;
     $.getJSON('/api/books', function(data) {
@@ -185,6 +188,12 @@ class StoryTime extends React.Component {
 
   componentDidMount() {
     this.render();
+  }
+
+  componentWillUnmount() {
+    const conversation = this.props.conversation;
+    conversation.localMedia.stop();
+    conversation.disconnect();
   }
 
   onClickPrev() {
@@ -228,7 +237,10 @@ class StoryTime extends React.Component {
       return (
         <div>
           <div className="sidenavigation orange lighten-5">
-            <SideBar handlePreview={this.handlePreview} />
+            <SideBar
+              handlePreview={this.handlePreview}
+              handleInviteToggle={this.handleInviteToggle}
+            />
           </div>
           <div className="booksection">
             <Title bookTitle={this.state.bookTitle} author={this.state.author} />
@@ -237,24 +249,16 @@ class StoryTime extends React.Component {
             <NextButton rightClickHandler={this.onClickNext} />
             <LeftPageText bookData={this.state.bookData} pageCounter={this.state.pageCounter} />
             <RightPageText bookData={this.state.bookData} pageCounter={this.state.pageCounter} />
+            {this.state.invitePopUp ? <InvitePopUp handleInviteToggle={this.handleInviteToggle} handleInvite={this.handleInvite} /> : null}
             <div>
-              <input id="invite-to" type="text" placeholder="Identity to send an invite to" />
-              <input
-                type="button"
-                id="button-invite"
-                className="hvr-back-pulse"
-                onClick={this.handleInvite}
-                value="Invite"
-              />
-              <p id="your-username">{this.state.identity}</p>
+              <p id="your-username">username: {this.state.identity}</p>
               <div id="local-media" className="local-webcam"></div>
               {this.state.renderConvoContainer === true ?
                 <ConversationContainer
                   conversation={this.state.activeConversation}
                 /> : null}
             </div>
-          </div>
-          
+          </div>   
         </div>
       );
     }
@@ -265,13 +269,5 @@ class StoryTime extends React.Component {
 export default StoryTime;
 
 
-// <div id='buttons-with-book'>
-//   <div id='left-button'><PrevButton clickHandler={this.onClickPrev.bind(this)}/></div>
-//   <div id='right-button'><NextButton clickHandler={this.onClickNext.bind(this)}/></div>
-//     <LeftPageText bookData={this.state.bookData} pageCounter={this.state.pageCounter}/>
-//     <LeftPageImage bookData={this.state.bookData} pageCounter={this.state.pageCounter}/>
-//     <RightPageText bookData={this.state.bookData} pageCounter={this.state.pageCounter}/>
-//     <RightPageImage bookData={this.state.bookData} pageCounter={this.state.pageCounter}/>   
-//     </div>
-//      </div>
+
 // // <Canvas />

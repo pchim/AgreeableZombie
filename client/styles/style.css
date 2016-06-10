@@ -26,6 +26,15 @@ footer {
   bottom: 0;
 }
 
+.popupbox {
+  width: 260px;
+  height: 40px;
+  top: 165px;
+  right: 50px;
+  z-index: 3;
+  position: absolute;
+}
+
 .icons {
   max-width: 27px;
   margin: 10px 0px;
@@ -111,7 +120,7 @@ footer {
 
 .next-button {
   position: absolute;
-  z-index: 1000;
+  z-index: 2;
   top: 490px;
   left: 1150px;
 }
@@ -190,12 +199,9 @@ footer {
   padding: 8px 10px 12px 10px;
   color: white;
   background-color: black;
-  font-size: 18px;
-  font-family: TravelingTypewriter, sans-serif;
+  font-size: 14px;
+  font-family: Avenir, sans-serif;
   position: absolute;
-  top: 80px;
-  left: 20px;
-
 }
 
 #webcam-features {
@@ -204,11 +210,8 @@ footer {
 }
 
 #invite-to {
-  width: 300px;
-  height: 39px;
-  position: absolute;
-  top: 79px;
-  left: 100px;
+  width: 200px; 
+  height: 30px;
 }
 
 input {
@@ -221,10 +224,6 @@ input {
   padding-left: 10px;
 }
 
-::-webkit-input-placeholder {
-  font-size: 18px;
-  text-align: center;
-}
 
 #webcam-wrapper {
   vertical-align: top;
@@ -245,9 +244,10 @@ input {
 }
 
 #your-username {
+  font-family: Avenir;
   position: absolute;
-  top: 150px;
-  left: 25px;
+  right: 60px;
+  bottom: 3px;
 }
 
 .remote-webcam > video {

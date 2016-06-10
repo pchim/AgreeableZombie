@@ -8,7 +8,7 @@ const SideBar = (props) => (
     <br />
     <img className="icons" onClick={props.handlePreview} src="../../assets/icons/video-chat.png" alt="preview" />
     <br />
-    <img className="icons" src="../../assets/icons/add-contact.png" alt="invite" />
+    <img className="icons" onClick={props.handleInviteToggle} src="../../assets/icons/add-contact.png" alt="invite" />
   </div>
 );
 
