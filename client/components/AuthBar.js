@@ -2,6 +2,11 @@
 import React from 'react';
 import $ from 'jquery';
 
+const fbButtonStyle = {
+  textTransform: 'none',
+  backgroundColor: '#3B5998',
+};
+
 class AuthBar extends React.Component {
   constructor(props) {
     super(props);
@@ -37,8 +42,14 @@ class AuthBar extends React.Component {
     return (
       <div>
         <ul>
-          {user ? <li>{user.name}</li> : <li><button onClick={this.signIn}>Sign In</button></li>}
-          {user ? <li><button onClick={this.signOut}>Sign Out</button></li> : null}
+          {user ? <li>{user.name}</li>
+                : <li>
+                    <button className="btn fb-button" style={fbButtonStyle} onClick={this.signIn}>
+                      <span className="fa fa-facebook-square"></span>
+                      Log in
+                    </button>
+                  </li>}
+          {user ? <li><button className="btn fb-button" style={fbButtonStyle} onClick={this.signOut}>Log out</button></li> : null}
         </ul>
       </div>
     );

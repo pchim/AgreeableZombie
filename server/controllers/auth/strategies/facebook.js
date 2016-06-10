@@ -1,15 +1,15 @@
-var User     = require('../../../models/user');
+var User     = require('../../../models/User');
 var Strategy = require('passport-facebook').Strategy;
 
 var config = {
   clientID: process.env.FACEBOOK_APP_ID,
   clientSecret: process.env.FACEBOOK_APP_SECRET,
   callbackURL: 'http://localhost:3000/facebook/callback',
-  passReqToCallback: true
+  passReqToCallback: true,
+  profileFields: ['email', 'first_name', 'last_name', 'displayName']
 };
 
 var verify = function(req, token, refreshToken, profile, done) {
-  console.log(req);
   User.findOne({ 'facebook.id': profile.id }, function(err, existingUser) {
     var user;
 
@@ -26,11 +26,12 @@ var verify = function(req, token, refreshToken, profile, done) {
     // otherwise create a new account.
     user = req.user ? req.user : new User();
 
-    console.log(profile);
-
     user.facebook.id = profile.id;
     user.facebook.token = token;
     user.facebook.name = profile.displayName;
+    user.facebook.email = profile.emails[0].value;
+    user.facebook.firstName = profile.name.givenName;
+    user.facebook.lastName = profile.name.familyName;
 
     return user.save(function(error, savedUser) {
       if (error) {
