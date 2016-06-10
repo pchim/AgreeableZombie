@@ -13,8 +13,11 @@ class WebCam extends React.Component {
       activeConversation: undefined,
       previewMedia: undefined,
       identity: undefined,
-      message: undefined
+      message: undefined,
     };
+
+    this.handlePreview = this.handlePreview.bind(this);
+    this.handleInvite = this.handleInvite.bind(this);
 
     var conversationsClient = this.state.conversationsClient;
     var activeConversation = this.state.activeConversation;
@@ -35,20 +38,20 @@ class WebCam extends React.Component {
       conversationsClient = new Twilio.Conversations.Client(accessManager);
 
       webcam.setState({
-        identity: identity,
-        conversationsClient: conversationsClient
+        identity,
+        conversationsClient,
       });
 
       conversationsClient.listen().then(webcam.clientConnected.bind(webcam), function (error) {
-          webcam.log('Could not connect to Twilio: ' + error.message);
-          console.log(error, '<<< client could not connect');
+        webcam.log('Could not connect to Twilio: ' + error.message);
+        console.log(error, '<<< client could not connect');
       });
     });
   }
 
   log(message) {
-    this.setState({message: message});
-    console.log("WEBCAM MESSAGE: ", message);
+    this.setState({ message });
+    console.log('WEBCAM MESSAGE: ', message);
   }
 
   clientConnected() {
@@ -57,8 +60,8 @@ class WebCam extends React.Component {
     var webcam = this;
     // When conversationClient hears 'invite' event, accept the invite event and start conversation
     this.state.conversationsClient.on('invite', function (invite) {
-        webcam.log('Incoming invite from: ' + invite.from);
-        invite.accept().then(webcam.conversationStarted.bind(webcam));
+      webcam.log(`Incoming invite from: ' ${invite.from}`);
+      invite.accept().then(webcam.conversationStarted.bind(webcam));
     });
   }
 
@@ -128,21 +131,35 @@ class WebCam extends React.Component {
             console.error('Unable to access local media', error);
         });
 
-      this.setState({previewMedia: preview});
+      this.setState({ previewMedia: preview });
     }
   }
 
   render() {
     return (
       <div>
-        <input type="button" id="button-preview" value="WebCam Preview"  className="hvr-back-pulse"onClick={this.handlePreview.bind(this)} /><br/>
-
+        <input
+          type="button"
+          id="button-preview"
+          value="WebCam Preview"
+          className="hvr-back-pulse"
+          onClick={this.handlePreview}
+        />
+        <br />
         <input id="invite-to" type="text" placeholder="Identity to send an invite to" />
-        <input type="button" id="button-invite"  className="hvr-back-pulse" onClick={this.handleInvite.bind(this)} value="Invite" />
-
+        <input
+          type="button"
+          id="button-invite"
+          className="hvr-back-pulse"
+          onClick={this.handleInvite}
+          value="Invite"
+        />
         <p id="your-username">{this.state.identity}</p>
         <div id="local-media" className="local-webcam"></div>
-        {this.state.renderConvoContainer === true ? <ConversationContainer conversation={this.state.activeConversation} /> : null }
+        {this.state.renderConvoContainer === true ?
+          <ConversationContainer
+            conversation={this.state.activeConversation}
+          /> : null}
       </div>
     );
   }

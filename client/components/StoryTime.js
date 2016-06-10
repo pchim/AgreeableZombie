@@ -113,6 +113,9 @@ class StoryTime extends React.Component {
             <NextButton rightClickHandler={this.onClickNext} />
             <LeftPageText bookData={this.state.bookData} pageCounter={this.state.pageCounter} />
             <RightPageText bookData={this.state.bookData} pageCounter={this.state.pageCounter} />
+            <div id="webcam-features">
+              <WebCam conversation={this.state.conversation} />
+            </div>
           </section>
         </div>
       );
@@ -123,10 +126,6 @@ class StoryTime extends React.Component {
 
 export default StoryTime;
 
-
-// <div id="webcam-features">
-//   <WebCam conversation={this.state.conversation}/>
-// </div>
 
 // <div id='buttons-with-book'>
 //   <div id='left-button'><PrevButton clickHandler={this.onClickPrev.bind(this)}/></div>

@@ -172,7 +172,7 @@ footer {
 }
 
 
-/*#button-preview {
+#button-preview {
   border-style: none;
   color: white;
   background-color: black;
@@ -224,7 +224,7 @@ input {
 ::-webkit-input-placeholder {
   font-size: 18px;
   text-align: center;
-}*/
+}
 
 
 
