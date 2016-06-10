@@ -21,8 +21,8 @@ class App extends Component {
 
   render() {
     return (
-      <AuthBar />
       <div className="container">
+        <AuthBar />
         {this.props.children}
       </div>
     );

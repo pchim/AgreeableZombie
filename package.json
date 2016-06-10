@@ -22,7 +22,6 @@
     "url": "https://github.com/wonky-mongoose/AgreeableZombie/issues"
   },
   "dependencies": {
-    "bcrypt": "^0.8.6",
     "body-parser": "^1.4.3",
     "connect-ensure-login": "^0.1.1",
     "cookie-parser": "^1.4.3",

@@ -40,11 +40,11 @@ module.exports = {
       },
       {
         test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        loader: 'url-loader?name=assets/fonts/[name].[ext]&limit=10000&mimetype=application/font-woff'
+        loader: 'url-loader?name=assets/fonts/[name].[ext]?[hash]&limit=10000&mimetype=application/font-woff'
       },
       {
         test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        loader: 'file-loader?name=client/assets/fonts/[name].[ext]'
+        loader: 'file-loader?name=assets/fonts/[name].[ext]?[hash]'
       },
       {
         test: /\.json$/,
