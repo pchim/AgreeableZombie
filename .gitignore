@@ -11,5 +11,8 @@ node_modules
 # webpack bundle
 bundle.*
 
+# fonts
+client/assets/fonts
+
 #git files
 ./git

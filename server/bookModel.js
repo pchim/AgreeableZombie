@@ -1,7 +1,7 @@
-var mongoose = require ('mongoose');
+var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var bookSchema = new Schema ({
+var bookSchema = new Schema({
   bookTitle: String,
   bookData: [{
     name: String,
@@ -12,4 +12,4 @@ var bookSchema = new Schema ({
 
 var Book = mongoose.model('Book', bookSchema);
 
-module.exports = Book; 
+module.exports = Book;

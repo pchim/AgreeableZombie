@@ -1,22 +1,15 @@
-var Book = require ('./bookModel.js');
+var Book = require('./bookModel.js');
 
 module.exports = {
-  getAllBooks: function (req, res, next) {
-    //res.json({message: 'inside getAllBooks !!'});
-
-    Book.find({}, function(err, books) {
-      if (err) {
-        throw err;
-      }
-      console.log ('inside getAllBooks - ', books);
-      res.json(books);
+  getAllBooks: function (req, res) {
+    Book.find({}, function (err, books) {
+      if (err) return res.status(500).send(err);
+      return res.json(books);
     });
   },
 
-  addBook: function (req, res, next) {
-    console.log ('inside addBook !!');
-
-    var newBook = Book ({
+  addBook: function (req, res) {
+    var newBook = new Book({
       bookTitle: 'The Very Hungry Caterpillar',
       author: 'Eric Carle',
       bookData: [
@@ -53,13 +46,11 @@ module.exports = {
       ]
     });
 
-    newBook.save(function(err) {
+    newBook.save(function (err, book) {
       if (err) {
-        throw err;
+        res.status(500).send(err);
       }
-      console.log('New Book entry created !');
+      res.json(book);
     });
-
-    res.json({message: 'inside addBooks !!'});
   }
 };
