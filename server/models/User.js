@@ -5,7 +5,10 @@ var UserSchema = new mongoose.Schema(
     facebook: {
       id: String,
       token: String,
-      name: String
+      name: String,
+      email: String,
+      firstName: String,
+      lastName: String
     }
   },
   { timestamps: true }

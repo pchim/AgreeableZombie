@@ -15,7 +15,7 @@ body {
 }
 
 body.story-time {
-  background: url(../assets/cartoon-wallpaper.jpg) no-repeat center center fixed; 
+  background: url(../assets/cartoon-wallpaper.jpg) no-repeat center center fixed;
 }
 
 /*
@@ -168,7 +168,7 @@ body.story-time {
   font-size: 18px;
   font-family: TravelingTypewriter, sans-serif;
   position: absolute;
-  top: 80px; 
+  top: 80px;
   left: 20px;
 
 }
@@ -179,7 +179,7 @@ body.story-time {
 }
 
 #invite-to {
-  width: 300px; 
+  width: 300px;
   height: 39px;
   position: absolute;
   top: 79px;
@@ -197,25 +197,25 @@ input {
 }
 
 ::-webkit-input-placeholder {
-  font-family: TravelingTypewriter, sans-serif;  
+  font-family: TravelingTypewriter, sans-serif;
   font-size: 18px;
   text-align: center;
 }
 
 :-moz-placeholder { /* Firefox 18- */
-  font-family: TravelingTypewriter, sans-serif;  
+  font-family: TravelingTypewriter, sans-serif;
   font-size: 18px;
   text-align: center;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-  font-family: TravelingTypewriter, sans-serif;  
+  font-family: TravelingTypewriter, sans-serif;
   font-size: 18px;
   text-align: center;
 }
 
-:-ms-input-placeholder {  
-  font-family: TravelingTypewriter, sans-serif;  
+:-ms-input-placeholder {
+  font-family: TravelingTypewriter, sans-serif;
   font-size: 18px;
   text-align: center;
 }
@@ -229,7 +229,7 @@ input {
 .media-container {
 }
 
-.local-webcam > video { 
+.local-webcam > video {
   width: 230px;
   position: absolute;
   top: 200px;
@@ -258,4 +258,12 @@ input {
   z-index: 3000;
   width: 800px;
   height: 480px;
+}
+
+.fb-button {
+  font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+}
+.fb-button span {
+  padding-right: 7px;
+  font-size: 20px;
 }

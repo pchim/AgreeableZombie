@@ -19,8 +19,11 @@ module.exports = function(app) {
     user.facebook.id    = undefined;
     user.facebook.token = undefined;
     user.facebook.name  = undefined;
+    user.facebook.email = undefined;
+    user.facebook.firstName = undefined;
+    user.facebook.lastName = undefined;
     user.save(function() {
-      res.redirect('/profile');
+      res.redirect('/');
     });
   });
 };
