@@ -1,20 +1,15 @@
 import React from 'react';
-// import Logo from './storycomponents/Logo.js';
 import Title from './storycomponents/Title.js';
 import BookBackground from './storycomponents/BookBackground.js';
 import PrevButton from './storycomponents/PrevButton.js';
 import NextButton from './storycomponents/NextButton.js';
 import LeftPageText from './storycomponents/LeftPageText.js';
 import RightPageText from './storycomponents/RightPageText.js';
-// import WebCam from './storycomponents/WebCam.js';
 import InvitePopUp from './storycomponents/InvitePopUp.js';
-import Canvas from './storycomponents/Canvas.jsx';
 import SideBar from './storycomponents/SideBar.js';
 import socket from '../../websocket.js';
 import ConversationContainer from './ConversationContainer.jsx';
 import $ from 'jquery';
-// import LeftPageImage from './storycomponents/LeftPageImage.js';
-// import RightPageImage from './storycomponents/RightPageImage.js';
 
 class StoryTime extends React.Component {
   constructor(props) {
@@ -43,14 +38,10 @@ class StoryTime extends React.Component {
     this.handleInviteToggle = this.handleInviteToggle.bind(this);
 
     var conversationsClient = this.state.conversationsClient;
-    var activeConversation = this.state.activeConversation;
-    var previewMedia = this.state.previewMedia;
-    var identity = this.state.identity;
-
     var webcam = this;
 
-    //Ajax request to server to get token
-    $.getJSON('/token', function(data) {
+    // Ajax request to server to get token
+    $.getJSON('/token', data => {
       var identity = data.identity;
       var accessManager = new Twilio.AccessManager(data.token);
 
@@ -65,21 +56,23 @@ class StoryTime extends React.Component {
         conversationsClient,
       });
 
-      conversationsClient.listen().then(webcam.clientConnected.bind(webcam), function (error) {
-        webcam.log('Could not connect to Twilio: ' + error.message);
+      conversationsClient.listen().then(webcam.clientConnected.bind(webcam), error => {
+        webcam.log(`Could not connect to Twilio: ${error.message}`);
         console.log(error, '<<< client could not connect');
       });
     });
 
-    socket.on('prev page', (data) => {
-      console.log('data from server', data);
-      this.setState({ msg: data.msg });
-      this.setState({ pageCounter: data.pageCounter });
-    });
+    socket.emit('join', this.props.params.bookId);
 
-    socket.on('next page', (data) => {
-      this.setState({ msg: data.msg });
-      this.setState({ pageCounter: data.pageCounter });
+    socket.on('action', data => {
+      console.log(data);
+      switch (data.action) {
+        case 'TURN_PAGE':
+          this.setState({ ...this.state, pageCounter: data.payload });
+          break;
+        default:
+          console.log('action not recognized: ', data);
+      }
     });
   }
   // END OF CONSTRUCTOR
@@ -197,39 +190,19 @@ class StoryTime extends React.Component {
   }
 
   onClickPrev() {
-    console.log('Previous Clicked');
-    socket.emit('PrevButtonClick', {
-      msg: 'Previous button clicked', pageCounter: this.state.pageCounter - 2,
-    });
-    if (this.state.pageCounter - 1 >= 0) {
-      this.setState({
-        pageCounter: this.state.pageCounter - 2 });
-    } else {
-      socket.emit('PrevButtonClick', {
-        msg: 'BEGINNING OF BOOK!', pageCounter: this.state.pageCounter,
-      });
+    const prev = this.state.pageCounter - 2;
+    if (prev >= 0) {
+      socket.emit('action', { action: 'TURN_PAGE', payload: prev });
+      this.setState({ ...this.state, pageCounter: prev });
     }
   }
 
   onClickNext() {
-    console.log('Next clicked');
-    if (this.state.pageCounter < this.state.bookData.length - 1) {
-      this.setState({ pageCounter: this.state.pageCounter + 2 });
-      socket.emit('NextButtonClick', {
-        msg: 'Next button clicked', pageCounter: this.state.pageCounter + 2,
-      });
-    } else {
-      socket.emit('NextButtonClick', {
-        msg: 'END OF BOOK!',
-        pageCounter: this.state.pageCounter,
-      });
+    const next = this.state.pageCounter + 2;
+    if (next  < this.state.bookData.length - 1) {
+      socket.emit('action', { action: 'TURN_PAGE', payload: next });
+      this.setState({ ...this.state, pageCounter: next });
     }
-  }
-
-  changeText(event) {
-    this.setState({
-      msg: event.msg,
-    });
   }
 
   render() {
@@ -249,7 +222,11 @@ class StoryTime extends React.Component {
             <NextButton rightClickHandler={this.onClickNext} />
             <LeftPageText bookData={this.state.bookData} pageCounter={this.state.pageCounter} />
             <RightPageText bookData={this.state.bookData} pageCounter={this.state.pageCounter} />
-            {this.state.invitePopUp ? <InvitePopUp handleInviteToggle={this.handleInviteToggle} handleInvite={this.handleInvite} /> : null}
+            {this.state.invitePopUp ?
+              <InvitePopUp
+                handleInviteToggle={this.handleInviteToggle}
+                handleInvite={this.handleInvite}
+              /> : null}
             <div>
               <p id="your-username">username: {this.state.identity}</p>
               <div id="local-media" className="local-webcam"></div>

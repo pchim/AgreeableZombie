@@ -7,6 +7,14 @@ var app = express();
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
 
+var twilio = require('twilio');
+var randomUsername = require('./randos.js');
+
+var port;
+var grant;
+var AccessToken;
+var ConversationsGrant;
+
 // Setup of environment variables
 require('dotenv').config({ silent: true });
 
@@ -26,75 +34,69 @@ process.env.TWILIO_API_KEY
 process.env.TWILIO_API_SECRET
 process.env.TWILIO_CONFIGURATION_SID
 */
-var twilio = require('twilio');
-var AccessToken = twilio.AccessToken;
-var ConversationsGrant = AccessToken.ConversationsGrant;
-var randomUsername = require('./randos.js');
+AccessToken = twilio.AccessToken;
+ConversationsGrant = AccessToken.ConversationsGrant;
 
 app.use(express.static(__dirname + '/client'));
 
-var port = process.env.PORT || 3000;
 
 // Twilio token request
 app.get('/token', function(req, res) {
-    var identity = randomUsername();
+  var identity = randomUsername();
 
-    // Create an access token
-    var token = new AccessToken(
-        process.env.TWILIO_ACCOUNT_SID,
-        process.env.TWILIO_API_KEY,
-        process.env.TWILIO_API_SECRET
-    );
+  // Create an access token
+  var token = new AccessToken(
+      process.env.TWILIO_ACCOUNT_SID,
+      process.env.TWILIO_API_KEY,
+      process.env.TWILIO_API_SECRET
+  );
 
-    // Assign the generated identity to the token
-    token.identity = identity;
+  // Assign the generated identity to the token
+  token.identity = identity;
 
-    //grant the access token Twilio Video capabilities
-    var grant = new ConversationsGrant();
-    grant.configurationProfileSid = process.env.TWILIO_CONFIGURATION_SID;
-    token.addGrant(grant);
+  // grant the access token Twilio Video capabilities
+  grant = new ConversationsGrant();
+  grant.configurationProfileSid = process.env.TWILIO_CONFIGURATION_SID;
+  token.addGrant(grant);
 
-    // Serialize the token to a JWT string and include it in a JSON response
-    res.send({
-        identity: identity,
-        token: token.toJwt()
-    });
+  // Serialize the token to a JWT string and include it in a JSON response
+  res.send({
+    identity: identity,
+    token: token.toJwt()
+  });
 });
 
 app.get('*', function (req, res) {
-    res.sendFile(path.join(__dirname + '/client/index.html'));
+  res.sendFile(path.join(__dirname + '/client/index.html'));
 });
-
-// draw history for canvas
-var drawHistory = [];
 
 // Socket.IO Connection
-io.on('connection', (socket) => {
-  console.log('a user connected');
-  socket.on('NextButtonClick', function(data) {
-    console.log ('inside server');
-    io.emit('next page', data);
-  });
-  socket.on('PrevButtonClick', function(data) {
-    io.emit('prev page', data);
-  });
-  socket.on('disconnect', () => {
-    console.log('user disconnected');
+io.on('connection', function(socket) {
+  var room;
+
+  socket.on('join', function(data) {
+    if (room) {
+      console.log('leaving room ' + room);
+      socket.leave(room);
+    }
+
+    room = data;
+    console.log('joining room ' + room);
+    socket.join(room);
   });
 
-  //Socket Events for Canvas interactions
-  for(var i in drawHistory){
-    socket.emit('drawLine', drawHistory[i]);
-  }
+  socket.on('action', function(data) {
+    console.log('action in room ' + room + ': ', data);
+    socket.to(room).emit('action', data);
+  });
 
-  socket.on('drawLine', data => {
-    var newLine = {line: data.line};
-    drawHistory.push(newLine);
-    io.emit('drawLine', newLine);
+  socket.on('disconnect', function() {
+    console.log('user disconnected from room ' + room);
   });
 });
 
-server.listen(port, (err) => {
+port = process.env.PORT || 3000;
+server.listen(port, function(err) {
   if (err) {
     return console.log('Listen error: ', err);
   }
