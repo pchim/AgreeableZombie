@@ -1,6 +1,6 @@
-import React, { PropTypes, Component } from 'react';
+import React from 'react';
 
-var LeftPageText = (props) => {
+const LeftPageText = (props) => {
   console.log ('bookData inside LeftPageText is - ', props.bookData);
   console.log ('bookTitle inside LeftPageText is - ', props.bookTitle);
   return (

@@ -15,7 +15,7 @@ module.exports = {
       bookData: [
         {
           name: 'Page1',
-          content: 'In the light of the moon a little egg lay on a leaf.',
+          content: 'In the light of the moon a little egg lay on a leaf. I ate a banana and tripped on it like a boss',
           image: 'http://i.imgur.com/gXB9G7j.gif'
         },
         {

@@ -25,8 +25,8 @@ class Canvas extends React.Component {
       var context = this.state.context;
       context.beginPath();
       context.lineWidth = 2;
-      context.moveTo(line[0].x - 500 , line[0].y - 150 ); // adjusts draw point to be in book component
-      context.lineTo(line[1].x - 500 , line[1].y - 150 );
+      context.moveTo(line[0].x, line[0].y); // adjusts draw point to be in book component
+      context.lineTo(line[1].x, line[1].y);
       context.stroke();
     });
   }
@@ -34,8 +34,8 @@ class Canvas extends React.Component {
   componentDidMount() {
     var canvas = this.refs.canvas;
     var context = canvas.getContext('2d');
-    canvas.width = document.getElementsByClassName('background')[0].clientWidth;
-    canvas.height = document.getElementsByClassName('background')[0].clientHeight;
+    canvas.width = screen.availWidth - 50;
+    canvas.height = screen.availHeight;
 
     canvas.onmousedown = e => {
       this.setState({click:true});
@@ -45,11 +45,11 @@ class Canvas extends React.Component {
       this.setState({click:false});
     };
 
-    var boundingRect = document.getElementsByClassName('background')[0].getBoundingClientRect();
+    var boundingRect = document.getElementsByClassName('booksection')[0].getBoundingClientRect();
   
     canvas.onmousemove = e => {
-      var mx = e.clientX;
-      var my = e.clientY;
+      var mx = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
+      var my = e.clientY + document.body.scrollTop + document.documentElement.scrollTop;
 
       this.setState({
         move: true,

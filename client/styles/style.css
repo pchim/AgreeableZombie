@@ -1,22 +1,55 @@
-@font-face {
-  font-family:'TravelingTypewriter';
-  src: url('../assets/TravelingTypewriter.otf');
-}
+@import url(https://fonts.googleapis.com/css?family=Indie+Flower);
+@import url(https://fonts.googleapis.com/css?family=Berkshire+Swash);
 
-body {
-  /*background: url(../assets/star-party.jpg) no-repeat center center fixed; */
-  background-color: rgb(255,255,253);
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+body html {
   margin: 0;
-  font-family: TravelingTypewriter, sans-serif;
+  padding: 0;
+  width:100%;
+  height:100%;
+  background-color: rgb(255,255,253);
 }
 
-body.story-time {
-  background: url(../assets/cartoon-wallpaper.jpg) no-repeat center center fixed;
+.booksection {
+  width:95%;
+  float:left;
 }
+
+.sidenavigation {
+  position:fixed;
+  width:50px;
+  height:100%;
+  z-index: 4;
+  top:0;
+  right:0;
+  border-color: black
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+}
+
+.popupbox {
+  width: 260px;
+  height: 40px;
+  top: 165px;
+  right: 50px;
+  z-index: 5;
+  position: fixed;
+}
+
+.icons {
+  max-width: 27px;
+  margin: 10px 0px;
+  height: 27px;
+  position:relative;
+}
+
+.icons:hover {
+  opacity: 0.3;
+  transition: opacity 0.2s ease-in-out;
+}
+
 
 /*
  * todo: this would be better to use the scss variables;
@@ -46,96 +79,93 @@ body.story-time {
   display: inline-block;
 }
 
-
-.header {
-  /*background-color: #d6c6a7;*/
-  text-align: center;
-}
 .logo {
   margin: 10px 0px 0px 0px;
-  position: absolute;
-  top: 15px;
-  left: 509px;
-}
+  max-width: 150px;
+  height:auto;
 
-.title-and-author {
-  text-align: center;
-  margin-top: 0px;
-  position: absolute;
-  top: 77px;
-  left: 567px;
 }
 
 .title {
   font-weight: bold;
+  font-size:20px;
+  font-family: 'Berkshire Swash', cursive;
 }
 
 .author {
   font-size: 16px;
-  margin-bottom: 0;
-}
-.background {
-  text-align: center;
-  position: absolute;
-  top: 150px;
-  left: 500px;
-  z-index: 1;
+  font-family: 'Berkshire Swash', cursive;
 }
 
-#book-background-image {
-  width: 800px;
-  height: 480px;
+.book-background-image {
+  width: 1200px;
+  height:480px;
 }
 
-.button {
+.page-turn-button {
+  font-family: 'Indie Flower', cursive;
+  font-weight: 400;
+  font-size: 30px;
   border-style: none;
-  padding: 15px;
-  background-color: black;
-  color: white;
-  font-size: 18px;
+  background-color: white;
+  color: black;
+  opacity: 1.0;
+  font-size: 25px;
+}
+
+.page-turn-button:focus {
+  outline: none;
+}
+
+.page-turn-button:hover {
+  opacity: 0.3;
+  transition: opacity .2s ease-in-out;
 }
 
 .next-button {
   position: absolute;
-  top: 350px;
-  right: 60px;
+  z-index: 4;
+  top: 490px;
+  left: 1150px;
 }
 
 .prev-button {
+  font-family: 'Indie Flower', cursive;
+  font-weight: 400;
+  font-size: 30px;
   position: absolute;
-  top: 350px;
-  left: 430px;
+  z-index: 4;
+  top: 460px;
+  left: 180px;
 }
 
 .left-page-text {
-  z-index: 1000;
-  width:313px;
+  font-family: 'Indie Flower', cursive;
+  font-weight: 400;
+  font-size:25px;
+  z-index: 1;
+  width:430px;
   height:300px;
   position: absolute;
   top: 190px;
-  left: 580px;
+  left: 200px;
 }
 
-.left-page-image {
-  z-index: 1000;
-  text-align: center;
+.right-page-text {
+  font-family: 'Indie Flower', cursive;
+  font-weight: 400;
+  font-size: 25px;
+  z-index: 1;
+  width: 430px;
+  height: 300px;
   position: absolute;
-  left: 570px;
-  top: 361px;
+  top: 190px;
+  left: 740px;
 }
 
 .page-image {
   width: 300px;
   border-radius: 15px;
-}
-
-.right-page-text {
-  z-index: 1000;
-  width: 313px;
-  height: 300px;
-  position: absolute;
-  top: 190px;
-  left: 940px;
 }
 
 .right-page-image {
@@ -165,12 +195,9 @@ body.story-time {
   padding: 8px 10px 12px 10px;
   color: white;
   background-color: black;
-  font-size: 18px;
-  font-family: TravelingTypewriter, sans-serif;
+  font-size: 14px;
+  font-family: Avenir, sans-serif;
   position: absolute;
-  top: 80px;
-  left: 20px;
-
 }
 
 #webcam-features {
@@ -179,11 +206,8 @@ body.story-time {
 }
 
 #invite-to {
-  width: 300px;
-  height: 39px;
-  position: absolute;
-  top: 79px;
-  left: 100px;
+  width: 200px; 
+  height: 30px;
 }
 
 input {
@@ -194,30 +218,6 @@ input {
 
 #invite-section {
   padding-left: 10px;
-}
-
-::-webkit-input-placeholder {
-  font-family: TravelingTypewriter, sans-serif;
-  font-size: 18px;
-  text-align: center;
-}
-
-:-moz-placeholder { /* Firefox 18- */
-  font-family: TravelingTypewriter, sans-serif;
-  font-size: 18px;
-  text-align: center;
-}
-
-::-moz-placeholder {  /* Firefox 19+ */
-  font-family: TravelingTypewriter, sans-serif;
-  font-size: 18px;
-  text-align: center;
-}
-
-:-ms-input-placeholder {
-  font-family: TravelingTypewriter, sans-serif;
-  font-size: 18px;
-  text-align: center;
 }
 
 #webcam-wrapper {
@@ -231,33 +231,39 @@ input {
 
 .local-webcam > video {
   width: 230px;
+  height: auto;
   position: absolute;
-  top: 200px;
-  left: 20px;
-  border-radius: 15px;
+  top: 580px;
+  left: 300px;
+  border-radius: 5px;
+  z-index: 4;
 }
 
 #your-username {
+  font-family: Avenir;
   position: absolute;
-  top: 150px;
-  left: 25px;
+  right: 60px;
+  bottom: 3px;
+  z-index: 2;
 }
 
 .remote-webcam > video {
   width: 230px;
+  height: auto;
   position: absolute;
-  top: 390px;
-  left: 20px;
-  border-radius: 15px;
+  top: 580px;
+  left: 800px;
+  border-radius: 5px;
+  z-index: 4;
 }
 
 .canvas-container {
   position: absolute;
-  top: 150px;
-  left: 500px;
-  z-index: 3000;
-  width: 800px;
-  height: 480px;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .fb-button {
