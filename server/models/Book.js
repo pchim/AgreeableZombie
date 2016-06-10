@@ -6,7 +6,7 @@ var bookSchema = new Schema({
   bookData: [{
     name: String,
     content: String,
-    image: String
+    image: Boolean,
   }]
 });
 
