@@ -258,7 +258,7 @@ class StoryTime extends React.Component {
                   conversation={this.state.activeConversation}
                 /> : null}
             </div>
-          </div>   
+          </div>
         </div>
       );
     }
@@ -267,7 +267,3 @@ class StoryTime extends React.Component {
 }
 
 export default StoryTime;
-
-
-
-// // <Canvas />

@@ -19,6 +19,12 @@ const SideBar = (props) => (
       src="../../assets/icons/add-contact.png"
       alt="invite"
     />
+    <a href='library'>
+    <img
+      className="icons"
+      src="../../assets/icons/book.png"
+      alt="library"
+    />
   </div>
 );
 
