@@ -1,4 +1,3 @@
-import React from 'react';
 import React, { Component, PropTypes } from 'react';
 import { browserHistory } from 'react-router';
 import Title from './storycomponents/Title.js';
