@@ -1,10 +1,13 @@
 var books = require('./controllers/books');
 var auth = require('./controllers/auth');
+var email = require('./controllers/email');
 
 module.exports = function(app) {
   app.get('/api/books', books.getAllBooks);
   app.post('/api/books', books.addBook);
   app.post('/api/addAllBooks', books.addAllSampleBooks);
+
+  app.post('/api/email', email.sendEmail);
 
   app.get('/facebook/signin', auth.facebook.signin);
   app.get('/facebook/verify', function(req, res) {
