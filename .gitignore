@@ -16,3 +16,8 @@ client/assets/fonts
 
 #git files
 ./git
+.gitaliases
+
+#archived sites
+./PublicBooksLoader/sites
+./PublicBooksLoader/archived-stories/*

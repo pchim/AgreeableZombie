@@ -1,5 +1,10 @@
-var Book = require('../models/Book');
+var Book = require ('../models/Book.js');
+var Promise = Promise || require('bluebird');
+var fs = require('fs');
+fs.readFile = Promise.promisify(fs.readFile);
+fs.readdir = Promise.promisify(fs.readdir);
 
+var archiveHelper = require('../../database/PublicBooksLoader/archiveHelper.js');
 module.exports = {
   getAllBooks: function (req, res) {
     Book.find({}, function (err, books) {
@@ -8,49 +13,61 @@ module.exports = {
     });
   },
 
-  addBook: function (req, res) {
-    var newBook = new Book({
-      bookTitle: 'The Very Hungry Caterpillar',
-      author: 'Eric Carle',
-      bookData: [
-        {
-          name: 'Page1',
-          content: 'In the light of the moon a little egg lay on a leaf. I ate a banana and tripped on it like a boss',
-          image: 'http://i.imgur.com/gXB9G7j.gif'
-        },
-        {
-          name: 'Page2',
-          content: 'On Tuesday he ate through two pears. But he was still hungry.',
-          image: 'http://i.imgur.com/UbJv7zo.png'
-        },
-        {
-          name: 'Page3',
-          content: 'On Saturday, he ate through one piece of chocolate cake, one pickle, one slice of Swiss cheese, one slice of salami, one piece of cherry pie, one sausage, one cupcake, and one slice of watermelon.',
-          image: 'http://i.imgur.com/yh1dpvf.gif'
-        },
-        {
-          name: 'Page4',
-          content: 'He built a small house, called a cocoon, around himself. He stayed inside for more than two weeks. Then he nibbled a hole in the cocoon, pushed is way out and …',
-          image: 'http://i.imgur.com/z0RUFAo.png'
-        },
-        {
-          name: 'Page5',
-          content: 'Now he wasn’t hungry anymore – and he wasn’t a little caterpillar anymore. He was a big, fat caterpillar.',
-          image: 'http://i.imgur.com/Vzbap43.gif'
-        },
-        {
-          name: 'Page6',
-          content: 'He was a beautiful butterfly!',
-          image: 'http://i.imgur.com/M52l5cx.png'
-        }
-      ]
-    });
+  // currently not un use
+  addBook: function (req, res, next) {
+    console.log ('inside addBook !!');
+    const filePath = archiveHelper.paths.sampleData;
+    Book.remove({}).then(() => {
+        fs.readFile(__dirname + '/../database/PublicBooksLoader/sample-book-data/14837.json')
+          .then(content => JSON.parse(content))
+          .then(content => {
+            console.log(content);
+            var newBook = Book ({
+              bookTitle: 'The Very Hungry Caterpillar',
+              author: 'Eric Carle',
+              bookData: content
+            });
 
-    newBook.save(function (err, book) {
-      if (err) {
-        res.status(500).send(err);
-      }
-      res.json(book);
+            newBook.save(function(err) {
+              if (err) {
+                throw err;
+              }
+              console.log('New Book entry created !');
+            });
+
+            res.json({message: 'inside addBooks !!'});     
+      });
+    })
+  },
+
+  // add all sample books data, called from get '/api/addAllBooks'
+  addAllSampleBooks: function (req, res, next) {
+    console.log('add sample books');
+    const filePath = archiveHelper.paths.sampleData;
+    Book.remove({}).then( () => {
+      fs.readdir(filePath).then(files => {
+        if(files.length) {
+          while (files.indexOf('.DS_Store') > -1) {
+            files.splice(files.indexOf('.DS_Store'), 1);
+          }
+          let allBooks = [];
+          var importData = (i) => {
+            fs.readFile(filePath + '/' + files[i]).then(content => JSON.parse(content))
+              .then(book => {
+                allBooks.push(book);
+              }).then(() => {
+                if (i === files.length-1) {
+                  Book.insertMany(allBooks);
+                  console.log('all books added');
+                  res.json({ message: 'sample books added' });
+                } else {
+                  importData(i+1);
+                }
+              });
+          };
+          importData(0);
+        }
+      });
     });
-  }
+  },
 };

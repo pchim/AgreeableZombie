@@ -10,7 +10,8 @@
     "test": "mocha ./test/server --compilers js:babel-register && karma start",
     "test:client": "karma start",
     "test:server": "mocha ./test/server --watch --compilers js:babel-register",
-    "watch": "webpack --watch"
+    "watch": "webpack --watch",
+    "import:sampleBooks": "curl --data '' localhost:3000/api/addAllBooks"
   },
   "repository": {
     "type": "git",
@@ -22,10 +23,6 @@
     "url": "https://github.com/wonky-mongoose/AgreeableZombie/issues"
   },
   "dependencies": {
-    "body-parser": "^1.4.3",
-    "connect-ensure-login": "^0.1.1",
-    "cookie-parser": "^1.4.3",
-    "cors": "^2.7.1",
     "babel-cli": "^6.7.5",
     "babel-core": "^6.7.4",
     "babel-loader": "^6.2.4",
@@ -42,12 +39,14 @@
     "express": "^4.13.4",
     "express-session": "^1.13.0",
     "file-loader": "^0.8.5",
+    "fs-extra": "^0.30.0",
     "image-webpack-loader": "^1.8.0",
     "jquery": "^2.2.4",
     "json-loader": "^0.5.4",
     "materialize-css": "^0.97.6",
     "mongoose": "^4.4.19",
     "morgan": "^1.1.1",
+    "node-fetch": "^1.5.3",
     "node-sass": "^3.7.0",
     "nodemon": "^1.2.1",
     "passport": "^0.3.2",
@@ -60,8 +59,10 @@
     "sass-loader": "^3.2.0",
     "socket.io": "^1.4.6",
     "socket.io-client": "^1.4.6",
+    "striptags": "^2.1.1",
     "style-loader": "^0.13.1",
     "twilio": "^2.9.1",
+    "url": "^0.11.0",
     "url-loader": "^0.5.7",
     "webpack": "^1.12.14"
   },
