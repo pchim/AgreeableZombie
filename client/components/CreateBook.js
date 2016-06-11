@@ -5,22 +5,23 @@ class CreateBook extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: '',
-      author: '',
+      bookTitle: '',
+      bookTitleImage: '',
+      bookData: [],
       content: '',
     };
     this.handleTitle = this.handleTitle.bind(this);
+    this.handleTitleImage = this.handleTitleImage.bind(this);
     this.handleContent = this.handleContent.bind(this);
-    this.handleAuthor = this.handleAuthor.bind(this);
     this.saveBook = this.saveBook.bind(this);
   }
 
   handleTitle(event) {
-    this.setState({ title: event.target.value });
+    this.setState({ bookTitle: event.target.value });
   }
 
-  handleAuthor(event) {
-    this.setState({ author: event.target.value });
+  handleTitleImage(event) {
+    this.setState({ bookTitleImage: event.target.value });
   }
 
   handleContent(event) {
@@ -29,17 +30,31 @@ class CreateBook extends React.Component {
 
   saveBook(e) {
     e.preventDefault();
-    const context = this;
+    console.log('the content', this.state.content)
+    this.setState({ bookData: this.state.bookData.push(
+      {
+        content: this.state.content,
+        image: false,
+      }
+    ),
+    });
+    // this.setState({
+    //   bookData: this.state.bookData.concat({
+    //     content: this.state.content,
+    //     image: false,
+    //   }),
+    // });
+
     const story = {
-      title: this.state.title,
-      author: this.state.author,
-      content: this.state.content,
+      bookTitle: this.state.bookTitle,
+      bookTitleImage: this.state.bookTitleImage,
+      bookData: this.state.bookData,
     };
 
-    $.post('/User', story, (data, status) => {
-      console.log('the data', data);
+    $.post('/api/savebook', story, (data, status) => {
+      console.log('save STORY', data);
+      console.log(data);
       console.log(status);
-      context.setState({ userData: this.state.userData.concat([data]) });
     })
     .fail((err, status) => console.log('err', status));
   }
@@ -52,14 +67,14 @@ class CreateBook extends React.Component {
           <input
             type="text"
             placeholder="Title of Book"
-            value={this.state.title}
+            value={this.state.bookTitle}
             onChange={this.handleTitle}
           />
           <input
             type="text"
-            placeholder="Author"
-            value={this.state.author}
-            onChange={this.handleAuthor}
+            placeholder="Title Image URL"
+            value={this.state.bookTitleImage}
+            onChange={this.handleTitleImage}
           />
           <textarea
             className="materialize-textarea textareastory"

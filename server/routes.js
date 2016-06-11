@@ -4,7 +4,7 @@ var email = require('./controllers/email');
 
 module.exports = function(app) {
   app.get('/api/books', books.getAllBooks);
-  app.post('/api/books', books.addBook);
+  app.post('/api/savebook', books.saveCreatedBook);
   app.post('/api/getBook', books.getOneBook);
   app.post('/api/addAllBooks', books.addAllSampleBooks);
 
