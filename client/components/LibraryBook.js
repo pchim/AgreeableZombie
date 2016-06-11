@@ -10,7 +10,7 @@ const LibraryBook = ({ book }, context) => (
       {context.user ?
         <Link to={`/story-time/${context.user._id}/${book._id}`}>
           {book.bookTitle}
-        </Link> : null
+        </Link> : book.bookTitle
       }
     </div>
   </div>
