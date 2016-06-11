@@ -32,7 +32,7 @@ footer {
 .popupbox {
   width: 260px;
   height: 40px;
-  top: 165px;
+  top: 111px;
   right: 50px;
   z-index: 5;
   position: fixed;
@@ -219,7 +219,7 @@ footer {
 }
 
 #invite-to {
-  width: 200px; 
+  width: 200px;
   height: 30px;
 }
 
