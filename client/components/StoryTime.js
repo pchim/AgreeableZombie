@@ -1,4 +1,5 @@
 import React from 'react';
+import { browserHistory } from 'react-router';
 import Title from './storycomponents/Title.js';
 import BookBackground from './storycomponents/BookBackground.js';
 import PrevButton from './storycomponents/PrevButton.js';
@@ -30,12 +31,13 @@ class StoryTime extends React.Component {
       identity: undefined,
       message: undefined,
     };
-
+    this.backToLibrary = this.backToLibrary.bind(this);
     this.onClickPrev = this.onClickPrev.bind(this);
     this.onClickNext = this.onClickNext.bind(this);
     this.handlePreview = this.handlePreview.bind(this);
     this.handleInvite = this.handleInvite.bind(this);
     this.handleInviteToggle = this.handleInviteToggle.bind(this);
+
 
     var conversationsClient = this.state.conversationsClient;
     var webcam = this;
@@ -93,6 +95,9 @@ class StoryTime extends React.Component {
     });
   }
 
+  backToLibrary(e) {
+    browserHistory.push('/library');
+  }
 
   conversationStarted(conversation) {
     var webcam = this;
@@ -213,6 +218,7 @@ class StoryTime extends React.Component {
             <SideBar
               handlePreview={this.handlePreview}
               handleInviteToggle={this.handleInviteToggle}
+              backToLibrary={this.backToLibrary}
             />
           </div>
           <div className="booksection">
