@@ -38,31 +38,6 @@ class StoryTime extends Component {
     this.handleInvite = this.handleInvite.bind(this);
     this.handleInviteToggle = this.handleInviteToggle.bind(this);
 
-    let conversationsClient = this.state.conversationsClient;
-    const webcam = this;
-
-    // Ajax request to server to get token
-    $.getJSON('/token', data => {
-      const identity = data.identity;
-      const accessManager = new Twilio.AccessManager(data.token);
-
-      // Check the browser console to see identity
-      console.log(identity);
-
-      // Create a Conversations Client and connect to Twilio
-      conversationsClient = new Twilio.Conversations.Client(accessManager);
-
-      webcam.setState({
-        identity,
-        conversationsClient,
-      });
-
-      conversationsClient.listen().then(webcam.clientConnected.bind(webcam), error => {
-        webcam.log(`Could not connect to Twilio: ${error.message}`);
-        console.log(error, '<<< client could not connect');
-      });
-    });
-
     socket.emit('join', this.props.params.userId);
 
     socket.on('action', data => {
@@ -77,108 +52,18 @@ class StoryTime extends Component {
   }
   // END OF CONSTRUCTOR
 
-  clientConnected() {
-    // document.getElementById('invite-controls').style.display = 'block';
-    console.log("Connected to Twilio. Listening for incoming Invites as '" + this.state.conversationsClient.identity + "'");
-    const webcam = this;
-    // When conversationClient hears 'invite' event, accept the invite event and start conversation
-    this.state.conversationsClient.on('invite', invite => {
-      webcam.log(`Incoming invite from: ' ${invite.from}`);
-      invite.accept().then(webcam.conversationStarted.bind(webcam));
-    });
-  }
-
-  conversationStarted(conversation) {
-    const webcam = this;
-
-    this.setState({ activeConversation:conversation });
-    // Draw local video, if not already previewing
-    if (!this.state.previewMedia) {
-      this.setState({ renderConvoContainer: true });
-    }
-
-    // When a participant joins, draw their video on screen
-    webcam.state.activeConversation.on('participantConnected', participant => {
-      webcam.log("Participant '" + participant.identity + "' connected");
-      webcam.setState({ renderConvoContainer: true });
-    });
-
-    // When a participant disconnects, note in log
-    webcam.state.activeConversation.on('participantDisconnected',  participant => {
-      webcam.log("Participant '" + participant.identity + "' disconnected");
-      webcam.setState({ renderConvoContainer: false });
-    });
-
-    // When the conversation ends, stop capturing local video
-    webcam.state.activeConversation.on('disconnected', conversation => {
-      webcam.log("Connected to Twilio. Listening for incoming Invites as '" + webcam.state.conversationsClient.identity + "'");
-      webcam.setState({renderConvoContainer: false, activeConversation: null, previewMedia: null});
-    });
-  }
-
-  handleInviteToggle() {
-    this.setState({ invitePopUp: !this.state.invitePopUp });
-  }
-
-  handleInvite() {
-    const inviteTo = document.getElementById('invite-to').value;
-
-    $.post('/api/email', { email: inviteTo, href: location.href })
-      .done(() => {
-        this.handleInviteToggle();
-      });
-
-    // if (this.state.activeConversation) {
-    //   this.state.activeConversation.invite(inviteTo);
-    // } else {
-    //   const options = {};
-
-    //   if (this.state.previewMedia){
-    //     options.localMedia = this.state.previewMedia;
-    //   }
-    //   const webcam = this;
-    //   this.state.conversationsClient.inviteToConversation(inviteTo, options)
-    //     .then(webcam.conversationStarted.bind(webcam), error => {
-    //       console.error('Unable to create conversation', error);
-    //     })
-    //     .then(this.handleInviteToggle());
-    // }
-  }
-
-  handlePreview() {
-    if (!this.state.previewMedia) {
-      const preview = new Twilio.Conversations.LocalMedia();
-      Twilio.Conversations.getUserMedia()
-        .then(mediaStream => {
-          preview.addStream(mediaStream);
-          preview.attach('#local-media');
-        },
-        error => {
-          console.error('Unable to access local media', error);
-        });
-
-      this.setState({ previewMedia: preview });
-    }
-  }
-
   componentWillMount() {
     const app = this;
+    let conversationsClient = this.state.conversationsClient;
+
     $.post('/api/getBook', { bookId: this.props.params.bookId }, data => {
-      console.log('data from server is - ', data);
-      // query the db for a book,
-      // set the states
       let title = data.bookTitle;
       const bookData = data.bookData;
 
       title = $('<textarea />').html(title).text();
 
-      console.log('bookTitle is - ', title);
-      // console.log('bookdata is - ', bookData);
-
       const convertPages = (i) => {
-        // console.log(i);
         if (i === bookData.length) {
-          // console.log('i', i);
           app.setState({
             bookTitle: title,
             bookData,
@@ -187,17 +72,51 @@ class StoryTime extends Component {
 
         if (!bookData[i].image) {
           bookData[i].content = $('<textarea />').html(bookData[i].content).text();
-          // console.log(pages[i].content);
         }
         convertPages(i + 1);
       };
 
       convertPages(0);
-      // app.setState({
-      //   bookTitle: title,
-      //   bookData,
-      // });
     }, 'json');
+
+    // Ajax request to server to get token
+    $.getJSON('/token', data => {
+      // const identity = (this.context.user && this.context.user._id) || data.identity;
+      const identity = data.identity;
+      const accessManager = new Twilio.AccessManager(data.token);
+
+      // Create a Conversations Client and connect to Twilio
+      conversationsClient = new Twilio.Conversations.Client(accessManager);
+
+      app.setState({
+        identity,
+        conversationsClient,
+      });
+
+      conversationsClient.listen().then(app.clientConnected.bind(app), error => {
+        app.log(`Could not connect to Twilio: ${error.message}`);
+      });
+
+      // start conversation with room owner
+      const roomOwner = this.props.params.userId;
+      if (roomOwner !== identity) {
+        if (this.state.activeConversation) {
+          console.log(`${identity} is inviting ${roomOwner}`);
+          this.state.activeConversation.invite(roomOwner);
+        } else {
+          console.log(`${identity} is inviting ${roomOwner} / not active`);
+          const options = {};
+          if (this.state.previewMedia) {
+            options.localMedia = this.state.previewMedia;
+          }
+          this.state.conversationsClient.inviteToConversation(roomOwner, options)
+            .then(app.conversationStarted.bind(app), error => {
+              console.error('Unable to create conversation', error);
+            })
+            .then(this.handleInviteToggle);
+        }
+      }
+    });
   }
 
   componentDidMount() {
@@ -224,6 +143,81 @@ class StoryTime extends Component {
       socket.emit('action', { action: 'TURN_PAGE', payload: next });
       this.setState({ ...this.state, pageCounter: next });
     }
+  }
+
+  handleInviteToggle() {
+    this.setState({ invitePopUp: !this.state.invitePopUp });
+  }
+
+  handleInvite() {
+    const inviteTo = document.getElementById('invite-to').value;
+
+    $.post('/api/email', { email: inviteTo, href: location.href })
+      .done(() => {
+        this.handleInviteToggle();
+      });
+  }
+
+  handlePreview() {
+    if (!this.state.previewMedia) {
+      const preview = new Twilio.Conversations.LocalMedia();
+      Twilio.Conversations.getUserMedia()
+        .then(mediaStream => {
+          preview.addStream(mediaStream);
+          preview.attach('#local-media');
+        },
+        error => {
+          console.error('Unable to access local media', error);
+        });
+
+      this.setState({ previewMedia: preview });
+    }
+  }
+
+  conversationStarted(conversation) {
+    const webcam = this;
+
+    this.setState({ activeConversation: conversation });
+    // Draw local video, if not already previewing
+    if (!this.state.previewMedia) {
+      this.setState({ renderConvoContainer: true });
+    }
+
+    // When a participant joins, draw their video on screen
+    webcam.state.activeConversation.on('participantConnected', participant => {
+      webcam.log(`Participant '${participant.identity}' connected`);
+      webcam.setState({ renderConvoContainer: true });
+    });
+
+    // When a participant disconnects, note in log
+    webcam.state.activeConversation.on('participantDisconnected',  participant => {
+      webcam.log(`Participant '${participant.identity}' disconnected`);
+      webcam.setState({ renderConvoContainer: false });
+    });
+
+    // When the conversation ends, stop capturing local video
+    webcam.state.activeConversation.on('disconnected', () => {
+      webcam.log(`Connected to Twilio. Listening for incoming Invites as '${webcam.state.conversationsClient.identity}'`);
+      webcam.setState({ renderConvoContainer: false, activeConversation: null, previewMedia: null });
+    });
+  }
+
+  backToLibrary() {
+    browserHistory.push('/library');
+  }
+
+  clientConnected() {
+    console.log(`
+      Connected to Twilio.
+      Listening for incoming invites with id '${this.state.conversationsClient.identity}'
+    `);
+    const webcam = this;
+
+    // When conversationClient hears 'invite' event, accept the invite event and start conversation
+    this.state.conversationsClient.on('invite', invite => {
+      webcam.log(`incoming invite from: ' ${invite.from}`);
+      invite.accept().then(webcam.conversationStarted.bind(webcam));
+    });
   }
 
   log(message) {
@@ -254,11 +248,6 @@ class StoryTime extends Component {
                 handleInvite={this.handleInvite}
               /> : null}
             <div>
-              <p id="your-username">
-                <span>twilio: {this.state.identity}</span>
-                <span> / </span>
-                <span>facebook: {this.context.user.facebook.email}</span>
-              </p>
               <div id="local-media" className="local-webcam"></div>
               {this.state.renderConvoContainer === true ?
                 <ConversationContainer

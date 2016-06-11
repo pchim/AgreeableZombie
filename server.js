@@ -22,10 +22,6 @@ require('dotenv').config({ silent: true });
 require('./server/middleware.js')(app, express);
 require('./server/routes.js')(app, express);
 
-// Setup of environment variables
-require('dotenv').load();
-var path = require('path');
-
 // connect to mongo database named "books"
 mongoose.connect(process.env.MONGODB_URI);
 
@@ -46,8 +42,6 @@ app.use(express.static(__dirname + '/client'));
 
 // Twilio token request
 app.get('/token', function(req, res) {
-  var identity = randomUsername();
-
   // Create an access token
   var token = new AccessToken(
       process.env.TWILIO_ACCOUNT_SID,
@@ -56,7 +50,7 @@ app.get('/token', function(req, res) {
   );
 
   // Assign the generated identity to the token
-  token.identity = identity;
+  token.identity = (req.user && req.user._id.toString()) || randomUsername();
 
   // grant the access token Twilio Video capabilities
   grant = new ConversationsGrant();
@@ -65,7 +59,7 @@ app.get('/token', function(req, res) {
 
   // Serialize the token to a JWT string and include it in a JSON response
   res.send({
-    identity: identity,
+    identity: token.identity,
     token: token.toJwt()
   });
 });

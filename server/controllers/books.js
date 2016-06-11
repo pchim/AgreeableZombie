@@ -15,7 +15,6 @@ module.exports = {
 
   getOneBook: function (req, res) {
     Book.findOne({ "_id": req.body.bookId }).then(book => {
-      console.log('book in server: ', book);
       res.json(book);
     });
   },
