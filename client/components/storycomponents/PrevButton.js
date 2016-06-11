@@ -1,7 +1,7 @@
 import React from 'react';
 
 const PrevButton = (props) => (
-  <div className="prev-button">
+  <div className="col s6">
     <input
       type="button"
       className="page-turn-button"

@@ -1,7 +1,7 @@
 import React from 'react';
 
 const NextButton = (props) => (
-  <div className="next-button">
+  <div className="col s6 right-align">
     <input
       type="button"
       className="page-turn-button"

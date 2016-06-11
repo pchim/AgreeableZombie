@@ -17,9 +17,9 @@ body html {
 
 .sidenavigation {
   position:fixed;
-  width:50px;
+  width:800px;
   height:100%;
-  z-index: 4;
+  z-index: 10;
   top:0;
   right:0;
   border-color: black
@@ -35,7 +35,7 @@ footer {
   height: 40px;
   top: 111px;
   right: 50px;
-  z-index: 5;
+  z-index: 15;
   position: fixed;
 }
 
@@ -97,6 +97,8 @@ footer {
   font-weight: bold;
   font-size:20px;
   font-family: 'Berkshire Swash', cursive;
+  text-align: center;
+  margin-bottom: 100px;
 }
 
 .author {
@@ -146,23 +148,24 @@ footer {
   left: 180px;
 }
 
-.left-page-text {
+.page-text {
   font-family: 'Indie Flower', cursive;
   font-weight: 400;
-  font-size:21px;
+  font-size:50px;
   z-index: 1;
-  width:430px;
+  width:30%;
+/*  width:430px;
   height:300px;
   position: absolute;
   top: 190px;
-  left: 200px;
+  left: 200px;*/
 }
 
-.left-book-image {
+.book-image {
   z-index: 1;
-  max-width:350px
-  height:200px
-  overflow:scroll;
+  width: 30%;
+  height:200px;
+/*  overflow:scroll;*/
 }
 
 .right-book-image {
@@ -177,11 +180,11 @@ footer {
   font-weight: 400;
   font-size: 21px;
   z-index: 1;
-  width: 430px;
+/*  width: 430px;
   height: 300px;
   position: absolute;
   top: 190px;
-  left: 740px;
+  left: 740px;*/
 }
 
 .page-image {
@@ -244,13 +247,14 @@ input {
 }
 
 .local-webcam > video {
-  width: 230px;
+  width: 280px;
   height: auto;
-  position: absolute;
-  top: 580px;
-  left: 300px;
+  right: 0;
+  bottom: 10px;
+  margin: 10px;
   border-radius: 5px;
-  z-index: 4;
+  z-index: 100;
+  //float: right;
 }
 
 #your-username {
@@ -262,13 +266,13 @@ input {
 }
 
 .remote-webcam > video {
-  width: 230px;
+  width: 280px;
   height: auto;
-  position: absolute;
-  top: 580px;
-  left: 800px;
+  right: 0;
+  bottom: 10px;
+  margin: 10px;
   border-radius: 5px;
-  z-index: 4;
+  z-index: 100;
 }
 
 .canvas-container {
@@ -296,4 +300,26 @@ input {
   font-weight: 700;
   text-align: center;  
 }
+.left-book-image {
+  width: 100%;
+  height: auto;
+}
+.right-book-image {
+  width: 100%;
+  height: auto;
+}
+.story-title {
+  width: 100%;
+  height: auto;
+}
+.side-icons {
+  width: 100px;
+  height: 100px;
+}
+.sidenavigation {
+  width: 300px;
+}
 
+.page-image {
+  width: 100%;
+}

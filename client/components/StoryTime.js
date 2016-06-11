@@ -234,25 +234,35 @@ class StoryTime extends Component {
               handlePreview={this.handlePreview}
               handleInviteToggle={this.handleInviteToggle}
             />
-          </div>
-          <div className="booksection">
-            <Title bookTitle={this.state.bookTitle} author={this.state.author} />
-            <BookBackground />
-            <PrevButton leftClickHandler={this.onClickPrev} />
-            <NextButton rightClickHandler={this.onClickNext} />
-            <LeftPageText bookData={this.state.bookData} pageCounter={this.state.pageCounter} />
-            <RightPageText bookData={this.state.bookData} pageCounter={this.state.pageCounter} />
-            {this.state.invitePopUp ?
-              <InvitePopUp
-                handleInviteToggle={this.handleInviteToggle}
-                handleInvite={this.handleInvite}
-              /> : null}
             <div>
               <div id="local-media" className="local-webcam"></div>
               {this.state.renderConvoContainer === true ?
                 <ConversationContainer
                   conversation={this.state.activeConversation}
                 /> : null}
+            </div>
+          </div>
+          <div className="container">
+            <div className="row">
+              <Title  bookTitle={this.state.bookTitle} author={this.state.author} />
+            </div>
+            <div className="row">
+              <PrevButton leftClickHandler={this.onClickPrev} />
+              <NextButton rightClickHandler={this.onClickNext} />
+            </div>
+            <div className="row">
+
+              { // <BookBackground />
+              }
+
+              <LeftPageText bookData={this.state.bookData} pageCounter={this.state.pageCounter} />
+              <RightPageText bookData={this.state.bookData} pageCounter={this.state.pageCounter} />
+              {this.state.invitePopUp ?
+                <InvitePopUp
+                  handleInviteToggle={this.handleInviteToggle}
+                  handleInvite={this.handleInvite}
+                /> : null}
+
             </div>
           </div>
         </div>
