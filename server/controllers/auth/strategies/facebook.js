@@ -29,7 +29,7 @@ var verify = function(req, token, refreshToken, profile, done) {
     user.facebook.id = profile.id;
     user.facebook.token = token;
     user.facebook.name = profile.displayName;
-    user.facebook.email = profile.emails[0].value;
+    user.facebook.email = profile.emails && profile.emails.length > 0 ? profile.emails[0].value : '';
     user.facebook.firstName = profile.name.givenName;
     user.facebook.lastName = profile.name.familyName;
 
