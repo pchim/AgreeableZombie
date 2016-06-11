@@ -50,6 +50,12 @@ footer {
   transition: opacity 0.2s ease-in-out;
 }
 
+.textareastory {
+  height: 400px,
+  overflow-y: scroll;
+  resize: none;
+}
+
 
 /*
  * todo: this would be better to use the scss variables;
