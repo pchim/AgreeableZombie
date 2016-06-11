@@ -1,5 +1,5 @@
-var Book = require ('../models/Book.js');
-var Promise = Promise || require('bluebird');
+var Book = require('../models/Book.js');
+var Promise = require('bluebird');
 var fs = require('fs');
 fs.readFile = Promise.promisify(fs.readFile);
 fs.readdir = Promise.promisify(fs.readdir);
@@ -14,54 +14,53 @@ module.exports = {
   },
 
   // currently not un use
-  addBook: function (req, res, next) {
-    console.log ('inside addBook !!');
-    const filePath = archiveHelper.paths.sampleData;
-    Book.remove({}).then(() => {
-        fs.readFile(__dirname + '/../database/PublicBooksLoader/sample-book-data/14837.json')
-          .then(content => JSON.parse(content))
-          .then(content => {
-            console.log(content);
-            var newBook = Book ({
-              bookTitle: 'The Very Hungry Caterpillar',
-              author: 'Eric Carle',
-              bookData: content
-            });
+  addBook: function (req, res) {
+    Book.remove({}).then(function() {
+      fs.readFile(__dirname + '/../database/PublicBooksLoader/sample-book-data/14837.json')
+        .then(function(content) { return JSON.parse(content); })
+        .then(function(content) {
+          var newBook = new Book({
+            bookTitle: 'The Very Hungry Caterpillar',
+            author: 'Eric Carle',
+            bookData: content
+          });
 
-            newBook.save(function(err) {
-              if (err) {
-                throw err;
-              }
-              console.log('New Book entry created !');
-            });
+          newBook.save(function(err) {
+            if (err) {
+              throw err;
+            }
+            console.log('New Book entry created !');
+          });
 
-            res.json({message: 'inside addBooks !!'});     
-      });
-    })
+          res.json({ message: 'inside addBooks !!' });
+        });
+    });
   },
 
   // add all sample books data, called from get '/api/addAllBooks'
-  addAllSampleBooks: function (req, res, next) {
+  addAllSampleBooks: function (req, res) {
     console.log('add sample books');
-    const filePath = archiveHelper.paths.sampleData;
-    Book.remove({}).then( () => {
-      fs.readdir(filePath).then(files => {
-        if(files.length) {
+    var filePath = archiveHelper.paths.sampleData;
+    Book.remove({}).then(function() {
+      fs.readdir(filePath).then(function(files) {
+        if (files.length) {
           while (files.indexOf('.DS_Store') > -1) {
             files.splice(files.indexOf('.DS_Store'), 1);
           }
-          let allBooks = [];
-          var importData = (i) => {
-            fs.readFile(filePath + '/' + files[i]).then(content => JSON.parse(content))
-              .then(book => {
+          var allBooks = [];
+          var importData = function(i) {
+            fs.readFile(filePath + '/' + files[i])
+              .then(function(content) { return JSON.parse(content); })
+              .then(function(book) {
                 allBooks.push(book);
-              }).then(() => {
-                if (i === files.length-1) {
+              })
+              .then(function() {
+                if (i === files.length - 1) {
                   Book.insertMany(allBooks);
                   console.log('all books added');
                   res.json({ message: 'sample books added' });
                 } else {
-                  importData(i+1);
+                  importData(i + 1);
                 }
               });
           };
@@ -69,5 +68,5 @@ module.exports = {
         }
       });
     });
-  },
+  }
 };
