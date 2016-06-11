@@ -142,7 +142,7 @@ footer {
 .left-page-text {
   font-family: 'Indie Flower', cursive;
   font-weight: 400;
-  font-size:25px;
+  font-size:21px;
   z-index: 1;
   width:430px;
   height:300px;
@@ -151,10 +151,24 @@ footer {
   left: 200px;
 }
 
+.left-book-image {
+  z-index: 1;
+  max-width:350px
+  height:200px
+  overflow:scroll;
+}
+
+.right-book-image {
+  z-index: 1;
+  max-width:350px
+  height:200px;
+  overflow:scroll;
+}
+
 .right-page-text {
   font-family: 'Indie Flower', cursive;
   font-weight: 400;
-  font-size: 25px;
+  font-size: 21px;
   z-index: 1;
   width: 430px;
   height: 300px;
@@ -168,13 +182,6 @@ footer {
   border-radius: 15px;
 }
 
-.right-page-image {
-  z-index: 1000;
-  text-align: center;
-  position: absolute;
-  left: 935px;
-  top: 350px;
-}
 
 
 #button-preview {

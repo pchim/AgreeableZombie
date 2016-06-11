@@ -3,7 +3,7 @@ import AuthBar from './AuthBar';
 import LibraryBook from './LibraryBook';
 
 const Library = ({ books, term, filter }) => (
-  <div>
+  <div className="container">
     <AuthBar />
     <div className="library">
       <h1>Read With Me</h1>
