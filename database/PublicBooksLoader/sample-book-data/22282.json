@@ -1,709 +1,714 @@
 {
- "bookTitle": "\nUNCLE REMUS and BRER RABBIT\r\n\r\nBy\r\n\r\nJoel Chandler Harris\r\n\r\nNEW YORK\r\nFREDERICK A. STOKES COMPANY\r\nPUBLISHERS\r\n\r\nCopyright, 1906, by\r\nJoel Chandler Harris\r\n\r\nCopyright, 1907, by\r\nFrederick A. Stokes Company\r\nSeptember, 1907\r\n\r\n\r\nTHE CREETURS GO TO THE BARBECUE\n",
+ "bookTitle": "\r\n\r\n\r\n\r\n\r\n\r\nUNCLE REMUS and BRER RABBIT\n",
  "bookTitleImage": "http://res.cloudinary.com/apical/image/upload/22282/images/image-00.jpg",
  "bookData": [
   {
    "name": "1",
+   "content": "\r\n\r\n\r\n\r\n\r\n\r\nUNCLE REMUS and BRER RABBIT\n",
+   "image": false
+  },
+  {
+   "name": "2",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-00.jpg",
    "image": true
   },
   {
-   "name": "2",
-   "content": "\nUNCLE REMUS and BRER RABBIT\r\n\r\nBy\r\n\r\nJoel Chandler Harris\r\n\r\nNEW YORK\r\nFREDERICK A. STOKES COMPANY\r\nPUBLISHERS\r\n\r\nCopyright, 1906, by\r\nJoel Chandler Harris\r\n\r\nCopyright, 1907, by\r\nFrederick A. Stokes Company\r\nSeptember, 1907\r\n\r\n\r\nTHE CREETURS GO TO THE BARBECUE\n",
+   "name": "3",
+   "content": "By\r\n\r\nJoel Chandler Harris\r\n\r\nNEW YORK\r\nFREDERICK A. STOKES COMPANY\r\nPUBLISHERS\r\n\r\nCopyright, 1906, by\r\nJoel Chandler Harris\r\n\r\nCopyright, 1907, by\r\nFrederick A. Stokes Company\r\nSeptember, 1907\r\n\r\n\r\nTHE CREETURS GO TO THE BARBECUE\n",
    "image": false
   },
   {
-   "name": "3",
+   "name": "4",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-01.jpg",
    "image": true
   },
   {
-   "name": "4",
+   "name": "5",
    "content": "&ldquo;Once &rsquo;pon a time,&rdquo; said Uncle Remus to the little\r\nboy&mdash;&ldquo;But when was once upon a time?&rdquo; the child interrupted\r\nto ask. The old man smiled. &ldquo;I speck &rsquo;twuz one time er two\r\ntimes, er maybe a time an&rsquo; a half. You know when Johnny Ashcake\r\n&rsquo;gun ter bake? Well, &rsquo;twuz &rsquo;long in dem days. Once\r\n&rsquo;pon a time,&rdquo; he resumed, &ldquo;Mr. Man had a gyarden so\r\nfine dat all de neighbors come ter see it. Some &rsquo;ud look at it\r\nover de fence, some &rsquo;ud peep thoo de cracks, an&rsquo; some\r\n&rsquo;ud come an&rsquo; look at it by de light er de stars. An&rsquo;\r\none un um wuz ol&rsquo; Brer Rabbit; starlight, moonlight, cloudlight,\r\nde nightlight wuz de light fer him. When de turn er de mornin&rsquo;\r\ncome, he &rsquo;uz allers up an&rsquo; about, an&rsquo; a-feelin&rsquo;\r\npurty well I thank you, suh!\n",
    "image": false
   },
   {
-   "name": "5",
+   "name": "6",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-02.jpg",
    "image": true
   },
   {
-   "name": "6",
+   "name": "7",
    "content": "&ldquo;Now, den, you done hear what I say. Dar wuz Mr. Man, yander wuz\r\nde gyarden, an&rsquo; here wuz ol&rsquo; Brer Rabbit.&rdquo; Uncle Remus\r\nmade a map of this part of the story by marking in the sand with his\r\nwalking-cane. &ldquo;Well, dis bein&rsquo; de case, what you speck\r\ngwineter happen? Nothin&rsquo; in de roun&rsquo; worl&rsquo; but what\r\nbeen happenin&rsquo; sence greens an&rsquo; sparrer-grass wuz planted in\r\nde groun&rsquo;. Dey look fine an&rsquo; dey tas&rsquo;e fine, an&rsquo;\r\nlong to&rsquo;rds de shank er de mornin&rsquo;, Brer Rabbit &rsquo;ud\r\ncreep thoo de crack er de fence an&rsquo; nibble at um. He&rsquo;d take\r\nde greens, but leave his tracks, mo&rsquo; speshually right atter a\r\nrain. Takin&rsquo; an&rsquo; leavin&rsquo;&mdash;it&rsquo;s de way er de\r\nworl&rsquo;.\n",
    "image": false
   },
   {
-   "name": "7",
+   "name": "8",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-03.jpg",
    "image": true
   },
   {
-   "name": "8",
+   "name": "9",
    "content": "&ldquo;Well, one mornin&rsquo;, Mr. Man went out in his truck patch,\r\nan&rsquo; he fin&rsquo; sump&rsquo;n missin&rsquo;&mdash;a cabbage here, a\r\nturnip dar, an&rsquo; a mess er beans yander, an&rsquo; he ax how come\r\ndis? He look &rsquo;roun&rsquo;, he did, an&rsquo; he seed Brer\r\nRabbit&rsquo;s tracks what he couldn&rsquo;t take wid &rsquo;im. Brer\r\nRabbit had lef&rsquo; his shoes at home, an&rsquo; come\r\nbar&rsquo;footed.\n",
    "image": false
   },
   {
-   "name": "9",
+   "name": "10",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-04.jpg",
    "image": true
   },
   {
-   "name": "10",
+   "name": "11",
    "content": "&ldquo;So Mr. Man, he call his dogs &lsquo;Here, Buck! Here, Brinjer!\r\nHere, Blue!&rsquo; an&rsquo; he sicc&rsquo;d um on de track, an&rsquo;\r\nhere dey went!\n",
    "image": false
   },
   {
-   "name": "11",
+   "name": "12",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-05.jpg",
    "image": true
   },
   {
-   "name": "12",
+   "name": "13",
    "content": "&ldquo;You&rsquo;d &rsquo;a&rsquo; thunk dey wuz runnin&rsquo; atter\r\nforty-lev&rsquo;m rhinossyhosses fum de fuss dey made. Brer Rabbit he\r\nhear um comin&rsquo; an&rsquo; he put out fer home, kinder\r\ndoublin&rsquo; &rsquo;roun&rsquo; des like he do deze days.\n",
    "image": false
   },
   {
-   "name": "13",
+   "name": "14",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-06.jpg",
    "image": true
   },
   {
-   "name": "14",
+   "name": "15",
    "content": "&ldquo;When he got ter de p&rsquo;int whar he kin set down fer ter rest\r\nhis face an&rsquo; han&rsquo;s, he tuck a poplar leaf an&rsquo;\r\n&rsquo;gun ter fan hisse&rsquo;f. Den Brer Fox come a-trottin&rsquo; up.\r\nHe say, &lsquo;Brer Rabbit, what&rsquo;s all dis fuss I hear in de\r\nwoods? What de name er goodness do it mean?&rsquo; Brer Rabbit kinder\r\nscratch his head an&rsquo; &rsquo;low, &lsquo;Why, deyer tryin&rsquo;\r\nfer drive me ter de big bobbycue on de creek. Dey all ax me, an&rsquo;\r\nwhen I &rsquo;fuse dey say deyer gwine ter make me go any how. Dey aint\r\nno fun in bein&rsquo; ez populous ez what I is, Brer Fox. Ef you wanter\r\ngo, des git in ahead er de houn&rsquo;s an&rsquo; go lickity-split down\r\nde big road!&rsquo;\n",
    "image": false
   },
   {
-   "name": "15",
+   "name": "16",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-07.jpg",
    "image": true
   },
   {
-   "name": "16",
+   "name": "17",
    "content": "&ldquo;Brer Fox roll his little eyes, an&rsquo; lick his chops whar he\r\ndribble at de mouf, an put out ter de bobbycue, an&rsquo; he aint\r\nmo&rsquo; dan made his disappearance, &rsquo;fo&rsquo; here come Brer\r\nWolf, an&rsquo; when he got de news, off he put.\r\n\r\n&ldquo;An&rsquo; he aint mo&rsquo;n got out&rsquo;n sight,\r\n&rsquo;fo&rsquo; here come ol&rsquo; Brer B&rsquo;ar, an&rsquo; when he\r\nhear talk er de bakin&rsquo; meat an&rsquo; de big pan er gravy, he sot\r\nup on his behime legs an&rsquo; snored. Den off he put, an&rsquo; he\r\naint got out&rsquo;n hearin&rsquo;, &rsquo;fo&rsquo; Brer Coon come\r\nrackin&rsquo; up, an&rsquo; when he got de news, he put out.\n",
    "image": false
   },
   {
-   "name": "17",
+   "name": "18",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-08.jpg",
    "image": true
   },
   {
-   "name": "18",
+   "name": "19",
    "content": "&ldquo;So dar dey wuz an&rsquo; what you gwine do &rsquo;bout it? It\r\nseem like dey all got in front er de dogs, er de dogs got behime um,\r\nan&rsquo; Brer Rabbit sot by de creek-side laughin&rsquo; an&rsquo;\r\nhittin&rsquo; at de snake doctors. An&rsquo; dem po&rsquo; creeturs had\r\nter go clean past de bobbycue&mdash;ef dey wuz any bobbycue, which I\r\ndon&rsquo;t skacely speck dey wuz. Dat what make me say what I\r\ndoes&mdash;when you git a invite ter a bobbycue, you better fin&rsquo; out\r\nwhen an&rsquo; whar it&rsquo;s at, an&rsquo; who runnin&rsquo;\r\nit.&rdquo;\r\n\r\n\r\nBRER RABBIT&rsquo;S FROLIC\n",
    "image": false
   },
   {
-   "name": "19",
+   "name": "20",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-09.jpg",
    "image": true
   },
   {
-   "name": "20",
+   "name": "21",
    "content": "The little boy, when he next saw Uncle Remus, after hearing how the\r\nanimals went to the barbecue, wanted to know what happened to them: he\r\nwas anxious to learn if any of them were hurt by the dogs that had been\r\nchasing Brother Rabbit. The old darkey closed his eyes and chuckled.\r\n&ldquo;You sho is axin&rsquo; sump&rsquo;n now, honey. Und&rsquo; his\r\nhat, ef he had any, Brer Rabbit had a mighty quick thinkin&rsquo;\r\napple-ratus, an&rsquo; mos&rsquo; inginner&rsquo;lly, all de time, de\r\npranks he played on de yuther creeturs pestered um bofe ways\r\na-comin&rsquo; an&rsquo; a-gwine. De dogs done mighty well, &rsquo;long\r\nez dey had dealin&rsquo;s wid de small fry, like Brer Fox, an&rsquo;\r\nBrer Coon, an&rsquo; Brer Wolf, but when dey run ag&rsquo;in&rsquo;\r\nol&rsquo; Brer B&rsquo;ar, dey sho struck a snag. De mos&rsquo;\r\nservigrous wuz de identual one dat got de wust hurted. He got too close\r\nter Brer B&rsquo;ar, an&rsquo; when he look at hisse&rsquo;f in\r\nrunnin&rsquo; water, he tuck notice dat he wuz split wide open fum flank\r\nter dewlap.\n",
    "image": false
   },
   {
-   "name": "21",
+   "name": "22",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-10.jpg",
    "image": true
   },
   {
-   "name": "22",
+   "name": "23",
    "content": "&ldquo;Atter de rucus wuz over, de creeturs hobbled off home de best dey\r\ncould, an&rsquo; laid &rsquo;roun&rsquo; in sun an&rsquo; shade fer ter\r\nlet der cuts an&rsquo; gashes git good an&rsquo; well. When dey got so\r\ndey could segashuate, an&rsquo; pay der party calls, dey &rsquo;gree fer\r\nter insemble some&rsquo;rs, an&rsquo; hit on some plan fer ter outdo\r\nBrer Rabbit. Well, dey had der insembly, an&rsquo; dey jower&rsquo;d\r\nan&rsquo; jower&rsquo;d des like yo&rsquo; pa do when he aint\r\nfeelin&rsquo; right well; but, bimeby, dey &rsquo;greed &rsquo;pon a\r\nplan dat look like it mought work. Dey &rsquo;gree fer ter make out dat\r\ndey gwine ter have a dance. Dey know&rsquo;d dat ol&rsquo; Brer Rabbit\r\nwuz allers keen fer dat, an&rsquo; dey say dey&rsquo;ll gi&rsquo; him a\r\ninvite, an&rsquo; when he got dar, dey&rsquo;d ax &rsquo;im fer ter play\r\nde fiddle, an&rsquo; ef he &rsquo;fuse, dey&rsquo;ll close in on\r\n&rsquo;im an&rsquo; make way wid &rsquo;im.\n",
    "image": false
   },
   {
-   "name": "23",
+   "name": "24",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-11.jpg",
    "image": true
   },
   {
-   "name": "24",
+   "name": "25",
    "content": "&ldquo;So fur, so good! But all de time dey wuz jowerin&rsquo; an&rsquo;\r\nconfabbin&rsquo;, ol&rsquo; Brer Rabbit wus settin&rsquo; in a shady\r\nplace in de grass, a-hearin&rsquo; eve&rsquo;y word dey say. When de\r\ntime come, he crope out, he did, an&rsquo; run &rsquo;roun&rsquo;,\r\nan&rsquo; de fust news dey know&rsquo;d, here he come down de big\r\nroad&mdash;bookity-bookity&mdash;same ez a hoss dat&rsquo;s broke thoo de\r\npastur&rsquo; fence. He say, sezee, &lsquo;Why, hello, frien&rsquo;s!\r\nan&rsquo; howdy, too, kaze I aint seed you-all sence de last time! Whar\r\nde name er goodness is you been deze odd-come-shorts? an&rsquo; how did\r\nyou far&rsquo; at de bobbycue? Ef my two eyeballs aint gone an&rsquo;\r\ngot crooked, dar&rsquo;s ol&rsquo; Brer B&rsquo;ar, him er de short tail\r\nan&rsquo; sharp tush&mdash;de ve&rsquo;y one I&rsquo;m a-huntin&rsquo; fer!\r\nAn&rsquo; dar&rsquo;s Brer Coon! I sho is in big luck. Dar&rsquo;s\r\ngwineter be a big frolic at Miss Meadows&rsquo;, an&rsquo; her an&rsquo;\r\nde gals want Brer B&rsquo;ar fer ter show um de\r\nroas&rsquo;n&rsquo;-y&rsquo;ar shuffle; an&rsquo; dey put Brer Coon down\r\nfer de jig dey calls rack-back-Davy.\n",
    "image": false
   },
   {
-   "name": "25",
+   "name": "26",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-12.jpg",
    "image": true
   },
   {
-   "name": "26",
+   "name": "27",
    "content": "&ldquo;&lsquo;I&rsquo;m ter play de fiddle&mdash;sump&rsquo;n I aint done\r\nsence my oldest gal had de mumps an&rsquo; de measles, bofe de same day\r\nan&rsquo; hour! Well, dis mornin&rsquo; I tuck down de fiddle fum whar\r\nshe wuz a-hangin&rsquo; at, an&rsquo; draw&rsquo;d de bow backerds\r\nan&rsquo; forerds a time er two, an&rsquo; den I shot my eyes an&rsquo;\r\nhit some er de ol&rsquo;-time chunes, an&rsquo; when I come ter\r\nmyse&rsquo;f, dar wuz my whole blessed fambly skippin&rsquo; an&rsquo;\r\nsasshayin&rsquo; &rsquo;roun&rsquo; de room, spite er de fack dat\r\nbrekkus wuz ter be cooked!&rsquo;\n",
    "image": false
   },
   {
-   "name": "27",
+   "name": "28",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-13.jpg",
    "image": true
   },
   {
-   "name": "28",
+   "name": "29",
    "content": "&ldquo;Wid dat, Brer Rabbit bow&rsquo;d, he did, an&rsquo; went back\r\ndown de road like de dogs wuz atter &rsquo;im.&rdquo;\n",
    "image": false
   },
   {
-   "name": "29",
+   "name": "30",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-14.jpg",
    "image": true
   },
   {
-   "name": "30",
+   "name": "31",
    "content": "&ldquo;But what happened then?&rdquo; the little boy asked.\r\n&ldquo;Nothin&rsquo; &rsquo;t all,&rdquo; replied Uncle Remus, taking up\r\nthe chuckle where he had left off. &ldquo;De creeturs aint had no dance,\r\nan&rsquo; when dey went ter Miss Meadows&rsquo;, she put her head out de\r\nwinder, an&rsquo; say ef dey don&rsquo;t go off fum dar she&rsquo;ll\r\nhave de law on um!&rdquo;\r\n\r\n\r\nBROTHER BEAR&rsquo;S BIG HOUSE\n",
    "image": false
   },
   {
-   "name": "31",
+   "name": "32",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-15.jpg",
    "image": true
   },
   {
-   "name": "32",
+   "name": "33",
    "content": "&ldquo;Uv all de creeturs&rdquo;, said Uncle Remus, in response to a\r\nquestioning took on the part of the little boy, &ldquo;ol Brer\r\nB&rsquo;ar had de biggest an&rsquo; de warmest house. I dunner why ner\r\nwharfo&rsquo;, but I&rsquo;m a-tellin&rsquo; you de plain fack, des ez\r\ndey to!&rsquo; it unter me. Ef I kin he&rsquo;p it I never will be\r\ndeceivin&rsquo; you, ner lead you inter no bad habits. Yo&rsquo; pappy\r\ntrotted wid me a mighty long time, an&rsquo; ef you&rsquo;ll ax him\r\nhe&rsquo;ll tell you dat de one thing I never did do wuz ter deceive him\r\nwhiles he had his eyes open; not ef I knows myse&rsquo;f. Well,\r\nol&rsquo; Brer B&rsquo;ar had de big house I&rsquo;m a-tellin&rsquo; you\r\nabout. Ef he y&rsquo;ever is brag un it, it aint never come down ter me.\r\nYit dat&rsquo;s des what he had&mdash;a big house an&rsquo; plenty er room\r\nfer him an&rsquo; his fambly; an&rsquo; he aint had mo&rsquo; dan he\r\nneed, kaze all er his fambly wuz fat an&rsquo; had what folks calls\r\nheft&mdash;de nachal plunkness.\n",
    "image": false
   },
   {
-   "name": "33",
+   "name": "34",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-16.jpg",
    "image": true
   },
   {
-   "name": "34",
+   "name": "35",
    "content": "&ldquo;He had a son name Simmon, an&rsquo; a gal name Sue, not\r\ncountin&rsquo; his ol&rsquo; &rsquo;oman, an&rsquo; dey all live wid one\r\nan&rsquo;er day atter day, an&rsquo; night atter night; an&rsquo; when\r\none un um went abroad, dey&rsquo;d be spected home &rsquo;bout\r\nmeal-time, ef not befo&rsquo;, an&rsquo; dey segashuated right along fum\r\nday ter day, washin&rsquo; der face an&rsquo; han&rsquo;s in de same\r\nwash-pan in de back po&rsquo;ch, an&rsquo; wipin&rsquo; on de same towel\r\nsame ez all happy famblies allers does.\n",
    "image": false
   },
   {
-   "name": "35",
+   "name": "36",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-17.jpg",
    "image": true
   },
   {
-   "name": "36",
+   "name": "37",
    "content": "&ldquo;Well, time went on an&rsquo; fotched de changes dat might be\r\nspected, an&rsquo; one day dar come a mighty knockin&rsquo; on Brer\r\nB&rsquo;ar&rsquo;s do&rsquo;. Brer B&rsquo;ar, he holla out, he did.\r\n&lsquo;Who dat come a-knockin&rsquo; dis time er de year,\r\n&rsquo;fo&rsquo; de corn&rsquo;s done planted, er de cotton-crap&rsquo;s\r\npitched?&rsquo; De one at de do&rsquo; make a big noise, an&rsquo;\r\nrattle de hinges. Brer B&rsquo;ar holla out, he did, &lsquo;Don&rsquo;t\r\nt&rsquo;ar down my house! Who is you, anyhow, an&rsquo; what you\r\nwant?&rsquo; An&rsquo; de answer come, &lsquo;I&rsquo;m one an&rsquo;\r\ndarfo&rsquo; not two; ef youer mo&rsquo; dan one, who is you an&rsquo;\r\nwhat you doin&rsquo; in dar?&rsquo; Brer B&rsquo;ar, he say, sezee,\r\n&lsquo;I&rsquo;m all er one an&rsquo; mighty nigh two, but I&rsquo;d\r\nthank you fer ter tell me yo&rsquo; full fambly name.&rsquo; Den de\r\nanswer come.\n",
    "image": false
   },
   {
-   "name": "37",
+   "name": "38",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-18.jpg",
    "image": true
   },
   {
-   "name": "38",
+   "name": "39",
    "content": "&ldquo;&lsquo;I&rsquo;m de knocker an&rsquo; de mover bofe, an&rsquo; ef\r\nI can&rsquo;t clim&rsquo; over I&rsquo;ll crawl under ef you do but\r\ngi&rsquo; me de word. Some calls me Brer Polecat, an&rsquo; some a big\r\nword dat it aint wuff while ter ermember, but I wanter move in.\r\nIt&rsquo;s mighty col&rsquo; out here, an&rsquo; all I meets tells me\r\nit&rsquo;s mighty warm in dar whar you is.&rsquo; Den ol&rsquo; Brer\r\nB&rsquo;ar say, sezee. &lsquo;It&rsquo;s warm nuff fer dem what stays in\r\nhere, but not nigh so warm fer dem on de outside. What does you reely\r\nwant?&rsquo; Brer Polecat &rsquo;spon&rsquo;, he did, &lsquo;I wants a\r\nheap er things dat I don&rsquo;t git. I&rsquo;m a mighty good\r\nhousekeeper, but I takes notice dat dar&rsquo;s mighty few folks dat\r\nwants me ter keep house fer um.&rsquo; Brer B&rsquo;ar say, sezee,\r\n&lsquo;I aint got no room fer no housekeeper; we aint skacely got room\r\nfer ter go ter bed. Ef you kin keep my house on de outside, you er\r\nmighty welcome.&rsquo;\n",
    "image": false
   },
   {
-   "name": "39",
+   "name": "40",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-19.jpg",
    "image": true
   },
   {
-   "name": "40",
+   "name": "41",
    "content": "&ldquo;Brer Polecat say, &lsquo;You may think you aint got no room, but\r\nI bet you got des ez much room ez anybody what I know. Ef you let me in\r\ndar one time, I boun&rsquo; you I&rsquo;ll make all de room I\r\nwant.&rsquo;&rdquo;\n",
    "image": false
   },
   {
-   "name": "41",
+   "name": "42",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-20.jpg",
    "image": true
   },
   {
-   "name": "42",
+   "name": "43",
    "content": "Uncle Remus paused to see what effect this statement would have on the\r\nlittle boy. He closed his eyes, as though he were tired, but when he\r\nopened them again, he saw the faint shadow of a smile on the\r\nchild&rsquo;s face. &ldquo;&rsquo;Taint gwine ter hurt you fer ter laugh\r\na little bit, honey. Brer Polecat come in Brer B&rsquo;ar&rsquo;s house,\r\nan&rsquo; he had sech a bad breff dat dey all hatter git out&mdash;an&rsquo;\r\nhe stayed an&rsquo; stayed twel time stopped runnin&rsquo;\r\nag&rsquo;in&rsquo; him.&rdquo;\r\n\r\n\r\nBRER RABBIT TREATS THE CREETURS TO A RACE\n",
    "image": false
   },
   {
-   "name": "43",
+   "name": "44",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-21.jpg",
    "image": true
   },
   {
-   "name": "44",
+   "name": "45",
    "content": "One sultry summer day, while the little boy was playing not far from\r\nUncle Remus&rsquo;s cabin, a heavy black cloud made its appearance in\r\nthe west, and quickly obscured the sky. It sent a brisk gale before it,\r\nas if to clear the path of leaves and dust. Presently there was a\r\nblinding flash of lightning, a snap and a crash, and, with that, the\r\nchild took to his heels, and ran to Uncle Remus, who was standing in his\r\ndoor. &ldquo;Dar now!&rdquo; he exclaimed, before the echoes of the\r\nthunder had rolled away, &ldquo;Dat dust an&rsquo; win&rsquo;, an&rsquo;\r\nrain, puts me in mind er de time when ol&rsquo; Brer Rabbit got up a big\r\nrace fer ter pleasure de yuther creeturs. It wuz de mos&rsquo; funniest\r\nrace you ever hear tell on. Brer Rabbit went &rsquo;way off in de woods\r\ntwel he come ter de Rainmaker&rsquo;s house. He knocked an&rsquo; went\r\nin, an&rsquo; he ax de Rainmaker ef he can&rsquo;t fix it up so dey kin\r\nhave a race &rsquo;tween Brer Dust an&rsquo; Cousin Rain, fer ter see\r\nwhich kin run de fastes&rsquo;. De Rainmaker growled an&rsquo; jowered,\r\nbut bimeby he &rsquo;gree, but he say that ef &rsquo;twuz anybody but\r\nBrer Rabbit, he wouldn&rsquo;t gi&rsquo; it but one thunk.\n",
    "image": false
   },
   {
-   "name": "45",
+   "name": "46",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-22.jpg",
    "image": true
   },
   {
-   "name": "46",
+   "name": "47",
    "content": "&ldquo;Well, dey fix de day, dey did, an&rsquo; den Brer Rabbit put out\r\nter whar de creeturs wuz stayin&rsquo; at, an&rsquo; tol&rsquo; um de\r\nnews. Dey dunner how Brer Rabbit know, but dey all wanter see de race.\r\nNow, him an&rsquo; de Rainmaker had fixt it up so dat de race would be\r\nright down de middle er de big road, an&rsquo; when de day come,\r\ndar&rsquo;s whar he made de creeturs stan&rsquo;&mdash;Brer B&rsquo;ar at de\r\nbend er de road, Brer Wolf a leetle furder off, an&rsquo; Brer Fox at a\r\np&rsquo;int whar de cross-roads wuz. Brer Coon an&rsquo; Brer Possum\r\nan&rsquo; de yuthers be scattered about up an&rsquo; down de Road.\n",
    "image": false
   },
   {
-   "name": "47",
+   "name": "48",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-23.jpg",
    "image": true
   },
   {
-   "name": "48",
+   "name": "49",
    "content": "&ldquo;Ter dem what has ter wait, it seem like de sun stops an&rsquo;\r\nall de clocks wid &rsquo;im. Brer B&rsquo;ar done some growlin&rsquo;;\r\nBrer Wolf some howlin&rsquo; an&rsquo; Brer Possum some laughin&rsquo;;\r\nbut atter while a cloud come up fum some&rsquo;rs. &rsquo;Twant sech a\r\nbig cloud, but Brer Rabbit know&rsquo;d dat Cousin Rain wuz in dar\r\n&rsquo;long wid Uncle Win&rsquo;. De cloud crope up, it did, twel it got\r\nright over de big road, an&rsquo; den it kinder drapped down a leetle\r\ncloser ter de groun&rsquo;. It look like it kinder stop, like a buggy,\r\nfer Cousin Rain ter git out, so der&rsquo;d be a fa&rsquo;r start. Well,\r\nhe got out, kaze de creeturs kin see &rsquo;im, an&rsquo; den Uncle\r\nWin&rsquo;, he got out.\n",
    "image": false
   },
   {
-   "name": "49",
+   "name": "50",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-24.jpg",
    "image": true
   },
   {
-   "name": "50",
+   "name": "51",
    "content": "&ldquo;An&rsquo; den, gentermens! de race begun fer ter commence. Uncle\r\nWin&rsquo; hep&rsquo;d um bofe; he had his bellows wid &rsquo;im,\r\nan&rsquo; he blow&rsquo;d it! Brer Dust got up fum whar he wuz\r\na-layin&rsquo; at, an&rsquo; come down de road des a-whirlin&rsquo;. He\r\nstricken ol&rsquo; Brer B&rsquo;ar fust, den Brer Wolf, an&rsquo; den\r\nBrer Fox, an&rsquo; atter dat, all de yuther creeturs, an&rsquo; it come\r\nmighty nigh smifflicatin&rsquo; um! Not never in all yo&rsquo; born days\r\nis you y&rsquo;ever heern sech coughin&rsquo; an&rsquo; sneezin&rsquo;,\r\nsech snortin&rsquo; an&rsquo; wheezin&rsquo;! An&rsquo; dey all look\r\nlike dey wuz painted red. Brer B&rsquo;ar sneeze so hard dat he hatter\r\nlay down in de road, an&rsquo; Brer Dust come mighty nigh buryin&rsquo;\r\n&rsquo;im, an&rsquo; &rsquo;twuz de same wid de yuther creeturs&mdash;dey got\r\nder y&rsquo;ears, der noses, an&rsquo; der eyeses full.\n",
    "image": false
   },
   {
-   "name": "51",
+   "name": "52",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-25.jpg",
    "image": true
   },
   {
-   "name": "52",
+   "name": "53",
    "content": "&ldquo;An&rsquo; den Cousin Rain come &rsquo;long, a-pursuin&rsquo; Brer\r\nDust, an&rsquo; he come mighty nigh drownin&rsquo; um. He left um\r\nkivver&rsquo;d wid mud, an&rsquo; dey wuz wuss off dan befo&rsquo;. It\r\nwuz de longest &rsquo;fo&rsquo; dey kin git de mud out &rsquo;n der eyes\r\nan&rsquo; y&rsquo;ears, an&rsquo; when dey git so dey kin see a leetle\r\nbit, dey tuck notice dat Brer Rabbit, stidder bein&rsquo; full er mud,\r\nwuz ez dry ez a chip, ef not dryer.\n",
    "image": false
   },
   {
-   "name": "53",
+   "name": "54",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-26.jpg",
    "image": true
   },
   {
-   "name": "54",
+   "name": "55",
    "content": "&ldquo;It make um so mad, dat dey all put out atter &rsquo;im, an&rsquo;\r\ntry der level best fer ter ketch, but ef dey wuz anything in de\r\nroun&rsquo; worl&rsquo; dat Brer Rabbit&rsquo;s got, it&rsquo;s soople\r\nfoots, an&rsquo; &rsquo;twant no time &rsquo;fo&rsquo; de yuther\r\ncreeturs can&rsquo;t see ha&rsquo;r ner hide un &rsquo;im! All de same\r\nBrer Rabbit aint bargain fer ter have two races de same day.&rdquo;\r\n\r\n&ldquo;But, Uncle Remus,&rdquo; said the little boy, &ldquo;which beat,\r\nBrother Dust or Cousin Rain?&rdquo; The old man stirred uneasily in his\r\nchair, and rubbed his chin with his hand. &ldquo;Dey tells me,&rdquo; he\r\nresponded cautiously, &ldquo;dat when Cousin Rain can&rsquo;t see\r\nnothin&rsquo; er Brother Dust, he thunk he am beat, but he holla out,\r\n&lsquo;Brer Dust, wharbouts is you?&rsquo; an&rsquo; Brer Dust he holla\r\nback, &lsquo;You&rsquo;ll hatter scuzen me; I fell down in de mud\r\nan&rsquo; can&rsquo;t run no mo&rsquo;!&rsquo;&rdquo;\r\n\r\n\r\nBRER RABBIT&rsquo;S FLYING TRIP\n",
    "image": false
   },
   {
-   "name": "55",
+   "name": "56",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-27.jpg",
    "image": true
   },
   {
-   "name": "56",
+   "name": "57",
    "content": "Dar once wuz a time when most er de creeturs\r\nGot mighty tired er Brer Rabbit&rsquo;s capers,\r\nAn&rsquo; dey &rsquo;semble&rsquo;, dey did, grass an&rsquo; meat eaters.\r\nBrowsers an&rsquo; grazers, an&rsquo; likewiss de bone-scrapers,\r\nFer ter see what dey kin do.\r\n\r\nBrer B&rsquo;ar wuz dar, wid his bid fur suit on,\r\nAn&rsquo; ol&rsquo; Brer Wolf fetched his big howl along,\r\nAn&rsquo; when eve&rsquo;ything wuz ready, wid a long, loud hoot on,\r\nHere come ol&rsquo; Simon Swamp Owl along,\r\nA-tootin&rsquo; of his too-whoo.\r\n\r\nDar wuz ol&rsquo; Brer Fox, suh, wid his black socks, suh,\r\nAn&rsquo; a heap er creeturs dat I don&rsquo;t hatter mention;\r\nSome bow-legged an&rsquo; some knock-kneed in de hocks, suh.\r\nAn&rsquo; dey all agree fer ter hol&rsquo; a convention\r\nFer ter stop Brer Rabbit&rsquo;s pranks.\n",
    "image": false
   },
   {
-   "name": "57",
+   "name": "58",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-28.jpg",
    "image": true
   },
   {
-   "name": "58",
+   "name": "59",
    "content": "Brer Fox, he &rsquo;low he&rsquo;ll gi&rsquo; a pot er gol&rsquo;, suh,\r\nTer de man what kin tol Brer Rabbit off, suh;\r\nBrer Buzzard say, &ldquo;I&rsquo;m a-gittin&rsquo; ol&rsquo;, suh,\r\nBut I&rsquo;ll try my han,&rdquo; an&rsquo; den he cough, suh.\r\nAn&rsquo; de rest un um bowed dere thanks.\r\n\r\nNow, ol&rsquo; Brer B&rsquo;ar wuz a-settin&rsquo; in de cheer, suh,\r\nSo he stand up an&rsquo; move a motion;\r\nHe up an&rsquo; &rsquo;low, &ldquo;Le&rsquo;s erso&rsquo;v right here, suh,\r\nFer ter thank Brer Buzzard whiles we&rsquo;re in de notion,\r\nAn&rsquo; not put it off ter some yuther day.&rdquo;\r\n\r\nAn&rsquo; den dey had it up an&rsquo; down, suh,\r\n&rsquo;Sputin&rsquo; &rsquo;bout what dey oughter do,\r\nSome wanter gi&rsquo; &rsquo;im a flower crown, suh,\r\nEf he rid Brer Rabbit up dar in de blue,\r\nAn&rsquo; drap &rsquo;im when he got half-way.\n",
    "image": false
   },
   {
-   "name": "59",
+   "name": "60",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-29.jpg",
    "image": true
   },
   {
-   "name": "60",
+   "name": "61",
    "content": "Dey sont a runner atter ol&rsquo; Brer Rabbit\r\nTer ax &rsquo;im ter call an&rsquo; &rsquo;ten&rsquo; de convention;\r\nBut ol&rsquo; frien&rsquo; Wobble-nose had a quare habit\r\nEr knowin&rsquo; a thing befo&rsquo; it wuz mention&rsquo;,\r\nAn he come &rsquo;fo&rsquo; he got de word.\r\n\r\nHe wiggle his nose, an&rsquo; wunk his eye&mdash;\r\n&ldquo;Here sho is de man I wants ter see, suh!\r\nBrer Buzzard I&rsquo;m tryin&rsquo; ter l&rsquo;arn how ter fly!&rdquo;\r\nAn&rsquo; c&rsquo;ose Brer Buzzard gi&rsquo; his agree, suh,\r\nAn&rsquo; all un um say he&rsquo;s a &rsquo;commydatin&rsquo; bird!\n",
    "image": false
   },
   {
-   "name": "61",
+   "name": "62",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-30.jpg",
    "image": true
   },
   {
-   "name": "62",
+   "name": "63",
    "content": "An&rsquo; den Brer Buzzard half spread his wing, suh\r\nHe try ter look young, but he wuz ol&rsquo; suh&mdash;\r\nHe try ter strut an&rsquo; walk wid a swing, suh;\r\nHe wuz dreamin&rsquo; &rsquo;bout dat pot er gol&rsquo;, suh,\r\nAn&rsquo; what he wuz gwine fer ter buy.\r\n\r\nBrer Buzzard ain&rsquo;t skacely got thoo wid his pride, suh,\r\n&rsquo;Fo&rsquo; Brer Rabbit lit right &rsquo;tween his floppers,\r\nWid, &ldquo;Now, hump yo&rsquo;se&rsquo;f, an&rsquo; gi&rsquo; me a ride, suh,\r\nEf you don&rsquo;t I&rsquo;ll hit&mdash;I&rsquo;ll hit you some whoppers\r\nWhen I git you up dar in de sky!&rdquo;\n",
    "image": false
   },
   {
-   "name": "63",
+   "name": "64",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-31.jpg",
    "image": true
   },
   {
-   "name": "64",
+   "name": "65",
    "content": "Well, de creeturs grinned when Brer Buzzard riz, suh.\r\nAn&rsquo; made a big fuss accordin&rsquo; ter der natur&rsquo;;\r\nEz fer ol&rsquo; Brer Rabbit, de pleasure wuz all his, suh\r\nDe ridin&rsquo; wuz easy ez eatin&rsquo; tater\r\nWhen it&rsquo;s b&rsquo;iled an&rsquo; made inter pie!\r\n\r\nKaze under bofe wings he had a paw, suh,\r\nAn&rsquo;, when Brer Buzzard try fer ter drap &rsquo;im.\r\nHe&rsquo;d scratch an&rsquo; tickle &rsquo;im wid his claw, suh;\r\nAn&rsquo; when Brer Buzzard try fer ter flap &rsquo;im,\r\nHe&rsquo;d scratch an&rsquo; wink his eye!\n",
    "image": false
   },
   {
-   "name": "65",
+   "name": "66",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-32.jpg",
    "image": true
   },
   {
-   "name": "66",
+   "name": "67",
    "content": "An&rsquo; wid his claws he tuck an&rsquo; steered &rsquo;im\r\nFum post ter pillar in de deep blue, suh;\r\nHe&rsquo;d holla an&rsquo; laugh&mdash;all de creeturs heer&rsquo;d &rsquo;im&mdash;\r\nYou know how you&rsquo;d feel ef it hab been you, suh,\r\nA-waitin&rsquo; fer some un ter fall!\r\n\r\nWhen ol&rsquo; Brer Rabbit got tired er ridin&rsquo;,\r\nHe steered Brer Buzzard right straight ter de groun&rsquo;, suh,\r\nAn&rsquo; den an&rsquo; dar went right inter hidin&rsquo;.\r\nWhen de creeturs come up he couldn&rsquo;t be foun&rsquo;, suh,\r\nAn&rsquo; I speck an&rsquo; I reckon dat&rsquo;s all!\r\n\r\n\r\n\r\nBRER RABBIT AND THE GOLD MINE\n",
    "image": false
   },
   {
-   "name": "67",
+   "name": "68",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-33.jpg",
    "image": true
   },
   {
-   "name": "68",
+   "name": "69",
    "content": "There had been silence in the cabin for a long ten minutes, and Uncle\r\nRemus, looking up, saw a threat of sleep in the little boy&rsquo;s eyes.\r\nWhereupon he plunged headlong into a story without a word of\r\nexplanation.\r\n\r\n&ldquo;Well, suh, one year it fell out dat de craps wuz burnt up. A dry\r\ndrouth had done de work, an&rsquo; ef you&rsquo;d &rsquo;a&rsquo; struck\r\na match anywhar in dat settlement, de whole county would &rsquo;a&rsquo;\r\nblazed up. Ol&rsquo; man Hongriness des natchally tuck of his cloze\r\nan&rsquo; went paradin&rsquo; &rsquo;bout eve&rsquo;ywhar, an&rsquo; de\r\ncreeturs got bony an&rsquo; skinny. Ol&rsquo; Brer B&rsquo;ar done\r\nbetter dan any un um, kaze all he hatter do wuz go ter sleep an&rsquo;\r\nlive off&rsquo;n his own fat; an&rsquo; Brer Rabbit an&rsquo; his\r\nol&rsquo; &rsquo;oman had put some calamus root by, an&rsquo; saved up\r\nsome sugar-cane dat dey fin&rsquo; lyin&rsquo; &rsquo;roun&rsquo; loose,\r\nan&rsquo; dey got &rsquo;long purty well. But de balance er de\r\ncreeturs wuz dat ga&rsquo;nt dat dey ain&rsquo;t got over it down ter\r\ndis day.\n",
    "image": false
   },
   {
-   "name": "69",
+   "name": "70",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-34.jpg",
    "image": true
   },
   {
-   "name": "70",
+   "name": "71",
    "content": "&ldquo;De creeturs had der meetin&rsquo;-place, whar dey could all set\r\n&rsquo;roun&rsquo; an&rsquo; talk de kind er politics dey had, des like\r\nfolks does at de cross-roads grocery. One day, whiles dey wuz all\r\nsettin&rsquo; an&rsquo; squottin&rsquo; &rsquo;roun&rsquo;,\r\njowerin&rsquo; an&rsquo; confabbin&rsquo;, Brer Rabbit, he up\r\n&rsquo;n&rsquo; say, sezee, dat ol&rsquo; Mammy-Bammy-Big-Money\r\ntol&rsquo; his great gran&rsquo;daddy dat dar wuz a mighty big an&rsquo;\r\nfat gol&rsquo; mine in deze parts, an&rsquo; he say dat he\r\nwouldn&rsquo;t be &rsquo;tall &rsquo;stonished ef &rsquo;twant\r\nsome&rsquo;rs close ter Brer B&rsquo;ar&rsquo;s house. Brer B&rsquo;ar,\r\nhe growled, he did, an&rsquo; say dat de gol&rsquo; mine better not let\r\nhim fin&rsquo; it, kaze atter he got done wid it, dey won&rsquo;t be no\r\ngol&rsquo; mine dar.\n",
    "image": false
   },
   {
-   "name": "71",
+   "name": "72",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-35.jpg",
    "image": true
   },
   {
-   "name": "72",
+   "name": "73",
    "content": "&rdquo;Some laughed, some grinned an&rsquo; some gapped, an&rsquo;,\r\natter jowerin&rsquo; some mo&rsquo;, dey all put out ter whar der\r\nfamblies wuz livin&rsquo; at; but I boun&rsquo; you dey ain&rsquo;t\r\nfergit &rsquo;bout dat gol&rsquo; mine, kaze, fum dat time on, go whar\r\nyou mought, you&rsquo;d ketch some er de creeturs diggin&rsquo;\r\nan&rsquo; grabblin&rsquo; in de groun&rsquo;, some in de fields, some in\r\nde woods, an&rsquo; some in de big road; an&rsquo; dey wuz so weak\r\nan&rsquo; hongry dat dey kin skacely grabble fer fallin&rsquo; down.\n",
    "image": false
   },
   {
-   "name": "73",
+   "name": "74",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-36.jpg",
    "image": true
   },
   {
-   "name": "74",
+   "name": "75",
    "content": "&ldquo;Well, dis went on fer de longest, but bimeby, one day, dey all\r\n&rsquo;gree dat sump&rsquo;n bleeze ter be done, an&rsquo; dey say\r\ndey&rsquo;ll all take one big hunt fer de gol&rsquo; mine, an&rsquo; den\r\nquit. Dey hunted in gangs, wid de gangs not fur fum one an&rsquo;er,\r\nan&rsquo; it so happen dat Brer Rabbit wuz in de gang wid Brer Wolf,\r\nan&rsquo; he know&rsquo;d dat he hatter keep his eyes wide open. All de\r\ncreeturs hatter dig in diffunt places, an&rsquo; whiles Brer Rabbit want\r\nmuch uv a grabbler, he had a way er makin&rsquo; de yuthers\r\nb&rsquo;lieve dat he wuz de best er de lot. So he made a heap er motion\r\nlike he wuz t&rsquo;arin&rsquo; up de yeth. Dey ain&rsquo;t been gwine\r\non dis away long fo&rsquo; Brer Wolf holler out,\n",
    "image": false
   },
   {
-   "name": "75",
+   "name": "76",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-37.jpg",
    "image": true
   },
   {
-   "name": "76",
+   "name": "77",
    "content": "&ldquo;&lsquo;Run here, Brer Rabbit! I done foun&rsquo; it!&rsquo; Brer\r\nB&rsquo;ar an&rsquo; Brer Fox wuz bofe diggin&rsquo; close by, an&rsquo;\r\nBrer Rabbit kinder wunk one eye at de elements; he say, sezee,\r\n&lsquo;Glad I is fer yo&rsquo; sake, Brer Wolf; git yo&rsquo; gol&rsquo;\r\nan&rsquo; &rsquo;joy yo&rsquo;se&rsquo;f!&rsquo; Brer Wolf say,\r\n&lsquo;Come git some, Brer Rabbit! Come git some!&rsquo; Ol&rsquo; Brer\r\nRabbit &rsquo;spon&rsquo;, &lsquo;I&rsquo;ll take de leavin&rsquo;s,\r\nBrer Wolf; you take what you want, an&rsquo; den when you done got\r\n&rsquo;nough I&rsquo;ll get de leetle bit I want.&rsquo; Brer Wolf say,\r\n&lsquo;I wanter show you sump&rsquo;n.&rsquo; Brer Rabbit &rsquo;low,\r\n&lsquo;My eyes ain&rsquo;t big fer nothin&rsquo;.&rsquo; Brer Wolf say,\r\n&lsquo;I got a secret I wanter tell you.&rsquo; Brer Rabbit &rsquo;low,\r\n&lsquo;My y&rsquo;ears ain&rsquo;t long fer nothin&rsquo;. Des\r\nstan&rsquo; dar an&rsquo; do yo&rsquo; whisperin&rsquo;, Brer Wolf,\r\nan&rsquo; I&rsquo;ll hear eve&rsquo;y word you say.&rsquo;\n",
    "image": false
   },
   {
-   "name": "77",
+   "name": "78",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-38.jpg",
    "image": true
   },
   {
-   "name": "78",
+   "name": "79",
    "content": "&ldquo;Brer Wolf ain&rsquo;t say nothin&rsquo;, but make out he&rsquo;s\r\ngrabblin&rsquo;, an&rsquo; den, all of a sudden, he made a dash at Brer\r\nRabbit, but when he git whar Brer Rabbit wuz at, Brer Rabbit ain&rsquo;t\r\ndar no mo&rsquo;; he done gone. Weak an&rsquo; hongry ez he is, Brer\r\nWolf know dat he can&rsquo;t ketch Brer Rabbit, an&rsquo; so he holler\r\nout, &lsquo;hat&rsquo;s yo&rsquo; hurry, Brer Rabbit? Whar you\r\ngwine?&rsquo; Brer Rabbit holler back, &lsquo;I&rsquo;m gwine home atter\r\na bag fer ter tote de gol&rsquo; you gwine leave me! So long, Brer Wolf;\r\nI wish you mighty well!&rsquo; an&rsquo; wid dat he put out fer\r\nhome.&rdquo;\r\n\r\n\r\nBRER RABBIT GETS BRER FOX A HOSS\n",
    "image": false
   },
   {
-   "name": "79",
+   "name": "80",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-39.jpg",
    "image": true
   },
   {
-   "name": "80",
+   "name": "81",
    "content": "Not many er de creeturs wuz fon&rsquo; er water,\r\nOnless it mought &rsquo;a&rsquo; been Brer Coon&rsquo;s daughter;\r\nBrer B&rsquo;ar, Brer Fox, an&rsquo; ol&rsquo; Brer Rabbit,\r\nDey vow&rsquo;d dey can&rsquo;t never git in de habit\r\nEr wadin&rsquo; de creek, er swimmin&rsquo; de river&mdash;\r\nWhen it come ter dat, dey&rsquo;d run ter kivver!\r\nWhen folks come &rsquo;long fer ter git across,\r\nDe creeturs tuck notice dat dey rid a hoss.\n",
    "image": false
   },
   {
-   "name": "81",
+   "name": "82",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-40.jpg",
    "image": true
   },
   {
-   "name": "82",
+   "name": "83",
    "content": "Brer Fox, he say he wish he had one,\r\nAn&rsquo; &rsquo;mongst all de yuthers he&rsquo;d be de glad un;\r\nHe&rsquo;d git a bridle an&rsquo; a bran&rsquo; new saddle,\r\nAn&rsquo; git on de hoss an&rsquo; ride &rsquo;im straddle;\r\nHe say, sezee, &ldquo;He&rsquo;d do some trottin&rsquo;,\r\nKaze when I git started, I&rsquo;m a mighty hot un!&rdquo;\r\nBrer Rabbit, he smole a great big smile,\r\nWid, &ldquo;I can&rsquo;t ride myse&rsquo;f, kaze I got a b&rsquo;ile!\n",
    "image": false
   },
   {
-   "name": "83",
+   "name": "84",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-41.jpg",
    "image": true
   },
   {
-   "name": "84",
+   "name": "85",
    "content": "&ldquo;But it seem like ter me dat I knows whar a hoss is:\r\nHe&rsquo;s away back yan&rsquo; whar two roads crosses,\r\nAn&rsquo; I&rsquo;ll meet you dar termorrer mornin&rsquo;,\r\nDes &rsquo;bout de time when day&rsquo;s a-dawnin&rsquo;.&rdquo;\r\nBrer Fox, he say, &ldquo;I hear yo&rsquo; sesso,\r\nAn&rsquo; ef I ain&rsquo;t sick I&rsquo;ll be dar desso!&rdquo;\r\nBrer Rabbit tip his hat, wid, &ldquo;So-long, frien&rsquo;;\r\nWe&rsquo;ll git de hoss, you may depen&rsquo;.&rdquo;\n",
    "image": false
   },
   {
-   "name": "85",
+   "name": "86",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-42.jpg",
    "image": true
   },
   {
-   "name": "86",
+   "name": "87",
    "content": "Long &rsquo;fo&rsquo; de time, Brer Rabbit wuz a-stirrin&rsquo;,\r\nAn&rsquo; he chuckle ter hisse&rsquo;f like a cat a-purrin&rsquo;;\r\nDe hoss wuz stretched out asleep in de pastur&rsquo;;\r\nBrer Rabbit went up des ez close ez he dast ter,\r\nFer ter see ef he &rsquo;live: hoss switched his tail, suh!\r\n&ldquo;Dis time we&rsquo;ll git you widout fail, suh!&rdquo;\r\nSo Brer Rabbit say; den he seed Brer Fox&mdash;\r\n&ldquo;An&rsquo; an&rsquo;er fine gent fer ter git in a box!&rdquo;\n",
    "image": false
   },
   {
-   "name": "87",
+   "name": "88",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-43.jpg",
    "image": true
   },
   {
-   "name": "88",
+   "name": "89",
    "content": "Den he say out loud, &ldquo;Good luck done sont &rsquo;im,\r\nAn&rsquo; laid &rsquo;im down right whar you want &rsquo;im!\r\nEf youer tied ter his tail, you kin sholy hol&rsquo; &rsquo;im,\r\nAn&rsquo; mo&rsquo; dan dat, you kin trip &rsquo;im an&rsquo; roll &rsquo;im!&rdquo;\r\nSo said, so done! an&rsquo; dar Brer Fox wuz,\r\nRight close ter de place whar a heap er knocks wuz!\r\nBrer Rabbit, he holla, &ldquo;Hol&rsquo; &rsquo;im down! hol&rsquo; &rsquo;im down!\r\nDes make &rsquo;im stay right spang on de groun&rsquo;!&rdquo;\n",
    "image": false
   },
   {
-   "name": "89",
+   "name": "90",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-44.jpg",
    "image": true
   },
   {
-   "name": "90",
+   "name": "91",
    "content": "De hoss, he riz wid a snort an&rsquo; a whicker,\r\nAn&rsquo; showed dat he wuz sump&rsquo;n uv a kicker!\r\nAn&rsquo; den an&rsquo; dar, Brer Rabbit &rsquo;gun ter snicker,\r\nWid, &ldquo;Hol&rsquo; &rsquo;im, Brer Fox! &rsquo;twon&rsquo;t do ter flicker!\r\nEf you make &rsquo;im stan&rsquo; still, you kin ride &rsquo;im de quicker!&rdquo;\r\nDe hoss, he r&rsquo;ar&rsquo;d an&rsquo; raise a mighty dust up,\r\nAn&rsquo; fust thing you know, Brer Rabbit hear a bust-up!\r\n&ldquo;I hope, Brer Fox, dat you ain&rsquo;t much hurt&mdash;\r\nBut yo&rsquo; wife&rsquo;ll be mad, kaze you done tored yo&rsquo; shirt!&rdquo;\r\n\r\n\r\n\r\nBRER RABBIT FINDS THE MOON IN THE MILL POND\n",
    "image": false
   },
   {
-   "name": "91",
+   "name": "92",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-45.jpg",
    "image": true
   },
   {
-   "name": "92",
+   "name": "93",
    "content": "Oh, one bright day in de middle er May,\r\nBrer Rabbit wuz feelin&rsquo; fine;\r\nHe tuck ter de road, an&rsquo; never know&rsquo;d\r\nDe place whar he wuz gwine!\r\n\r\n&ldquo;Oh, fur an&rsquo; free,&rdquo; sezee, &ldquo;siree,\r\nNo gal kin change my min&rsquo;!&rdquo;\r\nBrer Tarrypin, sly, he wunk one eye,\r\nUn&rsquo;neat&rsquo; his green-gourd vine!\r\n\r\nHe holla an&rsquo; say, &ldquo;Whar you gwine dis day,\r\nWid yo&rsquo; pipe an&rsquo; walkin&rsquo;-cane?&rdquo;\r\nBrer Rabbit wave his han&rsquo; like a gal do her fan&mdash;\r\n&ldquo;My heart&rsquo;s &rsquo;bout ter bust wid pain;\n",
    "image": false
   },
   {
-   "name": "93",
+   "name": "94",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-46.jpg",
    "image": true
   },
   {
-   "name": "94",
+   "name": "95",
    "content": "&ldquo;I&rsquo;m a heap too nice, I ain&rsquo;t laugh&rsquo;d but twice\r\nSence de big Jinawary rain;\r\nMy day&rsquo;ll be done ef I don&rsquo;t have some fun&mdash;\r\nDey&rsquo;ll call me Sunday-Jane!\r\n\r\n&ldquo;I&rsquo;ll git sollumcholic ef I don&rsquo;t have a frolic,\r\nMy head&rsquo;ll git flabby an&rsquo; swink;\r\nI chaw de pine-bud, kaze I&rsquo;m &rsquo;bout ter lose my cud\r\nAn&rsquo; some nights I don&rsquo;t sleep a wink!\r\n\r\n&ldquo;Ef I has ter set still, oh, I&rsquo;ll w&rsquo;ar de green willow,\r\nAn&rsquo; go in mo&rsquo;nin&rsquo; wid de Mink!\r\nBut I bet you a hat dat &rsquo;fo&rsquo; I does dat,\r\nI&rsquo;ll show um all a new kink!&rdquo;\n",
    "image": false
   },
   {
-   "name": "95",
+   "name": "96",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-47.jpg",
    "image": true
   },
   {
-   "name": "96",
+   "name": "97",
    "content": "So, off he put, on his nimbles&rsquo; foot,\r\nWid a grin, a laugh, an&rsquo; a cough;\r\nTer Miss Motts an&rsquo; Miss Meadows, an&rsquo; all de udders,\r\nHe tell what &rsquo;uz gwineter come off!\r\n\r\n&rsquo;Twuz a mill-pon&rsquo; fishin&rsquo;, an&rsquo; he lef um a-wishin&rsquo;\r\nDat de win&rsquo; don&rsquo;t blow fum de norf!\r\nAn&rsquo; de creeturs all, bofe long an&rsquo; tall&mdash;\r\nAn&rsquo; dem no bigger dan a dwarf&mdash;\r\n\r\nBrer Wolf an&rsquo; Brer B&rsquo;ar,&mdash;all say dey&rsquo;d be dar,\r\nAn&rsquo; dey promise fer ter fetch a seine;\r\nDey &rsquo;gree ter de day, an&rsquo; Brer Rabbit say\r\nDat dey don&rsquo;t hatter come ef it rain;\n",
    "image": false
   },
   {
-   "name": "97",
+   "name": "98",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-48.jpg",
    "image": true
   },
   {
-   "name": "98",
+   "name": "99",
    "content": "So said, so done, an&rsquo; when de time come,\r\nDe big road ez well ez de lane\r\nWuz filled wid a crowd, all talkin&rsquo; out loud,\r\nAn&rsquo; a-prankin&rsquo; wid might an&rsquo; main!\r\n\r\nBrer Rabbit wuz dar, wid Miss Molly Har&rsquo;,\r\nA-waitin&rsquo; fer de fun ter begin;\r\nHe shuck his shank, an&rsquo; went ter de bank,\r\nAn&rsquo; make like he gwineter jump in!\r\n\r\nBut de sight dat he saw made &rsquo;im drap his jaw,\r\nAn&rsquo; break up a great big grin!\r\nHe sez ter Brer Coon, &ldquo;Run here an&rsquo; see de Moon!\r\nA-floatin&rsquo; widout a fin!.&rdquo;\n",
    "image": false
   },
   {
-   "name": "99",
+   "name": "100",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-49.jpg",
    "image": true
   },
   {
-   "name": "100",
+   "name": "101",
    "content": "He look ag&rsquo;in&mdash;&ldquo;She sho fell in,\r\nAn&rsquo; we got ter git her out;\r\nEf she stays in de pon&rsquo;, it&rsquo;s &rsquo;good-bye, John!&rsquo;\r\nAn&rsquo; uv dat dey ain&rsquo;t no doubt;\r\n\r\n&ldquo;We got ter have light when we play at night,\r\nFer ter see how ter git about;\r\nWe&rsquo;ll drag wid de seine&mdash;ef we don&rsquo;t drag in vain,\r\nWe&rsquo;ll have good reason ter shout!&rdquo;\r\n\r\nBut when it come ter seinin&rsquo;, dar wuz some complainin\r\n&rsquo;Bout who wuz ter do it all,\r\nDey all make out dat dey wanter wade out,\r\nBut it fell on dem dat wuz tall:\n",
    "image": false
   },
   {
-   "name": "101",
+   "name": "102",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-50.jpg",
    "image": true
   },
   {
-   "name": "102",
+   "name": "103",
    "content": "Brer B&rsquo;ar, he laugh, ez he tuck a staff,\r\nBrer Wolf say he fear&rsquo;d he&rsquo;d fall,\r\nBut he tuck his place wid a mighty wry face,\r\nAn&rsquo; when dey &rsquo;gun ter haul.\r\n\r\n&ldquo;Oh, you better bet dis water&rsquo;s wet!\r\nI feel des like a sponge!&rdquo;\r\nAn&rsquo; den dey all, wid a kick an&rsquo; a squall,\r\nWid a squeal an&rsquo; den a lunge,\r\n\r\nGrabbed at de water&mdash;which dey hadn&rsquo;t oughter\r\nWent over der heads wid a splunge;\r\nBrer Rabbit bent double, &ldquo;Oh, all er yo&rsquo; trouble\r\nFills me full er fun-unj-unj!&rdquo;\r\n\r\n\r\n\r\nHOW MR. LION LOST HIS WOOL\n",
    "image": false
   },
   {
-   "name": "103",
+   "name": "104",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-51.jpg",
    "image": true
   },
   {
-   "name": "104",
+   "name": "105",
    "content": "&ldquo;Twuz des sech a day ez dis dat Mr Lion lost his wool,&rdquo;\r\nremarked Uncle Remus to the little boy, &ldquo;Mr. Man tuck a notion dat\r\nde time done come fer him fer ter have a hog-killin&rsquo; an&rsquo; he\r\ngot &rsquo;im a big barrel, an&rsquo; fill it half full er water fum de\r\nbig springs. Den he piled up &rsquo;bout a cord er wood, an&rsquo; ez he\r\npiled, he put rocks &rsquo;twix&rsquo; de logs, an&rsquo; den he sot de\r\nwood after at bofe een&rsquo;s an&rsquo; in de middle.\r\n&rsquo;Twan&rsquo;t long &rsquo;fo&rsquo; dey had de hogs killt,\r\nan&rsquo; eve&rsquo;ything ready fer ter scrape de ha&rsquo;r off. Den\r\nhe tuck de red-hot rocks what he put in de fire, an&rsquo; flung um in\r\nde barrel whar de water wuz, an&rsquo; &rsquo;twan&rsquo;t long, mon,\r\n&rsquo;fo&rsquo; dat water wuz ready fer ter bile. Den dey tuck de hogs,\r\none at a time, an&rsquo; soused um in de water, an&rsquo; time dey tuck\r\num out, he ha&rsquo;r wuz ready fer ter drap out by de roots. Den\r\ndey&rsquo;d scrape un wid sticks an&rsquo; chips, an&rsquo; dey aint\r\nleave a ha&rsquo;r on um.\n",
    "image": false
   },
   {
-   "name": "105",
+   "name": "106",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-52.jpg",
    "image": true
   },
   {
-   "name": "106",
+   "name": "107",
    "content": "&ldquo;Well, bimeby, dey had all de hogs killt an&rsquo; cleaned,\r\nan&rsquo; hauled off, an&rsquo; when eve&rsquo;ything wuz still ez a\r\nsettin&rsquo; hen, ol&rsquo; Brer Rabbit stuck his head out fum behine a\r\nbush whar he been settin&rsquo; at. He stuck his head out, he did,\r\nan&rsquo; look all &rsquo;roun&rsquo;, an&rsquo; den he went whar de\r\nfier wuz an&rsquo; try fer ter warm hisse&rsquo;f. He aint been dar long\r\n&rsquo;fo&rsquo; here come Brer Wolf an&rsquo; Brer Fox, an den he got\r\nbusy.\n",
    "image": false
   },
   {
-   "name": "107",
+   "name": "108",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-53.jpg",
    "image": true
   },
   {
-   "name": "108",
+   "name": "109",
    "content": "&ldquo;He say, &lsquo;Hello, frien&rsquo;s! howdy an&rsquo; welcome! I\r\n&rsquo;m des fixin&rsquo; fer ter take a warm baff like Mr. Man\r\ngi&rsquo; his hogs; wont you j&rsquo;ine me?&rsquo; Dey say dey aint in\r\nno hurry, but dey holp Brer Rabbit put de hot rocks in de barrel\r\nan&rsquo; dey watch de water bubble, an&rsquo; bimeby, when\r\neve&rsquo;ything wuz ready, who should walk up but ol&rsquo; Mr. Lion?\n",
    "image": false
   },
   {
-   "name": "109",
+   "name": "110",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-54.jpg",
    "image": true
   },
   {
-   "name": "110",
+   "name": "111",
    "content": "&ldquo;He had a mane fum his head plum ter de een&rsquo; er his tail,\r\nan&rsquo; in some places it wuz so long it drug on de groun&rsquo;&mdash;dat\r\nwhat make all de creeturs &rsquo;fear&rsquo;d un &rsquo;im. He growl\r\nan&rsquo; ax um what dey doin&rsquo;, an&rsquo; when Brer Rabbit tell\r\n&rsquo;im, he say dat&rsquo;s what he long been needin&rsquo;.\r\n&lsquo;How does you git in?&rsquo; &lsquo;Des back right in,&rsquo; sez\r\nol&rsquo; Brer Rabbit, sezee, an&rsquo; wid dat,\n",
    "image": false
   },
   {
-   "name": "111",
+   "name": "112",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-55.jpg",
    "image": true
   },
   {
-   "name": "112",
+   "name": "113",
    "content": "&ldquo;Mr. Lion backed in, an&rsquo; de water wuz so hot, he try fer ter\r\ngit out, an&rsquo; he slipped in plum ter his shoulder-blades. You kin\r\nb&rsquo;lieve me er not, but dat creetur wuz scall&rsquo;d so dat he\r\nholler&rsquo;d an&rsquo; skeer&rsquo;d eve&rsquo;ybody fur miles\r\naroun&rsquo;.\n",
    "image": false
   },
   {
-   "name": "113",
+   "name": "114",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-56.jpg",
    "image": true
   },
   {
-   "name": "114",
+   "name": "115",
    "content": "&ldquo;An when he come out, all de wool drap&rsquo;t out,\r\n&rsquo;cep&rsquo; de bunch you see on his neck, an&rsquo; de leetle bit\r\nyou&rsquo;ll fin&rsquo; on de een&rsquo; er his tail&mdash;an&rsquo;\r\ndat&rsquo;d &rsquo;a&rsquo; come off ef de tail hadn&rsquo;t\r\n&rsquo;a&rsquo; slipped thoo de bung-hole er de barrel.&rdquo; With\r\nthat, Uncle Remus closed his eyes, but not so tightly that he\r\ncouldn&rsquo;t watch the little boy. For a moment the child said\r\nnothing, and then, &ldquo;I must tell that tale to mother before I\r\nforget it!&rdquo; So saying, he ran out of the cabin as fast as his feet\r\ncould carry him, leaving Uncle Remus shaking with laughter.\r\n\r\n\r\nHOW BRER RABBIT GOT A HOUSE\n",
    "image": false
   },
   {
-   "name": "115",
+   "name": "116",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-57.jpg",
    "image": true
   },
   {
-   "name": "116",
+   "name": "117",
    "content": "Oh, once &rsquo;pon a time, all de creeturs, all de creeturs,\r\nTuck a notion dat dey&rsquo;d build a house,\r\nAn&rsquo; fix it so ez ter keep out de skeeters,\r\nAn&rsquo; fix it up nix cummy rous!\r\nDey all wuz dar fum de B&rsquo;ar ter de Possum,\r\nBrer Wolf, Brer Fox, Brer Coon,\r\nWid ol&rsquo; Brer Rabbit fer ter stan&rsquo; &rsquo;roun&rsquo; an&rsquo; boss um,\r\nKaze dey hatter have de&rsquo; house right soon.\n",
    "image": false
   },
   {
-   "name": "117",
+   "name": "118",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-58.jpg",
    "image": true
   },
   {
-   "name": "118",
+   "name": "119",
    "content": "Brer Rabbit, he wuz busy, oh, yes, mighty busy,\r\nNot doin&rsquo; uv a blessed thing;\r\nEf he clim&rsquo; de scaffle, he say he&rsquo;ll git dizzy,\r\nSo he medjur an&rsquo; mark an&rsquo; sing.\r\nDey buil&rsquo; de house, an&rsquo; it sho wuz a fine un,\r\nMade er poplar, oak an&rsquo; pine;\r\nDe littlest room wuz a sev&rsquo;m-by-nine un,\r\nWhar de sick could go an&rsquo; whine!\n",
    "image": false
   },
   {
-   "name": "119",
+   "name": "120",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-59.jpg",
    "image": true
   },
   {
-   "name": "120",
+   "name": "121",
    "content": "Brer Rabbit, he wait, an&rsquo; when de time come\r\nHe choosened a upsta&rsquo;s room,\r\nAn&rsquo; dar he sot (ef I kin make de rhyme come)\r\nA-singin&rsquo; &ldquo;Hark fum de Toom&rdquo;!\r\nAn&rsquo; den he got what he aint had oughter,\r\nEz all de creeturs said,\r\nA gun, a cannon, an&rsquo; a tub er water,\r\nAn&rsquo; hid um under his bed!\n",
    "image": false
   },
   {
-   "name": "121",
+   "name": "122",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-60.jpg",
    "image": true
   },
   {
-   "name": "122",
+   "name": "123",
    "content": "When de creeturs come home, Brer Rabbit wuz ready,\r\nAn&rsquo; he tell um he gwineter set down;\r\n&ldquo;Well, set,&rdquo; sez dey, &ldquo;an&rsquo; we&rsquo;ll try ter be ste&rsquo;dy,&rdquo;\r\nAn&rsquo; wid dat, Brer Rabbit kinder frown;\r\nBang-bang! went de gun&mdash;de barrels wuz double&mdash;\r\nAn&rsquo; de creeturs wuz still ez mice;\r\nBrer B&rsquo;ar he say, &ldquo;Dy must be some trouble,\r\nBut I hope heedon&rsquo;t loosen de j&rsquo;is!&rdquo;\n",
    "image": false
   },
   {
-   "name": "123",
+   "name": "124",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-61.jpg",
    "image": true
   },
   {
-   "name": "124",
+   "name": "125",
    "content": "Brer Rabbit, he say, &ldquo;Wharbouts mus&rsquo; I spit at?&rdquo;\r\nAn&rsquo; Brer Wolf answer, wid a grin,\r\n&ldquo;Des wharsomever you kin make it hit at!&rdquo;\r\nBrer Fox, he rub his chin;\r\nBrer Rabbit, he tuck de tub er water,\r\nAn&rsquo; empty it all on de sta&rsquo;rs,\r\nAn&rsquo; it come nigh drownin&rsquo; Brer Coon&rsquo;s daughter.\r\nAn&rsquo; likewise one er Brer B&rsquo;ar&rsquo;s!\n",
    "image": false
   },
   {
-   "name": "125",
+   "name": "126",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-62.jpg",
    "image": true
   },
   {
-   "name": "126",
+   "name": "127",
    "content": "Brer Rabbit say, &ldquo;When I sneeze I&rsquo;ll skeer you,\r\nAn&rsquo; I hate fer ter have it ter do!&rdquo;\r\nBrer Fox say, &ldquo;We&rsquo;ll lissen an&rsquo; hear you\r\nDes go right ahead wid yo&rsquo; sneeze-a-ma-roo!&rdquo;\r\nBoom-a-lam! went de cannon, an&rsquo; de creeturs, dey lit out\r\nThoo window-sash an&rsquo; do&rsquo;\r\nAny way, any way dat dey kin git oot,\r\nAn&rsquo; dey aint come dar no mo&rsquo;!\r\n\r\n\r\n\r\nBRER RABBIT AND THE PARTRIDGE NEST\n",
    "image": false
   },
   {
-   "name": "127",
+   "name": "128",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-63.jpg",
    "image": true
   },
   {
-   "name": "128",
+   "name": "129",
    "content": "Oh, what&rsquo;s de matter wid de Whipperwill,\r\nDat she sets an&rsquo; cries on de furder hill?\r\nAn&rsquo; what&rsquo;s de matter wid Miss Bob White,\r\nDat she choke herse&rsquo;f wid sayin&rsquo; Good-night?\r\nYou know mighty well dat sump&rsquo;n is wrong\r\nWhen dey sets an&rsquo; sings dat kinder song,\r\n&rsquo;Twix&rsquo; a call an&rsquo; a cry, &rsquo;twix&rsquo; a weep an&rsquo; a wail&mdash;\r\nDey must be tellin&rsquo; a mighty sad tale.\n",
    "image": false
   },
   {
-   "name": "129",
+   "name": "130",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-64.jpg",
    "image": true
   },
   {
-   "name": "130",
+   "name": "131",
    "content": "Miss Whipperwill&rsquo;s troubles, an&rsquo; what she say\r\nWill do fer ter tell some yuther day;\r\nBut Miss Bob White&mdash;my! aint she a sight?&mdash;\r\nI&rsquo;ll hatter tell why she hollers Good-night.\r\nDey once wuz a time (needer mo&rsquo; ner less)\r\nWhen she ain&rsquo;t try ter hide ner kivver her nes&rsquo;;\r\nShe built it in de open, whar all kin see,\r\nAn&rsquo; wuz des ez perlite ez she kin be.\n",
    "image": false
   },
   {
-   "name": "131",
+   "name": "132",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-65.jpg",
    "image": true
   },
   {
-   "name": "132",
+   "name": "133",
    "content": "She&rsquo;d make her house facin&rsquo; eas&rsquo; an&rsquo; wes&rsquo;,\r\nAn&rsquo; den wid eggs she&rsquo;d fill her nes&rsquo;;\r\nFer ter keep um warm she&rsquo;d brood an&rsquo; set,\r\nAn&rsquo; keep her house fum gittin&rsquo; wet.\r\nWhiles dis gwine on, Brer Rabbit come by,\r\nA-wigglin&rsquo; his mouf, an&rsquo; a-blinkin&rsquo; his eye:\r\n&ldquo;De top er de mornin&rsquo;, Miss Bob,&rdquo; sezee;\r\n&ldquo;De same ter you, Brer Rabbit,&rdquo; se&rsquo; she.\n",
    "image": false
   },
   {
-   "name": "133",
+   "name": "134",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-66.jpg",
    "image": true
   },
   {
-   "name": "134",
+   "name": "135",
    "content": "Sez ol&rsquo; Brer Rabbit, &ldquo;I been missin&rsquo; you long,\r\nI wuz mighty fear&rsquo;d dat sump&rsquo;n wuz wrong,\r\nBut here you set ez still ez a mouse,\r\nNot doin&rsquo; nothin&rsquo; but keepin&rsquo; house!&rdquo;\r\n&ldquo;Oh, well,&rdquo; se&rsquo; she, &ldquo;I&rsquo;m too ol&rsquo; ter gad,\r\nI use&rsquo; ter do it, but I wish I never had!\r\nDe only thing I want is ter wash my dress,\r\nBut I can&rsquo;t do dat whiles I&rsquo;m on my nes&rsquo;.&rdquo;\n",
    "image": false
   },
   {
-   "name": "135",
+   "name": "136",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-67.jpg",
    "image": true
   },
   {
-   "name": "136",
+   "name": "137",
    "content": "Brer Rabbit, he say, &ldquo;Can&rsquo;t I he&rsquo;p you out?\r\nI ain&rsquo;t doin&rsquo; nothin&rsquo; but walkin&rsquo; about,\r\nAn&rsquo; my ol&rsquo; &rsquo;oman is willin&rsquo; fer ter bet\r\nDat ef settin &rsquo;s de thing, I&rsquo;m ol&rsquo; man Set!&rdquo;\r\n&ldquo;I know mighty well,&rdquo; sez Miss Bob White,\r\n&ldquo;Ef you set a-tall, it&rsquo;ll be done right.&rdquo;\r\n&ldquo;Thanky-do, Miss Bob! Go wash yo&rsquo; dress,\r\nAn&rsquo; I&rsquo;ll do what I kin fer ter kivver yo&rsquo; nes&rsquo;!&rdquo;\n",
    "image": false
   },
   {
-   "name": "137",
+   "name": "138",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-68.jpg",
    "image": true
   },
   {
-   "name": "138",
+   "name": "139",
    "content": "So off she put, wid a flutter an&rsquo; a flirt,\r\nAn&rsquo; washed her dress in a pile er clean dirt;\r\nBrer Rabbit see de eggs, an&rsquo; shuck his head;\r\nHis mouf &rsquo;gun ter dribble, an&rsquo; his eye turn red;\r\nSezee, &ldquo;It&rsquo;d sholy be hard fer ter match um,\r\nSo I&rsquo;ll des take um home an&rsquo; try fer ter hatch um!&rdquo;\r\nSo said, so done! An&rsquo; den when he come back,\r\nHe come in a gait &rsquo;twix&rsquo; a lope an&rsquo; a rack.\n",
    "image": false
   },
   {
-   "name": "139",
+   "name": "140",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-69.jpg",
    "image": true
   },
   {
-   "name": "140",
+   "name": "141",
    "content": "An&rsquo; Miss Bob White, atter washin&rsquo; her dress,\r\nWent a-runnin&rsquo; back ter house an&rsquo; nes&rsquo;;\r\n&ldquo;Much erbleege, Brer Rabbit,&rdquo; an&rsquo; den she bowed.\r\n&ldquo;Say nothin&rsquo;, ma&rsquo;am, fer ter make me proud,\r\nKaze I been a-waitin&rsquo; here, frettin&rsquo; an&rsquo; sweatin&rsquo;,\r\nFer fear I ain&rsquo;t sech a good han&rsquo; at settin&rsquo;;\r\nMy ol&rsquo; &rsquo;oman say I got a slow fever,\r\nAn&rsquo; I &rsquo;clar&rsquo; ter goodness, I&rsquo;m ready ter b&rsquo;lieve her!\n",
    "image": false
   },
   {
-   "name": "141",
+   "name": "142",
    "content": "http://res.cloudinary.com/apical/image/upload/22282/images/image-70.jpg",
    "image": true
   }

@@ -1,239 +1,244 @@
 {
- "bookTitle": "\nTHE STORY\r\nOF THE\r\nTHREE LITTLE PIGS\r\n\r\nWith drawings by L. Leslie Brooke\r\n\r\nFrederick Warne &amp; Co.\n",
+ "bookTitle": "\r\n\r\nTHE STORY\r\nOF THE\r\nTHREE LITTLE PIGS\n",
  "bookTitleImage": "http://res.cloudinary.com/apical/image/upload/18155/images/imgcover.jpg",
  "bookData": [
   {
    "name": "1",
+   "content": "\r\n\r\nTHE STORY\r\nOF THE\r\nTHREE LITTLE PIGS\n",
+   "image": false
+  },
+  {
+   "name": "2",
    "content": "http://res.cloudinary.com/apical/image/upload/18155/images/imgcover.jpg",
    "image": true
   },
   {
-   "name": "2",
-   "content": "\nTHE STORY\r\nOF THE\r\nTHREE LITTLE PIGS\r\n\r\nWith drawings by L. Leslie Brooke\r\n\r\nFrederick Warne &amp; Co.\n",
+   "name": "3",
+   "content": "With drawings by L. Leslie Brooke\r\n\r\nFrederick Warne &amp; Co.\n",
    "image": false
   },
   {
-   "name": "3",
+   "name": "4",
    "content": "http://res.cloudinary.com/apical/image/upload/18155/images/imginsidefront.jpg",
    "image": true
   },
   {
-   "name": "4",
+   "name": "5",
    "content": "http://res.cloudinary.com/apical/image/upload/18155/images/imgtitle.jpg",
    "image": true
   },
   {
-   "name": "5",
+   "name": "6",
    "content": "http://res.cloudinary.com/apical/image/upload/18155/images/img001.jpg",
    "image": true
   },
   {
-   "name": "6",
+   "name": "7",
    "content": "\n\nTHE STORY OF THE THREE LITTLE PIGS.\r\n\r\n\r\nOnce upon a time there was an old Sow with three little Pigs,\r\nand as she had not enough to keep them, she sent them out to seek their\r\nfortune.\n",
    "image": false
   },
   {
-   "name": "7",
+   "name": "8",
    "content": "http://res.cloudinary.com/apical/image/upload/18155/images/imgplate-1.jpg",
    "image": true
   },
   {
-   "name": "8",
+   "name": "9",
    "content": "http://res.cloudinary.com/apical/image/upload/18155/images/img002.jpg",
    "image": true
   },
   {
-   "name": "9",
+   "name": "10",
    "content": "http://res.cloudinary.com/apical/image/upload/18155/images/img003.jpg",
    "image": true
   },
   {
-   "name": "10",
+   "name": "11",
    "content": "\n\nThe first that went off met a Man with a bundle of straw, and said to\r\nhim, \"Please, Man, give me that straw to build me a house\"; which the\r\nMan did, and the little Pig built a house with it. Presently came along\r\na Wolf, and knocked at the door, and said, \"Little Pig, little Pig, let\r\nme come in.\"\r\n\r\nTo which the Pig answered, \"No, no, by the hair of my chinny chin chin.\"\n",
    "image": false
   },
   {
-   "name": "11",
+   "name": "12",
    "content": "http://res.cloudinary.com/apical/image/upload/18155/images/imgplate-2.jpg",
    "image": true
   },
   {
-   "name": "12",
+   "name": "13",
    "content": "\"Then I'll huff and I'll puff, and I'll blow your house\r\nin!\" said the Wolf. So he huffed and he puffed, and he blew his house\r\nin, and ate up the little Pig.\r\n\r\nThe second Pig met a Man with a bundle of furze, and said, \"Please, Man,\r\ngive me that furze to build a house\"; which the Man did, and the Pig\r\nbuilt his house.\n",
    "image": false
   },
   {
-   "name": "13",
+   "name": "14",
    "content": "http://res.cloudinary.com/apical/image/upload/18155/images/img004.jpg",
    "image": true
   },
   {
-   "name": "14",
+   "name": "15",
    "content": "Then along came the Wolf and said, \"Little Pig, little Pig, let me come\r\nin.\"\r\n\r\n\"No, no, by the hair of my chinny chin chin.\"\r\n\r\n\"Then I'll puff and I'll huff, and I'll blow your house in!\" So he\r\nhuffed and he puffed, and he puffed and he huffed, and at last he blew\r\nthe house down, and ate up the second little Pig.\n",
    "image": false
   },
   {
-   "name": "15",
+   "name": "16",
    "content": "http://res.cloudinary.com/apical/image/upload/18155/images/img005.jpg",
    "image": true
   },
   {
-   "name": "16",
+   "name": "17",
    "content": "The third little Pig met a Man with a load of bricks, and said, \"Please,\r\nMan, give me those bricks to build a house with\"; so the Man gave him\r\nthe bricks, and he built his house with them. So the Wolf came, as he\r\ndid to the other little Pigs, and said, \"Little Pig, little Pig, let me\r\ncome in.\"\r\n\r\n\"No, no, by the hair of my chinny chin chin.\"\r\n\r\n\"Then I'll huff and I'll puff, and I'll blow your house in.\"\n",
    "image": false
   },
   {
-   "name": "17",
+   "name": "18",
    "content": "http://res.cloudinary.com/apical/image/upload/18155/images/imgplate-3.jpg",
    "image": true
   },
   {
-   "name": "18",
+   "name": "19",
    "content": "Well, he huffed and he puffed, and he huffed and he puffed, and he\r\npuffed and he huffed; but he could not get the house down. When he\r\nfound that he could not, with all his huffing and puffing, blow the\r\nhouse down, he said, \"Little Pig, I know where there is a nice field of\r\nturnips.\"\n",
    "image": false
   },
   {
-   "name": "19",
+   "name": "20",
    "content": "http://res.cloudinary.com/apical/image/upload/18155/images/img006.jpg",
    "image": true
   },
   {
-   "name": "20",
+   "name": "21",
    "content": "\"Where?\" said the little Pig.\r\n\r\n\r\n\r\n\"Oh, in Mr. Smith's home-field; and if you will be ready to-morrow\r\nmorning, I will call for you, and we will go together and get some for\r\ndinner.\"\r\n\r\n\"Very well,\" said the little Pig, \"I will be ready. What time do you\r\nmean to go?\"\r\n\r\n\"Oh, at six o'clock.\"\n",
    "image": false
   },
   {
-   "name": "21",
+   "name": "22",
    "content": "http://res.cloudinary.com/apical/image/upload/18155/images/img007.jpg",
    "image": true
   },
   {
-   "name": "22",
+   "name": "23",
    "content": "Well, the little Pig got up at five, and got the turnips and was home\r\nagain before six. When the Wolf came he said, \"Little Pig, are you\r\nready?\"\r\n\r\n\"Ready!\" said the little Pig, \"I have been and come back again, and got\r\na nice pot-full for dinner.\"\n",
    "image": false
   },
   {
-   "name": "23",
+   "name": "24",
    "content": "http://res.cloudinary.com/apical/image/upload/18155/images/imgplate-4.jpg",
    "image": true
   },
   {
-   "name": "24",
+   "name": "25",
    "content": "http://res.cloudinary.com/apical/image/upload/18155/images/imgplate-5.jpg",
    "image": true
   },
   {
-   "name": "25",
+   "name": "26",
    "content": "\nThe Wolf felt very angry at this, but thought that he would be up to\r\nthe little Pig somehow or other; so he said, \"Little Pig, I know where\r\nthere is a nice apple-tree.\"\r\n\r\n\"Where?\" said the Pig.\r\n\r\n\"Down at Merry-garden,\" replied the Wolf; \"and if you will not deceive\r\nme I will come for you, at five o'clock to-morrow, and we will go\r\ntogether and get some apples.\"\n",
    "image": false
   },
   {
-   "name": "26",
+   "name": "27",
    "content": "http://res.cloudinary.com/apical/image/upload/18155/images/img008.jpg",
    "image": true
   },
   {
-   "name": "27",
+   "name": "28",
    "content": "Well, the little Pig woke at four the next morning, and bustled up, and\r\nwent off for the apples, hoping to get back before the Wolf came; but\r\nhe had farther to go, and had to climb the tree, so that just as he was\r\ncoming down from it, he saw the Wolf coming, which, as you may suppose,\r\nfrightened him very much. When the Wolf came up he said, \"Little Pig,\r\nwhat! are you here before me? Are they nice apples?\"\n",
    "image": false
   },
   {
-   "name": "28",
+   "name": "29",
    "content": "http://res.cloudinary.com/apical/image/upload/18155/images/img009.jpg",
    "image": true
   },
   {
-   "name": "29",
+   "name": "30",
    "content": "\"Yes, very,\" said the little Pig; \"I will throw you down one.\" And he\r\nthrew it so far that, while the Wolf was gone to pick it up, the\r\nlittle Pig jumped down and ran home.\n",
    "image": false
   },
   {
-   "name": "30",
+   "name": "31",
    "content": "http://res.cloudinary.com/apical/image/upload/18155/images/imgplate-6.jpg",
    "image": true
   },
   {
-   "name": "31",
+   "name": "32",
    "content": "The next day the Wolf came again, and said to the little Pig, \"Little\r\nPig, there is a Fair in the Town this afternoon: will you go?\"\n",
    "image": false
   },
   {
-   "name": "32",
+   "name": "33",
    "content": "http://res.cloudinary.com/apical/image/upload/18155/images/img010.jpg",
    "image": true
   },
   {
-   "name": "33",
+   "name": "34",
    "content": "\"Oh, yes,\" said the Pig, \"I will go; what time shall you be ready?\"\r\n\r\n\"At three,\" said the Wolf.\n",
    "image": false
   },
   {
-   "name": "34",
+   "name": "35",
    "content": "http://res.cloudinary.com/apical/image/upload/18155/images/img011.jpg",
    "image": true
   },
   {
-   "name": "35",
+   "name": "36",
    "content": "So the little Pig went off before the time, as usual, and got to the\r\nFair, and bought a butter churn, and was on his way home with it when he\r\nsaw the Wolf coming. Then he could not tell what to do. So he got into\r\nthe churn to hide, and in doing so turned it round, and it began to\r\nroll, and rolled down the hill with the Pig inside it, which frightened\r\nthe Wolf so much that he ran home without going to the Fair.\n",
    "image": false
   },
   {
-   "name": "36",
+   "name": "37",
    "content": "http://res.cloudinary.com/apical/image/upload/18155/images/imgplate-7.jpg",
    "image": true
   },
   {
-   "name": "37",
+   "name": "38",
    "content": "He went to the little Pig's house, and told him how frightened he had\r\nbeen by a great round thing which came down the hill past him.\n",
    "image": false
   },
   {
-   "name": "38",
+   "name": "39",
    "content": "http://res.cloudinary.com/apical/image/upload/18155/images/img012.jpg",
    "image": true
   },
   {
-   "name": "39",
+   "name": "40",
    "content": "Then the little Pig said, \"Hah! I frightened you, did I? I had been to\r\nthe Fair and bought a butter churn, and when I saw you I got into it,\r\nand rolled down the hill.\"\n",
    "image": false
   },
   {
-   "name": "40",
+   "name": "41",
    "content": "http://res.cloudinary.com/apical/image/upload/18155/images/img013.jpg",
    "image": true
   },
   {
-   "name": "41",
+   "name": "42",
    "content": "Then the Wolf was very angry indeed, and declared he would eat up the\r\nlittle Pig, and that he would get down the chimney after him.\n",
    "image": false
   },
   {
-   "name": "42",
+   "name": "43",
    "content": "http://res.cloudinary.com/apical/image/upload/18155/images/imgplate-8.jpg",
    "image": true
   },
   {
-   "name": "43",
+   "name": "44",
    "content": "When the little Pig saw what he was about, he hung on the pot full of\r\nwater, and made up a blazing fire, and, just as the Wolf was coming\r\ndown, took off the cover of the pot, and in fell the Wolf. And the\r\nlittle Pig put on the cover again in an instant, boiled him up, and ate\r\nhim for supper, and lived happy ever after.\n",
    "image": false
   },
   {
-   "name": "44",
+   "name": "45",
    "content": "http://res.cloudinary.com/apical/image/upload/18155/images/img014.jpg",
    "image": true
   },
   {
-   "name": "45",
+   "name": "46",
    "content": "http://res.cloudinary.com/apical/image/upload/18155/images/img015.jpg",
    "image": true
   },
   {
-   "name": "46",
+   "name": "47",
    "content": "http://res.cloudinary.com/apical/image/upload/18155/images/imgback-cover.jpg",
    "image": true
   },
   {
-   "name": "47",
+   "name": "48",
    "content": "http://res.cloudinary.com/apical/image/upload/18155/images/imginside-back.jpg",
    "image": true
   }

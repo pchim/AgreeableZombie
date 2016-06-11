@@ -1,10 +1,10 @@
 {
- "bookTitle": "\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nTHE TALE OF\r\nBENJAMIN BUNNY\r\n\r\nBY\r\nBEATRIX POTTER\r\n\r\nAUTHOR OF &quot;THE TAIL OF PETER RABBIT,&quot; &amp;C.\n",
+ "bookTitle": "\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nTHE TALE OF\r\nBENJAMIN BUNNY\n",
  "bookTitleImage": "http://res.cloudinary.com/apical/image/upload/14407/./images/title-page-tb.jpg",
  "bookData": [
   {
    "name": "1",
-   "content": "\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nTHE TALE OF\r\nBENJAMIN BUNNY\r\n\r\nBY\r\nBEATRIX POTTER\r\n\r\nAUTHOR OF &quot;THE TAIL OF PETER RABBIT,&quot; &amp;C.\n",
+   "content": "\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nTHE TALE OF\r\nBENJAMIN BUNNY\n",
    "image": false
   },
   {
@@ -14,7 +14,7 @@
   },
   {
    "name": "3",
-   "content": "FREDERICK WARNE &amp; CO., INC.\r\nNEW YORK\r\n\r\n\r\n\r\nCopyright, 1904\r\nBY\r\nFREDERICK WARNE &amp; Co.\r\n\r\nCopyright renewed, 1932\n",
+   "content": "BY\r\nBEATRIX POTTER\r\n\r\nAUTHOR OF &quot;THE TAIL OF PETER RABBIT,&quot; &amp;C.\r\n\r\n\r\n\r\nFREDERICK WARNE &amp; CO., INC.\r\nNEW YORK\r\n\r\n\r\n\r\nCopyright, 1904\r\nBY\r\nFREDERICK WARNE &amp; Co.\r\n\r\nCopyright renewed, 1932\n",
    "image": false
   },
   {

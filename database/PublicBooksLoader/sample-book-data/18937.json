@@ -1,10 +1,10 @@
 {
- "bookTitle": "\r\n\r\nMy First Picture Book.\r\nWith Thirty-six pages of pictures\r\nPrinted in colours by Kronheim.\n",
+ "bookTitle": "\r\n\r\nMy First Picture Book.\r\nWith Thirty-six pages of Pictures\n",
  "bookTitleImage": "http://res.cloudinary.com/apical/image/upload/18937/images/emblem.jpg",
  "bookData": [
   {
    "name": "1",
-   "content": "\r\n\r\nMy First Picture Book.\r\nWith Thirty-six pages of pictures\r\nPrinted in colours by Kronheim.\n",
+   "content": "\r\n\r\nMy First Picture Book.\r\nWith Thirty-six pages of Pictures\n",
    "image": false
   },
   {
@@ -14,7 +14,7 @@
   },
   {
    "name": "3",
-   "content": "London &amp; New York:\r\nGeorge Routledge and Sons.\r\n\r\n\r\n\r\n\r\nTranscriber's note:\r\n\r\nThe grouping of letters in the alphabet section and a few paragraph\r\nbreaks have been adjusted to accomodate image placement. There were\r\nno illustrations for the letters J and X in the original.\r\n\r\n\r\n\r\nContents\r\n\r\n  My First Alphabet\r\n  The Little Old Woman who Lived in a Shoe\r\n  The Babes in the Wood\r\n  Little Bo-Peep\r\n  The History of Five Little Pigs\r\n  The History of Old Mother Goose and her Son Jack\r\n\r\n\r\nMY FIRST ALPHABET\r\n\r\n\r\nA aB b\r\nArkBaby\r\nC cD d\r\nCatDog\n",
+   "content": "Printed in colours by Kronheim.\r\n\r\nLondon &amp; New York:\r\nGeorge Routledge and Sons.\r\n\r\n\r\n\r\n\r\nTranscriber's note:\r\n\r\nThe grouping of letters in the alphabet section and a few paragraph\r\nbreaks have been adjusted to accomodate image placement. There were\r\nno illustrations for the letters J and X in the original.\r\n\r\n\r\n\r\nContents\r\n\r\n  My First Alphabet\r\n  The Little Old Woman who Lived in a Shoe\r\n  The Babes in the Wood\r\n  Little Bo-Peep\r\n  The History of Five Little Pigs\r\n  The History of Old Mother Goose and her Son Jack\r\n\r\n\r\nMY FIRST ALPHABET\r\n\r\n\r\nA aB b\r\nArkBaby\r\nC cD d\r\nCatDog\n",
    "image": false
   },
   {
