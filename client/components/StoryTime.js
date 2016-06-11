@@ -32,7 +32,6 @@ class StoryTime extends Component {
       identity: undefined,
       message: undefined,
     };
-    this.backToLibrary = this.backToLibrary.bind(this);
     this.onClickPrev = this.onClickPrev.bind(this);
     this.onClickNext = this.onClickNext.bind(this);
     this.handlePreview = this.handlePreview.bind(this);
@@ -87,10 +86,6 @@ class StoryTime extends Component {
       webcam.log(`Incoming invite from: ' ${invite.from}`);
       invite.accept().then(webcam.conversationStarted.bind(webcam));
     });
-  }
-
-  backToLibrary() {
-    browserHistory.push('/library');
   }
 
   conversationStarted(conversation) {
@@ -224,7 +219,6 @@ class StoryTime extends Component {
             <SideBar
               handlePreview={this.handlePreview}
               handleInviteToggle={this.handleInviteToggle}
-              backToLibrary={this.backToLibrary}
             />
           </div>
           <div className="booksection">
