@@ -163,20 +163,40 @@ class StoryTime extends Component {
 
   componentWillMount() {
     const app = this;
-    $.post('/api/getBook', { bookId: this.props.params.bookId }, function(data) {
+    $.post('/api/getBook', { bookId: this.props.params.bookId }, data => {
       console.log('data from server is - ', data);
       // query the db for a book,
       // set the states
-      const title = data.bookTitle;
+      let title = data.bookTitle;
       const bookData = data.bookData;
 
-      console.log('bookTitle is - ', title);
-      console.log('bookdata is - ', bookData);
+      title = $('<textarea />').html(title).text();
 
-      app.setState({
-        bookTitle: title,
-        bookData,
-      });
+      console.log('bookTitle is - ', title);
+      // console.log('bookdata is - ', bookData);
+
+      const convertPages = (i) => {
+        // console.log(i);
+        if (i === bookData.length) {
+          // console.log('i', i);
+          app.setState({
+            bookTitle: title,
+            bookData,
+          });
+        }
+
+        if (!bookData[i].image) {
+          bookData[i].content = $('<textarea />').html(bookData[i].content).text();
+          // console.log(pages[i].content);
+        }
+        convertPages(i + 1);
+      };
+
+      convertPages(0);
+      // app.setState({
+      //   bookTitle: title,
+      //   bookData,
+      // });
     }, 'json');
   }
 
@@ -255,6 +275,7 @@ class StoryTime extends Component {
 
 StoryTime.propTypes = {
   params: PropTypes.object,
+  conversation: PropTypes.object,
 };
 
 StoryTime.contextTypes = {
