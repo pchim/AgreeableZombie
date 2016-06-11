@@ -22,7 +22,6 @@ class StoryTime extends Component {
       pageCounter: 0,
       bookTitle: '',
       bookData: [],
-      author: 'Eric Carle',
 
       invitePopUp: false,
 
@@ -169,11 +168,12 @@ class StoryTime extends Component {
 
   componentWillMount() {
     const app = this;
-    $.getJSON('/api/books', data => {
+    $.post('/api/getBook', { bookId: this.props.params.bookId }, function(data) {
       console.log('data from server is - ', data);
-
-      const title = data[0].bookTitle;
-      const bookData = data[0].bookData;
+      // query the db for a book,
+      // set the states
+      const title = data.bookTitle;
+      const bookData = data.bookData;
 
       console.log('bookTitle is - ', title);
       console.log('bookdata is - ', bookData);
@@ -182,7 +182,7 @@ class StoryTime extends Component {
         bookTitle: title,
         bookData,
       });
-    });
+    }, 'json');
   }
 
   componentDidMount() {

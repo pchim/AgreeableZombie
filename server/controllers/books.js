@@ -13,6 +13,13 @@ module.exports = {
     });
   },
 
+  getOneBook: function (req, res) {
+    Book.findOne({ "_id": req.body.bookId }).then(book => {
+      console.log('book in server: ', book);
+      res.json(book);
+    });
+  },
+
   // currently not un use
   addBook: function (req, res) {
     Book.remove({}).then(function() {
