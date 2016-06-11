@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Library from './Library';
+import $ from 'jquery';
 
 class LibraryContainer extends Component {
   constructor(props) {
@@ -16,7 +17,20 @@ class LibraryContainer extends Component {
 
   componentWillMount() {
     fetch('/api/books').then(res => {
-      res.json().then(json => this.receiveBooks(json));
+      res.json().then(books => {
+        const convertTitles = (i) => {
+          if (i === books.length) {
+            this.receiveBooks(books);
+          }
+
+          books[i].bookTitle = $('<textarea />').html(books[i].bookTitle).text();
+          convertTitles(i + 1);
+        };
+
+        if (books) {
+          convertTitles(0);
+        }
+      });
     });
   }
 
