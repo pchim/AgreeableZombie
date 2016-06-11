@@ -43,6 +43,22 @@ module.exports = {
     });
   },
 
+  updateBook: function (req, res) {
+    Book.findOne({bookTitle: req.body.bookTitle}, function(err, book) {
+      console.log('what the book is', book)
+        book.bookData = req.body.bookData;
+        book.save(function(err) {
+            if(!err) {
+                console.log("updated book object");
+            }
+            else {
+                console.log("Error: could not book ");
+            }
+        });
+        }
+    );
+  },
+
   saveCreatedBook: function (req, res) {
     var newCreatedBook = new Book({
       bookTitle: req.body.bookTitle,
