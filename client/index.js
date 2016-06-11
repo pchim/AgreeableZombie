@@ -19,8 +19,7 @@ const render = () => {
       <Route path="/" component={App}>
         <IndexRedirect to="/library" />
         <Route path="library" component={LibraryContainer} />
-        <Route path="story-time" component={StoryTime} />
-        <Route path="story-time/:bookId" component={StoryTime} />
+        <Route path="story-time/:userId/:bookId" component={StoryTime} />
         <Route path="*" component={NoMatch} />
       </Route>
     </Router>,

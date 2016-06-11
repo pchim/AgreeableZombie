@@ -1,4 +1,5 @@
 import React from 'react';
+import React, { Component, PropTypes } from 'react';
 import { browserHistory } from 'react-router';
 import Title from './storycomponents/Title.js';
 import BookBackground from './storycomponents/BookBackground.js';
@@ -12,7 +13,8 @@ import socket from '../../websocket.js';
 import ConversationContainer from './ConversationContainer.jsx';
 import $ from 'jquery';
 
-class StoryTime extends React.Component {
+// TODO: Clean Dead Code / Lint Fix
+class StoryTime extends Component {
   constructor(props) {
     super(props);
 
@@ -64,10 +66,9 @@ class StoryTime extends React.Component {
       });
     });
 
-    socket.emit('join', this.props.params.bookId);
+    socket.emit('join', this.props.params.userId);
 
     socket.on('action', data => {
-      console.log(data);
       switch (data.action) {
         case 'TURN_PAGE':
           this.setState({ ...this.state, pageCounter: data.payload });
@@ -234,7 +235,11 @@ class StoryTime extends React.Component {
                 handleInvite={this.handleInvite}
               /> : null}
             <div>
-              <p id="your-username">username: {this.state.identity}</p>
+              <p id="your-username">
+                <span>twilio: {this.state.identity}</span>
+                <span> / </span>
+                <span>facebook: {this.context.user.facebook.email}</span>
+              </p>
               <div id="local-media" className="local-webcam"></div>
               {this.state.renderConvoContainer === true ?
                 <ConversationContainer
@@ -248,5 +253,13 @@ class StoryTime extends React.Component {
     return (<p> Loading ... </p>);
   }
 }
+
+StoryTime.propTypes = {
+  params: PropTypes.object,
+};
+
+StoryTime.contextTypes = {
+  user: PropTypes.object,
+};
 
 export default StoryTime;
