@@ -19,5 +19,5 @@ client/assets/fonts
 .gitaliases
 
 #archived sites
-./PublicBooksLoader/sites
-./PublicBooksLoader/archived-stories/*
+database/PublicBooksLoader/archived-stories/
+client/assets/stories/
