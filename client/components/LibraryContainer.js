@@ -44,7 +44,7 @@ class LibraryContainer extends Component {
    */
   filterBooks(term) {
     const filtered = term ? this.state.books.filter(
-      book => book.bookTitle.includes(term)
+      book => book.bookTitle.toUpperCase().includes(term.toUpperCase())
     ) : this.state.books;
 
     this.setState({ ...this.state, term, filtered });
