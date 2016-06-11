@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Indie+Flower);
 @import url(https://fonts.googleapis.com/css?family=Berkshire+Swash);
+@import url(https://fonts.googleapis.com/css?family=McLaren);
 
 body html {
   margin: 0;
@@ -286,3 +287,13 @@ input {
   padding-right: 7px;
   font-size: 20px;
 }
+
+.card-action h5{
+  color: black;
+}
+.book-title-text {
+  font-family: 'McLaren', cursive;
+  font-weight: 700;
+  text-align: center;  
+}
+

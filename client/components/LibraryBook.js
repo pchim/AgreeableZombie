@@ -2,16 +2,16 @@ import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
 
 const LibraryBook = ({ book }, context) => (
-  <div className="card library-book small transparent">
+  <div className="card library-book transparent">
     <div className="card-image">
       <img src={book.bookTitleImage} alt={book.bookTitle} />
     </div>
-    <div className="card-action green darken-4">
-      {context.user ?
+    <div className="card-action cyan lighten-5 black-text">
+      <h5 className="book-title-text">{context.user ?
         <Link to={`/story-time/${context.user._id}/${book._id}`}>
           {book.bookTitle}
         </Link> : book.bookTitle
-      }
+      }</h5>
     </div>
   </div>
 );
