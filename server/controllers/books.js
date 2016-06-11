@@ -1,10 +1,10 @@
-var Book = require ('./bookModel.js');
+var Book = require ('../models/Book.js');
 var Promise = Promise || require('bluebird');
 var fs = require('fs');
 fs.readFile = Promise.promisify(fs.readFile);
 fs.readdir = Promise.promisify(fs.readdir);
 
-var archiveHelper = require('../database/PublicBooksLoader/archiveHelper.js');
+var archiveHelper = require('../../database/PublicBooksLoader/archiveHelper.js');
 module.exports = {
   getAllBooks: function (req, res) {
     Book.find({}, function (err, books) {
