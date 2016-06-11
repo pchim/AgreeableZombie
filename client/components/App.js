@@ -1,27 +1,43 @@
+/* global document */
 import 'materialize-css/sass/materialize.scss';
 import React, { PropTypes, Component } from 'react';
-import AuthBar from './AuthBar';
+import $ from 'jquery';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      user: null,
+    };
+
+    this.signIn = this.signIn.bind(this);
+    this.signOut = this.signOut.bind(this);
+  }
+
+  getChildContext() {
+    return {
+      user: this.state.user,
+      signIn: this.signIn,
+      signOut: this.signOut,
+    };
+  }
+
   componentDidMount() {
-    if (this.props.routes[1].path === 'story-time') {
-      document.body.classList.toggle('story-time', this.props);
-    }
+    $.get('/facebook/verify').then(user => user && this.setState({ ...this.state, user }));
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.routes[1].path.startsWith('story-time')) {
-      document.body.classList.toggle('story-time', nextProps);
-    }
+  signIn() {
+    document.location.assign('/facebook/signin');
   }
 
-  componentWillUnmount() {
-    document.body.classList.remove('story-time');
+  signOut() {
+    $.get('/facebook/signout').then(() => this.setState({ ...this.state, user: null }));
   }
 
   render() {
     return (
-      <div >
+      <div className="container">
         {this.props.children}
       </div>
     );
@@ -31,6 +47,12 @@ class App extends Component {
 App.propTypes = {
   children: PropTypes.node,
   routes: PropTypes.array,
+};
+
+App.childContextTypes = {
+  user: PropTypes.object,
+  signIn: PropTypes.func,
+  signOut: PropTypes.func,
 };
 
 export default App;

@@ -25,8 +25,14 @@ class LibraryContainer extends Component {
     this.setState({ ...this.state, books, filtered });
   }
 
+  /*
+   * filter the books where the title contains the term (case-sensistive)
+   */
   filterBooks(term) {
-    const filtered = term ? this.state.books.filter(book => book.bookTitle.includes(term)) : this.state.books;
+    const filtered = term ? this.state.books.filter(
+      book => book.bookTitle.includes(term)
+    ) : this.state.books;
+
     this.setState({ ...this.state, term, filtered });
   }
 
