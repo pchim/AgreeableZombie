@@ -1,13 +1,10 @@
 ![Alt text](/client/assets/readwithme-logo.png "Read With Me Logo")
 
 ## Team
-* **Ashwini Jogwar** - Product Owner
-* **Cathy Lee** - Scrum Master
-* **David Doan** - Development Team Member
-* **Jen Wong** - Development Team Member
-
-### Demo
-http://159.203.213.49:8000
+* **Matt Vargeson**
+* **David Valles**
+* **Peter Chim**
+* **Alex Wong**
 
 ### Requirements
 * node.js - v6.2.0
