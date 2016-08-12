@@ -17,7 +17,7 @@ body html {
 
 .sidenavigation {
   position:fixed;
-  width:800px;
+  width: 25%;
   height:100%;
   z-index: 10;
   top:0;
@@ -35,7 +35,7 @@ footer {
   height: 40px;
   top: 111px;
   right: 50px;
-  z-index: 15;
+  z-index: 100;
   position: fixed;
 }
 
@@ -98,7 +98,7 @@ footer {
   font-size:20px;
   font-family: 'Berkshire Swash', cursive;
   text-align: center;
-  margin-bottom: 100px;
+  margin-bottom: 10px;
 }
 
 .author {
@@ -151,9 +151,8 @@ footer {
 .page-text {
   font-family: 'Indie Flower', cursive;
   font-weight: 400;
-  font-size:50px;
+  font-size: 1.5rem;
   z-index: 1;
-  width:30%;
 /*  width:430px;
   height:300px;
   position: absolute;
@@ -293,8 +292,14 @@ input {
 }
 
 .card-action h5{
-  color: black;
+  font-size: 1.5rem;
+  padding: 5px;
 }
+
+.card .card-action {
+  padding: 5px;
+}
+
 .book-title-text {
   font-family: 'McLaren', cursive;
   font-weight: 700;
@@ -314,12 +319,33 @@ input {
 }
 .side-icons {
   width: 100px;
-  height: 100px;
-}
-.sidenavigation {
-  width: 300px;
+  height: 75px;
 }
 
 .page-image {
   width: 100%;
 }
+
+.container.storytime {
+  width: 60%;
+  margin-left: 10%;
+}
+
+.container.storytime .row {
+  width: 100%;
+}
+
+#toggle-instructions {
+  margin-top: 10px;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+#toggle-instructions a {
+  font-size: 1.5rem;
+}
+
+.sidebar h6 {
+  margin: 0;
+}
+

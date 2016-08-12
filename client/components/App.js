@@ -24,15 +24,15 @@ class App extends Component {
   }
 
   componentDidMount() {
-    $.get('/facebook/verify').then(user => user && this.setState({ ...this.state, user }));
+    // $.get('/facebook/verify').then(user => user && this.setState({ ...this.state, user }));
   }
 
   signIn() {
-    document.location.assign('/facebook/signin');
+    // document.location.assign('/facebook/signin');
   }
 
   signOut() {
-    $.get('/facebook/signout').then(() => this.setState({ ...this.state, user: null }));
+    // $.get('/facebook/signout').then(() => this.setState({ ...this.state, user: null }));
   }
 
   render() {
@@ -55,4 +55,8 @@ App.childContextTypes = {
   signOut: PropTypes.func,
 };
 
+
+
 export default App;
+
+

@@ -1,14 +1,13 @@
 import React, { PropTypes } from 'react';
-import AuthBar from './AuthBar';
+// import AuthBar from './AuthBar';
 import LibraryBook from './LibraryBook';
 import { Link } from 'react-router';
 
 const Library = ({ books, term, filter }) => (
   <div className="container">
-    <AuthBar />
-    <button className="btn waves-effect white"><Link to="create">Create Book</Link></button>
     <div className="library">
       <h1>Read With Me</h1>
+      <div className="contribute"><p>Contribute to our Project on the <a href="https://github.com/wonky-mongoose/AgreeableZombie">GitHub Repository</a></p></div>
       <input placeholder="filter by title..." value={term} onChange={e => filter(e.target.value)} />
       <div className="row">
         <div className="col s12 card-deck">

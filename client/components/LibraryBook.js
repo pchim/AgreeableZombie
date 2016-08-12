@@ -7,11 +7,11 @@ const LibraryBook = ({ book }, context) => (
       <img src={book.bookTitleImage} alt={book.bookTitle} />
     </div>
     <div className="card-action cyan lighten-5 black-text">
-      <h5 className="book-title-text">{context.user ?
-        <Link to={`/story-time/${context.user._id}/${book._id}`}>
+      <h5 className="book-title-text">
+        <Link to={`/story-time/user/${book._id}`}>
           {book.bookTitle}
-        </Link> : book.bookTitle
-      }</h5>
+        </Link>
+      </h5>
     </div>
   </div>
 );

@@ -7,7 +7,7 @@ import PrevButton from './storycomponents/PrevButton.js';
 import NextButton from './storycomponents/NextButton.js';
 import LeftPageText from './storycomponents/LeftPageText.js';
 import RightPageText from './storycomponents/RightPageText.js';
-import InvitePopUp from './storycomponents/InvitePopUp.js';
+// import InvitePopUp from './storycomponents/InvitePopUp.js';
 import SideBar from './storycomponents/SideBar.js';
 import socket from '../../websocket.js';
 import ConversationContainer from './ConversationContainer.jsx';
@@ -146,7 +146,7 @@ class StoryTime extends Component {
   }
 
   handleInviteToggle() {
-    this.setState({ invitePopUp: !this.state.invitePopUp });
+    // this.setState({ invitePopUp: !this.state.invitePopUp });
   }
 
   handleInvite() {
@@ -242,7 +242,7 @@ class StoryTime extends Component {
                 /> : null}
             </div>
           </div>
-          <div className="container">
+          <div className="container storytime">
             <div className="row">
               <Title  bookTitle={this.state.bookTitle} author={this.state.author} />
             </div>
@@ -257,11 +257,12 @@ class StoryTime extends Component {
 
               <LeftPageText bookData={this.state.bookData} pageCounter={this.state.pageCounter} />
               <RightPageText bookData={this.state.bookData} pageCounter={this.state.pageCounter} />
-              {this.state.invitePopUp ?
-                <InvitePopUp
-                  handleInviteToggle={this.handleInviteToggle}
-                  handleInvite={this.handleInvite}
-                /> : null}
+              {//this.state.invitePopUp ?
+                //<InvitePopUp
+                  //handleInviteToggle={this.handleInviteToggle}
+                  //handleInvite={this.handleInvite}
+                ///> : null
+              }
 
             </div>
           </div>

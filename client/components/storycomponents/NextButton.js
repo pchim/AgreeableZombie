@@ -5,7 +5,7 @@ const NextButton = (props) => (
     <input
       type="button"
       className="page-turn-button"
-      value=">"
+      value="Next >"
       onClick={props.rightClickHandler}
     />
   </div>

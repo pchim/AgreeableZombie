@@ -40,14 +40,12 @@ class CreateBook extends React.Component {
 
   saveBook(e) {
     e.preventDefault();
-    console.log('the content', this.state.content);
     this.state.bookData.push(
       {
         content: this.state.content,
         image: false,
       }
-    )
-    console.log('pushed bookddata', this.state.bookData)
+    );
 
     const story = {
       bookTitle: this.state.bookTitle,
@@ -56,9 +54,6 @@ class CreateBook extends React.Component {
     };
 
     $.post('/api/savebook', story, (data, status) => {
-      console.log('save STORY', data);
-      console.log(data);
-      console.log(status);
     })
     .fail((err, status) => console.log('err', status));
     this.toggleForm()
@@ -66,7 +61,6 @@ class CreateBook extends React.Component {
 
   savePage(e) {
     e.preventDefault();
-    console.log('pushed bookddata', this.state.bookData);
     this.state.bookData.push(
       {
         content: this.state.content,
@@ -80,9 +74,7 @@ class CreateBook extends React.Component {
     };
 
     $.post('/api/updatebook', story, (data, status) => {
-      console.log('add PAGE', data);
-      console.log(data);
-      console.log(status);
+      // console.log('add PAGE', data);
     })
     .fail((err, status) => console.log('err', status));
   }

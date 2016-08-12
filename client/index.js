@@ -21,7 +21,7 @@ const render = () => {
         <IndexRedirect to="/library" />
         <Route path="library" component={LibraryContainer} />
         <Route path="create" component={CreateBook} />
-        <Route path="story-time/:userId/:bookId" component={StoryTime} />
+        <Route path="story-time/user/:bookId" component={StoryTime} />
         <Route path="*" component={NoMatch} />
       </Route>
     </Router>,

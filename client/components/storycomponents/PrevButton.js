@@ -5,7 +5,7 @@ const PrevButton = (props) => (
     <input
       type="button"
       className="page-turn-button"
-      value="<"
+      value="< Prev"
       onClick={props.leftClickHandler}
     />
   </div>
