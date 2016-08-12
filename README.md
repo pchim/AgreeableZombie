@@ -6,6 +6,12 @@
 * **Peter Chim**
 * **Alex Wong**
 
+## Demo
+
+Check out [Read With Me](https://read-with-me-abc.herokuapp.com) to get started
+
+## Contributing
+
 ### Requirements
 * node.js - v6.2.0
 * mongodb
