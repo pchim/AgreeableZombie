@@ -1,6 +1,6 @@
 var mongoose = require("mongoose");
 var Books = require("./Models/Books"); //imports the Books module. Contains the bookSchema
-mongoose.connect("mongodb://localhost:27017/library"); //db name is library
+mongoose.connect(process.env.MONGODB_URI); //db name is library
 
 var db = mongoose.connection;
 
